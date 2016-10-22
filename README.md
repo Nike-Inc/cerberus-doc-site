@@ -1,10 +1,12 @@
-# Cerberus
+# [Nike-Inc.github.io/cerberus](http://nike-inc.github.io/cerberus)
 
-The source code for  [Nike-Inc.github.io/cerberus](http://nike-inc.github.io/cerberis)
+## Cerberus
+
+The source code for [Nike-Inc.github.io/cerberus](http://nike-inc.github.io/cerberus)
 
 Used to document Cerberus and its related components.
 
-## Development
+### Development
 This GitHub page is a [Jekyll](https://jekyllrb.com/) site.
 
 To run the site locally you will need to get [Jekyll](https://jekyllrb.com/docs/installation/) up and running.
@@ -15,6 +17,6 @@ If your using Mac OS X and have issues with nokogiri checkout this [Stack Overfl
 
 Once you have Jekyll installed you can host the site by running the following command `jekyll serve --watch`
 
-## License
+### License
 
 See the [LICENSE](https://github.com/Nike-Inc/cerberus/blob/master/LICENSE.md) file.
