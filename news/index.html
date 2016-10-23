@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="news">
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <div class="news-post-summery">
+            <h3>{{ post.date | date: "%b %-d, %Y" }}</h3>
+            <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h2>
+            <div class="news-post-summery-excerpt">{{ post.excerpt }}</div>
+        </div>
+        {% endfor %}
+    </ul>
+</div>

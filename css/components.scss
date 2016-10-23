@@ -1,0 +1,142 @@
+
+.cerberus-components {
+
+  h1 {
+    padding-bottom: 10px;
+  }
+
+  .component-category {
+
+    .category-components {
+      display: flex;
+      flex-flow: wrap;
+
+      margin-left: 1px;
+
+      .component-wrapper {
+        padding: 15px;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+      }
+
+      .component {
+        background-color: $ncss_white;
+
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 33%;
+        max-width: 33%;
+
+        border: solid;
+        border-width: 1px;
+        border-color: $ncss_light_grey;
+        margin-bottom: 20px;
+        margin-left: -1px;
+
+        .component-header {
+
+          .js {
+            background: #F9C45C;
+          }
+
+          .java {
+            background: #d9534f;
+          }
+
+          .swift {
+            background: #5bc0de;
+          }
+
+          .python {
+            background: #3C78A9;
+          }
+
+          .ruby {
+            background: #B60E01;
+          }
+
+          .scala {
+            background: #15A9CE;
+          }
+
+          .multi {
+            background-color: #48BD1F;
+          }
+
+          padding-bottom: 10px;
+
+          display: flex;
+
+          .name {
+            padding-right: 5px;
+          }
+
+          .language {
+            align-self: center;
+            min-width: 40px;
+            text-align: center;
+            margin-left: auto;
+            height: 20px;
+            line-height: 20px;
+          }
+
+          border-bottom: solid;
+          border-color: $ncss_light_grey;
+          border-width: 1px;
+        }
+
+        .component-body {
+          margin-top: 10px;
+
+          .description {
+            padding-bottom: 10px;
+          }
+        }
+
+        .component-footer {
+          margin-top: auto;
+          height: 50px;
+          border: 1px $ncss_light_grey;
+          border-top-style: solid;
+          padding-top: 10px;
+
+          display: flex;
+          align-items: center;
+
+          a {
+            text-decoration: none;
+          }
+
+          .social {
+            line-height: 30px;
+            font-size: 30px;
+
+            .ico {
+              padding-left: 5px;
+            }
+          }
+
+          .github-link {
+            margin-left: auto;
+            padding-right: 5px;
+          }
+        }
+      }
+      
+      @media (max-width: 1000px) {
+        .component {
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .component {
+          flex-basis: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

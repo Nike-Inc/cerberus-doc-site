@@ -1,0 +1,49 @@
+<div class="header">
+    <div class="top">
+        <div class="top-container">
+            <div class="branding">
+                <a href="/cerberus/"><div class="logo-image"></div></a>
+                <div class="logo-text u-uppercase"><a href="/cerberus/">Cerberus |</a></div>
+                <div class="logo-sub-text u-uppercase">A Secure dynamic property solution for AWS</div>
+            </div>
+            <div class="resources-container">
+                <div>Help Resources</div>
+                <div class="resources">
+                    <a class="resorouce github" target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc')" title="Open an issue with a Cerberus project" href="https://github.com/Nike-Inc"></a>
+                    <a class="resorouce stack-overflow" target="_blank" onclick="trackOutboundLink('http://stackoverflow.com/questions/tagged/cerberus')" title="Search or ask a new question on Stack Overflow" href="http://stackoverflow.com/questions/tagged/cerberus"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="menu">
+            {% assign breadCrumb = page.url | split: '/' %}
+            {% assign pageArea = breadCrumb[1] %}
+
+            {% if page.title == "Home" %}
+                <a class="u-uppercase selected" href="/cerberus/">Home</a>
+            {% else %}
+                <a class="u-uppercase" href="/cerberus/">Home</a>
+            {% endif %}
+
+            {% if pageArea == "components" %}
+                <a class="u-uppercase selected" href="/cerberus/components/">Components</a>
+            {% else %}
+                <a class="u-uppercase" href="/cerberus/components/">Components</a>
+            {% endif %}
+
+            {% if pageArea == "docs" %}
+                <a class="u-uppercase selected" href="/cerberus/docs/">Docs</a>
+            {% else %}
+                <a class="u-uppercase" href="/cerberus/docs/">Docs</a>
+            {% endif %}
+
+            {% if pageArea == "news" %}
+                <a class="u-uppercase selected" href="/cerberus/news/">News</a>
+            {% else %}
+                <a class="u-uppercase" href="/cerberus/news/">News</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

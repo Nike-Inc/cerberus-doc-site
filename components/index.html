@@ -1,0 +1,41 @@
+---
+layout: default
+title: Components
+off_white: true
+---
+
+<div class="cerberus-components">
+    {% for category in site.data.components_data %}
+    <div class="component-category">
+        <h1>{{ category.name }}</h1>
+        <div class="category-components">
+            {% for component in category.components %}
+            <div class="component">
+                <div class="component-wrapper">
+                    <div class="component-header">
+                        <div class="name"><h2>{{ component.name }}</h2></div>
+                        <div class="language rounded ncss-brand bg-accent text-color-white prl2-sm u-uppercase {{ component.language }}"><div>{{ component.language }}</div></div>
+                    </div>
+                    <div class="component-body">
+                        <div class="description"><p>{{ component.description }}</p></div>
+                    </div>
+                    <div class="component-footer">
+                        <div class="social">
+                            <a class="ico g72-facebook text-dark-grey" target="_blank" onclick="trackOutboundLink('https://www.facebook.com/sharer/sharer.php?u={{ component.url }}')" href="https://www.facebook.com/sharer/sharer.php?u={{ component.url }}"></a>
+                            <a class="ico g72-twitter text-dark-grey" target="_blank" onclick="trackOutboundLink('https://twitter.com/intent/tweet?text={{ component.url }}')" href="https://twitter.com/intent/tweet?text={{ component.url }}"></a>
+                        </div>
+                        <div class="github-link">
+                            {% if component.public %}
+                                <a href="{{ component.url }}" target="_blank" onclick="trackOutboundLink('{{ component.url }}')" class="ncss-btn-dark-grey ncss-brand pt3-sm pr5-sm pb3-sm pl5-sm pt2-lg pb2-lg u-uppercase">Github Repository</a>
+                            {% else %}
+                                <div class="disabled ncss-btn-dark-grey ncss-brand pt3-sm pr5-sm pb3-sm pl5-sm pt2-lg pb2-lg u-uppercase">Coming Soon</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

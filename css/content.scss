@@ -1,0 +1,116 @@
+.content {
+  background-color: $ncss_off_white;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+
+  .content-container {
+    background-color: $ncss_white;
+    color: $ncss_black;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    width: 60%;
+  }
+
+  .content-container-offwhite {
+    @extend .content-container;
+
+    background-color: $ncss_off_white;
+  }
+
+  @media (max-width: 1920px) {
+    .content-container {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 1350px) {
+    .content-container {
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 100%;
+    }
+  }
+
+  // basic styles for markup files
+  h1 {
+    padding-top: 10px;
+    font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 25px;
+  }
+
+  h2 {
+    font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+  }
+
+  h4 {
+    font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+  }
+
+  p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+
+  // NCSS resets this, and we want alternating bullets
+  ul {
+    li { list-style: disc; }
+    li li { list-style: circle; }
+    li li li { list-style: square; }
+    li li li li { list-style: disc; }
+    li li li li li { list-style: circle; }
+    li li li li li li { list-style: square; }
+  }
+
+  ol {
+    li { list-style: decimal; }
+    li li { list-style: lower-roman; }
+    li li li { list-style: upper-roman; }
+    li li li li { list-style: decimal; }
+    li li li li li { list-style: lower-roman; }
+  }
+
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: $ncss_grey;
+    }
+  }
+
+  // code blocks
+  pre {
+    margin-top: 25px;
+    code {
+      display: block;
+      padding: 15px;
+    }
+    width: 80%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: $ncss_light_grey;
+  }
+}
+

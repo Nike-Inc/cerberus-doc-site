@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="docs">
+    <div class="docs-title"><h1>{{ page.title }}</h1></div>
+    <div class="docs-content">
+        <div class="documentation-toc">
+            <div class="toc-container">
+                <h4>Home</h4>
+                <ul>
+                    <li><a href="{{ site.baseurl }}/docs">What is Cerberus</a></li>
+                </ul>
+                {% for category in site.data.documentation.table_of_contents %}
+                {% assign words = category.directory | split: '-' %}
+                <h4>{% for word in words %}{{ word | capitalize  }} {% endfor %}</h4>
+                <ul>
+                    {% for page in category.pages %}
+                    {% assign words = page | split: '-' %}
+                    <li><a href="{{ site.baseurl }}/docs/{{ category.directory }}/{{ page }}">{% for word in words %}{{ word | capitalize  }} {% endfor %}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="documentation-content">
+            {{ content }}
+        </div>
+    </div>
+</div>

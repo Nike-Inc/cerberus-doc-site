@@ -1,0 +1,127 @@
+.header {
+  font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: $ncss_off_white;
+  }
+
+  @media (max-width: $break-small) {
+    .branding {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .resources-container {
+      display: none !important;
+    }
+  }
+
+  .top {
+    display: flex;
+    justify-content: center;
+
+    .top-container {
+      display: flex;
+      width: 60%;
+
+      .branding {
+        display: flex;
+        padding: 5px;
+
+        .logo-image {
+          background: url('../images/cerberus-logo-white-on-transparent.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          cursor: pointer;
+
+          width: 60px;
+          height: 60px;
+        }
+
+        .logo-text {
+          align-self: center;
+          padding-left: 10px;
+          font-size: 40px;
+        }
+
+        .logo-sub-text {
+          align-self: center;
+          padding-left: 10px;
+          font-size: 20px;
+        }
+      }
+      .resources-container {
+        padding-right: 10px;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-self: center;
+
+        .resources {
+          margin-top: 5px;
+          justify-content: flex-end;
+
+          display: flex;
+
+          .resorouce {
+            justify-self: flex-end;
+            width: 25px;
+            height: 25px;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1920px) {
+      .top-container {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 1350px) {
+      .top-container {
+        width: 100%;
+      }
+    }
+  }
+
+  .bottom {
+    background-color: $ncss_white;
+    a { color: $ncss_black; }
+    border-bottom: solid;
+    border-color: $ncss_black;
+    border-width: 1px;
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      font-weight: 100;
+
+      .selected {
+        border: 2px $ncss_black;
+        border-bottom-style: solid;
+      }
+
+      a {
+        font-size: 20px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &:hover {
+          border: 2px $ncss_black;
+          border-bottom-style: solid;
+        }
+      }
+    }
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}

@@ -1,0 +1,106 @@
+- name: Components
+  components:
+  - name: Cerberus Management Service
+    description: >
+     A micro-service to compose Hashicorp's Vault API to enable the Safe Depoist Box paridigm, IAM Role auth
+     for EC2 instances and Lambda functions, and user auth via SSO providers.
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-management-service
+    public: false
+
+  - name: Cerberus Management Dashboard
+    description: >
+      A single page React js app for enabling the self service administration of Safe Depoist Boxes, access control, and
+      data.
+    language: js
+    url:
+    public: false
+
+  - name: Cerberus Util Scripts
+    description: >
+      A collection of Bash and Python scripts needed to operationalize the various components of Cerberus.
+    language: multi
+    url: https://github.com/Nike-Inc/cerberus-util-scripts
+    public: false
+
+  - name: HashiCorp's Vault
+    description: >
+      <a href="https://www.vaultproject.io/">A tool for managing secrets</a>. In Cerberus Vault is used for the encryption of secrets,
+      as well as access control policies.
+    language: go
+    url: https://github.com/hashicorp/vault
+    public: true
+
+  - name: HashiCorp's Consul
+    description: >
+      Consul is a tool for service discovery, monitoring and configuration. In Cerberus Consul is used to
+      provide high availibilty and be the storage backend for Vault.
+    language: go
+    url: https://github.com/hashicorp/consul
+    public: true
+
+  - name: Cerberus Healthcheck Lambda
+    description: >
+      An AWS Lambda funtion for health checking the complete health of the Cerberus system;
+    language: java
+    url:
+    public: false
+
+  - name: Cerberus CloudFront Lambda
+    description: An AWS Lambda funtion for processing logs from CloudFront to enable things like rate limiting.
+    language: java
+    url:
+    public: false
+
+  - name: Cerberus Lifecycle Management CLI
+    description: A CLI for managing the Lifecycle of a Cerberus environment.
+    language: java
+    url:
+    public: false
+
+- name: Clients
+  components:
+  - name: Vault Java Client
+    description: >
+      A Java client for Hashicorp's Vault, that includes admin functionality, The Java Cerberus Client
+      builds on this.
+    language: java
+    url:
+    public: true
+
+  - name: Cerberus Java Client
+    description: >
+     A Java client for interacting with the composed Cerberus API. Has an authentication provider chain that
+     enables automatic authentication for EC2 and Lambda instances, with fallback for local development. Builds on top
+     of the Java Vault Client and exposes Read, Write, List, Delete functionality for data in an Safe Depoist Box.
+    language: java
+    url:
+    public: false
+
+  - name: Cerberus Archaius Client
+    description: An Archaius polling client for Netflix OSS's Archaius, a configuration management API
+    language: java
+    url:
+    public: false
+
+  - name: Cerberus Ruby Client
+    description: A Ruby client for interacting with the composed Cerberus API.
+    language: ruby
+    url:
+    public: false
+
+  - name: Cerberus Node Client
+    description: A Node client for interacting with the composed Cerberus API.
+    language: js
+    url:
+    public: false
+
+- name: Utilities
+  components:
+  - name: Token Fetcher
+    description: >
+      A Java CLI to use on the command line of an EC2 instance to automatically fetch a token, usefull for
+      Bash scripting.
+    language: java
+    url:
+    public: false

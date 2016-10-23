@@ -3,37 +3,78 @@
 ---
 @charset "utf-8";
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$ncss_black: #111;
+$ncss_accent: #3498DB;
+$ncss_white: #FFF;
+$ncss_off_white: #F7F7F7;
+$ncss_grey: #8D8D8D;
+$ncss_dark_grey: #222222;
+$ncss_medium_grey: #DDDDDD;
+$ncss_light_grey: #E5E5E5;
+$ncss_success: #48BD1F;
+$ncss_error: #FE0000;
 
-$spacing-unit:     30px;
+$break-small: 660px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+@import "header";
+@import "footer";
+@import "content";
+@import "components";
+@import "documentation";
+@import "news";
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+html body {
+  background-color: $ncss_black;
+  color: $ncss_off_white;
+}
 
-// Width of the content area
-$content-width:    800px;
+.home {
+  .landing-image {
+    display: flex;
+    justify-content: center;
+  }
 
-$on-palm:          600px;
-$on-laptop:        800px;
+  .landing-text {
+    padding-top: 25px;
+  }
+}
 
-// Minima also includes a mixin for defining media queries.
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+.github {
+  background: url('../images/github-offwhite100px.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
 
-// Import partials from the `minima` theme.
-@import "minima";
+.slack {
+  background: url('../images/slack-offwhite100px.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.stack-overflow {
+  background: url('../images/stack-overflow-offwhite100px.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.twitter {
+  background: url('../images/twitter-logo-offwhite100px.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.nike-oss {
+  background: url('../images/nike-oss-logo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}

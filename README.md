@@ -1,8 +1,8 @@
-# [Nike-Inc.github.io/cerberus](http://nike-inc.github.io/cerberus)
+# [engineering.nike.com/cerberus](engineering.nike.com/cerberus)
 
 ## Cerberus
 
-The source code for [Nike-Inc.github.io/cerberus](http://nike-inc.github.io/cerberus)
+The source code for [engineering.nike.com/cerberus](engineering.nike.com/cerberus)
 
 Used to document Cerberus and its related components.
 
@@ -15,7 +15,7 @@ You should be able to do that via running `bundle install`, you will need [Ruby]
 
 If your using Mac OS X and have issues with nokogiri checkout this [Stack Overflow](https://stackoverflow.com/questions/37711814/error-installing-rails-on-os-x-el-capitan/39929160#39929160) answer that I found useful.
 
-Once you have Jekyll installed you can host the site by running the following command `jekyll serve --watch`
+Once you have Jekyll installed you can host the site by running the following command `bundle exec jekyll serve -w --config _config.yml,_dev_config.yml`
 
 ### License
 

@@ -1,0 +1,69 @@
+.footer {
+  display: flex;
+  justify-content: center;
+
+  .footer-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .column p a {
+      color: $ncss_off_white;
+    }
+
+    .column h4 a {
+      color: $ncss_off_white;
+    }
+
+    .column a {
+      color: $ncss_grey;
+    }
+
+    p {
+      a {
+        text-decoration: underline;
+      }
+      padding-bottom: 10px;
+      max-width: 260px;
+    }
+
+    .column {
+      padding: 10px;
+    }
+
+    width: 60%;
+  }
+  @media (max-width: 1920px) {
+    .footer-container {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 1350px) {
+    .footer-container {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .nike-oss {
+    width: 100px;
+    height: 100px;
+  }
+}
+

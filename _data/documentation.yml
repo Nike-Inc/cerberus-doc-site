@@ -1,0 +1,11 @@
+# Documentation Table of contents
+# You must update this for new pages to show up
+table_of_contents:
+  - directory: getting-started
+    pages:
+      - user-guide
+      - creating-a-cerberus-env
+      - faq
+  - directory: archetecture
+    pages:
+      - edge-security
