@@ -3,8 +3,8 @@
 table_of_contents:
   - directory: getting-started
     pages:
-      - user-guide
       - creating-a-cerberus-env
+      - user-guide
       - faq
   - directory: archetecture
     pages:

@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: edge security
+title: Edge Security
 ---
 
-# TODO
+# Coming Soon
