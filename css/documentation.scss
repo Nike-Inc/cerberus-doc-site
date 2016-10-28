@@ -92,3 +92,16 @@
     }
   }
 }
+
+.show-not-on-mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .show-not-on-mobile {
+    display: block !important;
+  }
+}

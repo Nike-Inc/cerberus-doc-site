@@ -29,9 +29,7 @@ Cerberus is a hosted solution that allows teams to increase business agility and
 
 Manage your properties and access control using the self-service web UI.
 
-Have your cloud applications (running on AWS EC2 or Lambda in any AWS account) retrieve properties at run time using one of several client libraries (Java, Node, CLI).
-
-Cerberus provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.
+Have your cloud applications (running on AWS EC2 or Lambda in any AWS account) retrieve properties at run time using one of [several client libraries](/cerberus/components/#clients).
 
 Behind the scenes Cerberus is an API that composes a few services.
 

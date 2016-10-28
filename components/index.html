@@ -6,6 +6,7 @@ off_white: true
 
 <div class="cerberus-components">
     {% for category in site.data.components_data %}
+    <a name="{{ category.name | downcase }}"></a>
     <div class="component-category">
         <h1>{{ category.name }}</h1>
         <div class="category-components">
