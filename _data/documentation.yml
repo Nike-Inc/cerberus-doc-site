@@ -1,11 +1,53 @@
 # Documentation Table of contents
 # You must update this for new pages to show up
 table_of_contents:
-  - directory: getting-started
+  - directory: user-guide
     pages:
-      - creating-a-cerberus-env
-      - user-guide
-      - faq
-  - directory: archetecture
+      - filename: quick-start
+        displayname: Quick Start
+      - filename: dashboard
+        displayname: Dashboard
+      - filename: archaius
+        displayname: Archaius
+      - filename: file-storage
+        displayname: File Storage
+      - filename: troubleshooting
+        displayname: Troubleshooting
+      - filename: limitations
+        displayname: Limitations
+  - directory: administration-guide
     pages:
-      - edge-security
+      - filename: lifecycle-management-cli
+        displayname: Lifecycle Management CLI
+      - filename: creating-an-environment
+        displayname: Creating an Environment
+      - filename: deleting-an-environment
+        displayname: Deleting an Environment
+      - filename: monitoring
+        displayname: Monitoring
+  - directory: architecture
+    pages:
+      - filename: overview
+        displayname: Overview
+      - filename: rest-api
+        displayname: REST API
+      - filename: infrastructure-overview
+        displayname: Infrastructure Overview
+      - filename: vault
+        displayname: Vault
+      - filename: authentication
+        displayname: Authentication
+      - filename: high-availability
+        displayname: High Availability
+      - filename: performance-testing
+        displayname: Performance Testing
+      - filename: alternative-solutions
+        displayname: Alternative Solutions
+  - directory: contributing
+    pages:
+      - filename: how-to-contribute
+        displayname: How to Contribute
+      - filename: developer-setup
+        displayname: Developer Setup
+      - filename: roadmap
+        displayname: Roadmap

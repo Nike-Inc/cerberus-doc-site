@@ -6,7 +6,7 @@ layout: default
     <div class="docs-content">
         <div class="documentation-toc">
             <div class="toc-container">
-                <h4>Home</h4>
+                <h4>Introduction</h4>
                 <ul>
                     <li><a href="{{ site.baseurl }}/docs">What is Cerberus</a></li>
                 </ul>
@@ -16,7 +16,7 @@ layout: default
                 <ul>
                     {% for page in category.pages %}
                     {% assign words = page | split: '-' %}
-                    <li><a href="{{ site.baseurl }}/docs/{{ category.directory }}/{{ page }}">{% for word in words %}{{ word | capitalize  }} {% endfor %}</a></li>
+                    <li><a href="{{ site.baseurl }}/docs/{{ category.directory }}/{{ page.filename }}">{{page.displayname}}</a></li>
                     {% endfor %}
                 </ul>
                 {% endfor %}
