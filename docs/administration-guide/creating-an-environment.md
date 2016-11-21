@@ -3,8 +3,6 @@ layout: documentation
 title: Creating a Cerberus Environment
 ---
 
-# Creating a Cerberus Environment
-
 ## Bake the necessary Cerberus AMIs
 Clone or download the [Cerberus Utility Script](https://github.com/Nike-Inc/cerberus-util-scripts) project and follow the README to create AMIs for Consul, Vault, Gateway and Cerberus Management Service
 
@@ -352,18 +350,16 @@ You can add arbitrary params that will get written to the properties file by add
 
 CMS requires the following -P parameters
 
-Parameter   | Notes
-------------|------
--P cms.auth.connector | The fully qualified classname of the Auth connector implemenation, currently we only have OneLogin: `com.nike.cerberus.auth.connector.onelogin.OneLoginAuthConnector`
+`cms.auth.connector`, The fully qualified classname of the Auth connector implementation, currently we only have OneLogin: com.nike.cerberus.auth.connector.onelogin.OneLoginAuthConnector
 
 OneLogin Auth Connector requires the following -P parameters
 
-Parameter                                | Notes
------------------------------------------|------
--P auth.connector.onelogin.api_region    | The OneLogin API region ex: us
--P auth.connector.onelogin.client_id     | The OneLogin API Client ID for this app, create one for Cerberus
--P auth.connector.onelogin.client_secret | The OneLogin API Client Secret for this app, create one for Cerberus
--P auth.connector.onelogin.subdomain     | The OneLogin API Subdomain ex: nike
+Parameter                             | Notes
+--------------------------------------|------
+auth.connector.onelogin.api_region    | The OneLogin API region ex: us
+auth.connector.onelogin.client_id     | The OneLogin API Client ID for this app, create one for Cerberus
+auth.connector.onelogin.client_secret | The OneLogin API Client Secret for this app, create one for Cerberus
+auth.connector.onelogin.subdomain     | The OneLogin API Subdomain ex: nike
 
 **A note about our OneLogin Connector Impl**
 We get user groups from the member-of field, which is wired to our LDAP groups, if you don't do this do our OneLogin connector in its current form will not work for you.

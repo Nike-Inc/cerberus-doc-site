@@ -19,9 +19,6 @@ vaultClient.write(“app/my-app/secrets”, contents);
 
 {% endhighlight %}
 
-
-<br />
-
 ### Over HTTPS
 
 POST /v1/secret/app/my-app/secrets

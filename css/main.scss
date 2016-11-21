@@ -22,6 +22,7 @@ $break-small: 660px;
 @import "components";
 @import "documentation";
 @import "news";
+@import "prism";
 
 html body {
   background-color: $ncss_black;
@@ -32,10 +33,37 @@ html body {
   .landing-image {
     display: flex;
     justify-content: center;
+
+    img {
+      height: 225px;
+      width: 225px;
+    }
   }
 
   .landing-text {
     padding-top: 25px;
+
+    th {
+      font-size: 25px;
+      font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
+      text-transform: uppercase;
+      width: 33%;
+    }
+
+    td {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    table {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
   }
 }
 

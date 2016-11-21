@@ -35,6 +35,7 @@
 
   .documentation-content {
     flex-basis: 80%;
+    max-width: 80%;
     padding-right: 40px;
   }
 
@@ -45,6 +46,7 @@
 
     .documentation-content {
       flex-basis: 75%;
+      max-width: 75%;
     }
   }
 }
@@ -61,6 +63,7 @@
     .documentation-content {
       margin-top: 25px;
       padding-right: 0px;
+      max-width: 100%;
     }
   }
 }
