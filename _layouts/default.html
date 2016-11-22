@@ -37,7 +37,7 @@
             <header>
                 {% include header.html %}
             </header>
-            <div class="content">
+            <div class="content content-{{ page.title }}">
                 <div class="{% if page.off_white == true %}content-container-offwhite{% else %}content-container{% endif %}">
                     {{ content }}
                  </div>

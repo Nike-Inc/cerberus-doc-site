@@ -1,0 +1,131 @@
+.landing {
+  .landing-header {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+
+    img {
+      height: 225px;
+      width: 225px;
+      margin-right: 35px;
+    }
+
+    @media (max-width: 675px) {
+      img {
+        margin-right: 0px;
+        margin-bottom: 25px;
+      }
+      .landing-header-text {
+        text-align: center;
+      }
+    }
+
+    .landing-header-text {
+      padding-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .brand {
+        font-size: 45px;
+        font-weight: bold;
+      }
+
+      .tagline {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .landing-content {
+    padding-top: 25px;
+
+    th {
+      font-size: 25px;
+      font-family: "Nike TG","Helvetica Neue",Helvetica,Arial,sans-serif;
+      text-transform: uppercase;
+      width: 33%;
+    }
+
+    td {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    table {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+  }
+
+  .marketing-items {
+    background-color: $ncss_black;
+    color: $ncss_white;
+
+    //background-color: $ncss_medium_grey;
+    //color: $ncss_black;
+
+    background-color: $ncss_accent;
+    color: $ncss_white;
+
+    padding-left: 50px;
+    padding-right: 50px;
+
+    padding-top: 15px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+
+    .marketing-item {
+      border-radius: 5px;
+
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 30px;
+
+      padding: 8px;
+
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 30%;
+
+      .marketing-item-label {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .marketing-item-text {
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+
+      .marketing-btn {
+        margin-top: auto;
+        width: 50px;
+        padding: 0;
+      }
+
+      .g72-arrow-thick-right {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .landing-content-text {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.content-landing .content-container {
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
