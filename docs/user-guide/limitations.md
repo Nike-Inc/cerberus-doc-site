@@ -27,6 +27,7 @@ Request limits will vary by organization and use case but a good rule of thumb w
 
 When writing data to Cerberus the request body size should be less than 256 KiB.
 
-# Payload Size
+# KMS Keys
 
-There is currently a 4KiB limit.  This has been sufficient thus far but can be increased in the future.
+Cerberus lazily creates a KMS key for every unique configured IAM role the first time they authenticate.
+By default Amazon limits the number of KMS keys per region per account to 1000. 
