@@ -27,12 +27,12 @@
       flex-direction: column;
 
       .brand {
-        font-size: 45px;
+        font-size: 55px;
         font-weight: bold;
       }
 
       .tagline {
-        font-size: 20px;
+        font-size: 30px;
         font-weight: bold;
       }
     }
@@ -65,7 +65,7 @@
   }
 
   .marketing-items {
-    background-color: $ncss_accent;
+    background-color: $ncss_black;
     color: $ncss_white;
 
     padding-left: 50px;
@@ -91,13 +91,13 @@
       flex-basis: 30%;
 
       .marketing-item-label {
-        font-size: 40px;
+        color: $snkrs_accent;
+        font-size: 35px;
         font-weight: bold;
       }
 
       .marketing-item-text {
         font-size: 15px;
-        font-weight: bold;
         padding-bottom: 10px;
       }
 
