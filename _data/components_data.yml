@@ -14,7 +14,7 @@
       a <a href="https://facebook.github.io/react/">React</a> single-page application (SPA).
     language: js
     url: https://github.com/Nike-Inc/cerberus-management-dashboard
-    public: false
+    public: true
 
   - name: Cerberus Lifecycle Management CLI
     description: A CLI for managing the lifecycle of a Cerberus environment.
