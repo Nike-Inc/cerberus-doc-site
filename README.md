@@ -17,6 +17,8 @@ If your using Mac OS X and have issues with nokogiri checkout this [Stack Overfl
 
 Once you have Jekyll installed you can host the site by running the following command `bundle exec jekyll serve -w --config _config.yml,_dev_config.yml`
 
+Enable live reloading by using `bundle exec guard`
+
 ### License
 
 See the [LICENSE](https://github.com/Nike-Inc/cerberus/blob/master/LICENSE.md) file.
