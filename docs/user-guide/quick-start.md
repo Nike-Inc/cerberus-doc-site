@@ -107,12 +107,12 @@ else
     echo "HOST is set to '$CERBERUS_HOST'";
 fi
 
-if [ -z ${USER_OR_EMAIL+x} ];
+if [ -z ${CERBERUS_USER_OR_EMAIL+x} ];
 then
     echo -n "Enter your username / email: "
-    read USER_OR_EMAIL
+    read CERBERUS_USER_OR_EMAIL
 else
-    echo "USER_OR_EMAIL is set to '$USER_OR_EMAIL'";
+    echo "CERBERUS_USER_OR_EMAIL is set to '$CERBERUS_USER_OR_EMAIL'";
 fi
 
 if [ -z ${CERBERUS_PASS+x} ];
@@ -125,7 +125,7 @@ fi
 
 echo ""
 
-DATA=$(curl -s -u ${USER_OR_EMAIL}:${CERBERUS_PASS} ${CERBERUS_HOST}/v2/auth/user)
+DATA=$(curl -s -u ${CERBERUS_USER_OR_EMAIL}:${CERBERUS_PASS} ${CERBERUS_HOST}/v2/auth/user)
 
 STATUS=$(echo $DATA | jq ".status" | cut -d '"' -f 2)
 
