@@ -22,7 +22,7 @@ and API keys, as well as non-sensitive dynamic run-time properties, such as feat
 <img src="../images/arch-diagrams/cerberus-core-components-hlo.png" />
 Cerberus is a [composed API](architecture/rest-api)
 
-Cerberus is a cloud native application.  It relies heavily on [AWS infrastructure](architecture/infrastructure-overview).  It would take significant work to 
+Cerberus is a cloud native system that relies heavily on [AWS infrastructure](architecture/infrastructure-overview).  It would take significant work to 
 enable it in other environments.
 
 # What Cerberus is NOT
