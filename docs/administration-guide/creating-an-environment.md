@@ -68,10 +68,6 @@ consul.us-west-2.demo.internal.cerberus-oss.io
 cms.us-west-2.demo.internal.cerberus-oss.io
 ```
 
-** **Note: Self-signed certs do not currently work with our automation, as there are no hooks to inject custom
-CAs, or disable SSL verification.**
-
-
 ### Creating a Certificate using LetsEncrypt
 
 [LetsEncrypt](https://letsencrypt.org/) is a free, automated, open Certificate Authority. This is a great option if your
@@ -101,10 +97,6 @@ I am lazy so I am going to export the dir to `CERBERUS_CERT_DIR` and reference i
 
 **Make sure to delete the A records you created for the cert generation.**
 
-** **Important Note: Let's Encrypt is not trusted by Java by default, we need to add it to our local trust store, I followed the directions
-outlined [here in this stack overflow answer](http://stackoverflow.com/a/37969672/770134)**
-
-
 ### Make Certificate Usable by Cerberus
 
 Once the certificate is created, we will need to ensure the following files are together in one directory for the CLI
@@ -126,6 +118,18 @@ Then, run the following commands to extract the private and public keys:
     openssl rsa -in privkey.pem -pubout > pubkey.pem  
     openssl rsa -in privkey.pem -out key.pem
 
+<a name="add-ca"></a>
+
+### Add the CA to your java trust store.
+
+More likely than not you will need to add your CA to the Java trust store, if it is not trusted by Java by default
+
+** **Let's Encrypt is not trusted by Java in the default trust store, and needs to be added, I followed the directions
+outlined [here in this stack overflow answer](http://stackoverflow.com/a/37969672/770134)**
+
+When you have the CA, you can run something like the following.
+
+    keytool -import -keystore PATH_TO_JDK\jre\lib\security\cacerts -storepass changeit -noprompt -trustcacerts -alias [ALAIS] -file PATH_TO_DOWNLOADS\[CA].der
 
 ## Generate a SSH Key Pair for your Cerberus instances using the AWS Console
 
@@ -319,6 +323,8 @@ If you get an error message like the following:
     
 You probably need to add the CA for your cert provider to the Java trust store on the machine you are running the CLI.
 Make sure the CA is in "DER" format.
+
+<a href="#add-ca">See add the CA to your java trust store.</a>
 
 ## Unseal Vault
 
