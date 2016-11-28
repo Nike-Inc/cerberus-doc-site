@@ -24,8 +24,8 @@ and API keys, as well as non-sensitive dynamic run-time properties, such as feat
 # What Cerberus is NOT
 
 Cerberus is designed for storing application secrets such as passwords, API keys, and certificates. It is not meant to 
-be a general purpose Key/Value store for storing any kind of data. It is not a replacement for applications like 
-Cassandra, DynamoDB, or Reddis.
+be a general purpose Key/Value store for storing any kind of data. It is not a replacement for data stores like 
+Cassandra, DynamoDB, or Redis.
 
 Cerberus is a cloud native application.  It relies heavily on AWS infrastructure.  It would take significant work to 
 enable it in other environments.
