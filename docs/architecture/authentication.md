@@ -53,7 +53,7 @@ assigned IAM roles to that instance.
    1. Attempt to decrypt response with KMS
 1. Store the [Vault token](vault) and expire time
 
-<img src="../../images/arch-diagrams/cms-iam-auth-sequence-diagram.png" style="width: 50%; height: 50%; margin: 50px;" />
+<img src="../../images/arch-diagrams/cms-iam-auth-sequence-diagram.png" />
 
 # Lambda Authentication
 

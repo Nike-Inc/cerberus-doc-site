@@ -43,7 +43,7 @@
       An AWS Lambda function that can be ran periodically to perform a health check of a Cerberus system.
     language: java
     url: https://github.com/Nike-Inc/cerberus-healthcheck-lambda
-    public: false
+    public: true
 
   - name: Cerberus CloudFront Lambda
     description: An AWS Lambda function for processing logs from CloudFront to enable things like rate limiting and

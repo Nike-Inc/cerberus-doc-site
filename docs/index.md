@@ -20,12 +20,13 @@ and API keys, as well as non-sensitive dynamic run-time properties, such as feat
 -  Provides client libraries (e.g. Java, Node, Ruby) that can be used by Cloud applications (EC2 or Lambda) to retrieve properties at run-time.
 
 <img src="../images/arch-diagrams/cerberus-core-components-hlo.png" />
+Cerberus is a [composed API](architecture/rest-api)
+
+Cerberus is a cloud native application.  It relies heavily on [AWS infrastructure](architecture/infrastructure-overview).  It would take significant work to 
+enable it in other environments.
 
 # What Cerberus is NOT
 
 Cerberus is designed for storing application secrets such as passwords, API keys, and certificates. It is not meant to 
 be a general purpose Key/Value store for storing any kind of data. It is not a replacement for data stores like 
 Cassandra, DynamoDB, or Redis.
-
-Cerberus is a cloud native application.  It relies heavily on AWS infrastructure.  It would take significant work to 
-enable it in other environments.
