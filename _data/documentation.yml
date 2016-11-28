@@ -39,8 +39,6 @@ table_of_contents:
         displayname: Authentication
       - filename: high-availability
         displayname: High Availability
-      - filename: performance-testing
-        displayname: Performance Testing
       - filename: alternative-solutions
         displayname: Alternative Solutions
   - directory: contributing
