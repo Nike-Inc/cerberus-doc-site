@@ -419,7 +419,7 @@ auth.connector.onelogin.client_secret | The OneLogin API Client Secret for this 
 auth.connector.onelogin.subdomain     | The OneLogin API Subdomain ex: nike
 
 ** **Note: Our OneLogin Connector Implementation: gets user groups from the member-of field, which is wired to our
-LDAP groups. If you use a similar system than our OneLogin connector in its current state will not work for you.
+LDAP groups. If you do not  use a similar system, than our OneLogin connector in its current state will not work for you.
 
 For the demo environment I will run the command with the following
 
@@ -579,10 +579,10 @@ to origin directly. Let's use Amazons Lambda for whitelisting only CloudFront IP
     --lambda-name CLOUD_FRONT_SG_GROUP_IP_SYNC
 
 
-## Create the Lambda function and subscribe the ip topic
+## Create the Lambda function and subscribe it to the AWS IP change topic
 
 Now that we created a Lambda that can auto update the ingress of Security Groups on ELBs that are tagged appropriately,
-lets subscribe to AWS topic that they publish to, when ever their IP space changes. So that we keep those Security
+lets subscribe to AWS topic that they publish to, when their IP space changes. So that we keep those Security
 Groups up-to-date.
 
     cerberus -e demo -r us-west-2 create-cloud-front-security-group-updater-lambda
