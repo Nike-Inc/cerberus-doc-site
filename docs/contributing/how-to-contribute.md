@@ -37,6 +37,6 @@ There are a few guidelines that we need contributors to follow so that we are ab
 
 *  <a target="_blank" onclick="trackOutboundLink('https://help.github.com/')" href="https://help.github.com/">General GitHub documentation</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://help.github.com/send-pull-requests/')" href="https://help.github.com/send-pull-requests/">GitHub pull request documentation</a>
-*  [Nike's Code of Conduct](https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CONDUCT.md)
-*  [Nike's Individual Contributor License Agreement](https://www.clahub.com/agreements/Nike-Inc/fastbreak)
+*  <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CONDUCT.md')" href="https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CONDUCT.md">Nike's Code of Conduct</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://www.clahub.com/agreements/Nike-Inc/fastbreak')" href="https://www.clahub.com/agreements/Nike-Inc/fastbreak">Nike's Individual Contributor License Agreement</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://nike-inc.github.io/')" href="https://nike-inc.github.io/">Nike OSS</a>

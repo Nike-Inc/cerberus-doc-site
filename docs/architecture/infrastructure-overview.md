@@ -23,7 +23,7 @@ S3 and every time a new log chunk is written to S3, the Lambda is triggered (eve
 For more background information, please see:
 
 *  AWS white paper on [AWS Best Practices for DDoS Resiliency](https://d0.awsstatic.com/whitepapers/DDoS_White_Paper_June2015.pdf)
-*  Blog post on [How to Configure Rate-Based Blacklisting with AWS WAF and AWS Lambda](https://blogs.aws.amazon.com/security/post/Tx1ZTM4DT0HRH0K/How-to-Configure-Rate-Based-Blacklisting-with-AWS-WAF-and-AWS-Lambda)
+*  Blog post on <a target="_blank" onclick="trackOutboundLink('https://blogs.aws.amazon.com/security/post/Tx1ZTM4DT0HRH0K/How-to-Configure-Rate-Based-Blacklisting-with-AWS-WAF-and-AWS-Lambda')" href="https://blogs.aws.amazon.com/security/post/Tx1ZTM4DT0HRH0K/How-to-Configure-Rate-Based-Blacklisting-with-AWS-WAF-and-AWS-Lambda">How to Configure Rate-Based Blacklisting with AWS WAF and AWS Lambda</a>
 
 # Routing Requests
 
@@ -58,10 +58,10 @@ Vault project including:
 # References
 
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/cloudfront/')" href="https://aws.amazon.com/cloudfront/">AWS CloudFront</a>
-*  [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/)
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/iam/')" href="https://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/route53/')" href="https://aws.amazon.com/route53/">AWS Route 53</a>
-*  [AWS Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/)
-*  [AWS Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/)
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/vpc/')" href="https://aws.amazon.com/vpc/">AWS Virtual Private Cloud (VPC)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/elasticloadbalancing/')" href="https://aws.amazon.com/elasticloadbalancing/">AWS Elastic Load Balancing (ELB)</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/autoscaling/')" href="https://aws.amazon.com/autoscaling/">AWS Auto Scaling</a>
-*  [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/kms/')" href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://www.nginx.com/')" href="https://www.nginx.com/">NGINX</a>

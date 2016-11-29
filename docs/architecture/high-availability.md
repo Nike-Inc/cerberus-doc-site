@@ -28,5 +28,5 @@ cluster is fault tolerant and self healing in the event that a node goes bad.
 
 *  <a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/docs/internals/high-availability.html')" href="https://www.vaultproject.io/docs/internals/high-availability.html">Vault High Availability</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://www.consul.io/docs/index.html')" href="https://www.consul.io/docs/index.html">Consul Documentation</a>
-*  [AWS Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/)
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/elasticloadbalancing/')" href="https://aws.amazon.com/elasticloadbalancing/">AWS Elastic Load Balancing (ELB)</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/autoscaling/')" href="https://aws.amazon.com/autoscaling/">AWS Auto Scaling</a>

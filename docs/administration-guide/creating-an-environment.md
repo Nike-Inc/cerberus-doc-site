@@ -76,7 +76,7 @@ company does not have a defined process for creating certificates.
 To create a certificate for Cerberus, make sure to create your A records in the AWS Console (example CNAMEs above).
 These A records should point to a machine running a server (e.g. NGINX).
 
-Then, use [cert-bot](https://certbot.eff.org/) and run the cert-bot wizard.
+Then, use <a target="_blank" onclick="trackOutboundLink('https://certbot.eff.org/')" href="https://certbot.eff.org/">cert-bot</a> and run the cert-bot wizard.
 
 At the end, I had the following files in `/etc/letsencrypt/live/demo.cerberus-oss.io`:
 
@@ -240,8 +240,8 @@ This command creates a Consul cluster (using the AMI we baked earlier), starts C
 configuration file that we generated. AWS Tags are then used to find other Consul clients in the same environment and
 join their cluster, or to create a new Consul cluster if no other clients are found.
 
-The Consul instances are configured to automatically backup there data to S3. Feel free to look through the [Cerberus
-Consul Puppet Module](https://github.com/Nike-Inc/cerberus-consul-puppet-module) to learn more about how we configure
+The Consul instances are configured to automatically backup there data to S3. Feel free to look through the 
+<a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-consul-puppet-module')" href="https://github.com/Nike-Inc/cerberus-consul-puppet-module">Cerberus Consul Puppet Module</a> to learn more about how we configure
 Consul.
 
 ## Upload Vault Certificate

@@ -73,8 +73,8 @@ permissions.
 # References
 
 *  [Vault](vault)
-*  [Amazon EC2 - Virtual Server Hosting](https://aws.amazon.com/ec2/)
-*  [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/)
-*  [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/ec2/')" href="https://aws.amazon.com/ec2/">Amazon EC2 - Virtual Server Hosting</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/iam/')" href="https://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/kms/')" href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://www.onelogin.com/')" href="https://www.onelogin.com/">OneLogin</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://www.okta.com/')" href="https://www.okta.com/">Okta</a>

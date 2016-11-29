@@ -19,4 +19,4 @@ running.  The lambda can be invoked via the AWS API Gateway.
 * <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-healthcheck-lambda')" href="https://github.com/Nike-Inc/cerberus-healthcheck-lambda">Health Check Lambda Github</a>
 * <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/lambda/')" href="https://aws.amazon.com/lambda/">AWS Lambda</a>
 * <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/api-gateway/')" href="https://aws.amazon.com/api-gateway/">AWS API Gateway</a>
-* [Amazon Relational Database Service (RDS)](https://aws.amazon.com/rds/)
+* <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/rds/')" href="https://aws.amazon.com/rds/">Amazon Relational Database Service (RDS)</a>
