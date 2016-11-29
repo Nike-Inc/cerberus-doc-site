@@ -78,8 +78,8 @@ URL friendly.  So, if you had 'My Awesome App' in the Applications category your
 
 Use one of the clients
 
-* [Java Client](https://github.com/Nike-Inc/cerberus-java-client)
-* [Java Archaius Polling Client](https://github.com/Nike-Inc/cerberus-archaius-client) (generally preferred for 
+* <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-java-client')" href="https://github.com/Nike-Inc/cerberus-java-client">Java Client</a>
+* <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-archaius-client')" href="https://github.com/Nike-Inc/cerberus-archaius-client">Java Archaius Polling Client</a> (generally preferred for 
   companies using [Archaius](archaius))
 * Others coming soon
 
@@ -94,7 +94,7 @@ To make use of Cerberus locally you'll need a token to access secrets from your 
 Most of the clients allow setting of a environmental or system property to enable local development with a user token.
 Below is a shell script you can add to your dev machine to retrieve a user token for development work.
 
-The below shell script requires [jq](https://stedolan.github.io/jq/) availible in your path
+The below shell script requires <a target="_blank" onclick="trackOutboundLink('https://stedolan.github.io/jq/')" href="https://stedolan.github.io/jq/">jq</a> availible in your path
 
 {% highlight bash %}
 #!/usr/bin/env bash

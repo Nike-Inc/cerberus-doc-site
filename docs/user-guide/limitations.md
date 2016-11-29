@@ -17,7 +17,7 @@ For example,
 -  1000 clients polling every 5 seconds results in a possibly excessive ~200 requests per second
 -  5000 clients polling every 5 minutes results in a reasonable ~17 requests per second
 
-The [rate limiting lambda](https://github.com/Nike-Inc/cerberus-cloudfront-lambda) is configured to auto-block
+The <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-cloudfront-lambda')" href="https://github.com/Nike-Inc/cerberus-cloudfront-lambda">rate limiting lambda</a> is configured to auto-block
 IPs making more than a maximum requests per minute (configurable).
 
 Request limits will vary by organization and use case but a good rule of thumb would be to make less than 

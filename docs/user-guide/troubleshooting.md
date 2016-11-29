@@ -19,7 +19,7 @@ role being used isn't listed for the SDB you are trying to access.
 
 Unexpectedly, you might also see this error when the path you are trying to access doesn't exist.
 
-Please see [Vault Documentation](https://www.vaultproject.io/docs/http/) for more information on Vault errors.
+Please see <a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/docs/http/')" href="https://www.vaultproject.io/docs/http/">Vault Documentation</a> for more information on Vault errors.
 
 
 # SSL Handshake Failure
@@ -27,8 +27,8 @@ Please see [Vault Documentation](https://www.vaultproject.io/docs/http/) for mor
 #### E.g. javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
 
 We've seen this during local development as result of a library conflict with the
-[jettyEclipseRun](https://github.com/Khoulaiz/gradle-jetty-eclipse-plugin) Gradle plugin.  Upgrading to the
-[Gretty](https://github.com/akhikhl/gretty) plugin resolved.
+<a target="_blank" onclick="trackOutboundLink('https://github.com/Khoulaiz/gradle-jetty-eclipse-plugin')" href="https://github.com/Khoulaiz/gradle-jetty-eclipse-plugin">jettyEclipseRun</a> Gradle plugin.  Upgrading to the
+<a target="_blank" onclick="trackOutboundLink('https://github.com/akhikhl/gretty')" href="https://github.com/akhikhl/gretty">Gretty</a> plugin resolved.
 
 
 # SSL Plaintext Connection Error
@@ -77,5 +77,5 @@ configurations.all {
 
 ### Maven
 
-Maven users can use the [dependency tree](http://maven.apache.org/plugins/maven-dependency-plugin/tree-mojo.html)
+Maven users can use the <a target="_blank" onclick="trackOutboundLink('http://maven.apache.org/plugins/maven-dependency-plugin/tree-mojo.html')" href="http://maven.apache.org/plugins/maven-dependency-plugin/tree-mojo.html">dependency tree</a>
 plugin to learn more about how dependencies are being resolved.

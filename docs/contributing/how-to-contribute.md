@@ -7,9 +7,9 @@ There are a few guidelines that we need contributors to follow so that we are ab
 
 # Getting Started
 
-*  Review our [Code of Conduct](https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CONDUCT.md)
-*  Submit the [Individual Contributor License Agreement](https://www.clahub.com/agreements/Nike-Inc/fastbreak)
-*  Make sure you have a [GitHub account](https://github.com/signup/free)
+*  Review our <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CONDUCT.md')" href="https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CONDUCT.md">Code of Conduct</a>
+*  Submit the <a target="_blank" onclick="trackOutboundLink('https://www.clahub.com/agreements/Nike-Inc/fastbreak')" href="https://www.clahub.com/agreements/Nike-Inc/fastbreak">Individual Contributor License Agreement</a>
+*  Make sure you have a <a target="_blank" onclick="trackOutboundLink('https://github.com/signup/free')" href="https://github.com/signup/free">GitHub account</a>
 *  Submit a ticket for your issue, assuming one does not already exist.
   *  Clearly describe the issue including steps to reproduce when it is a bug.
   *  Make sure you fill in the earliest version that you know has the issue.
@@ -35,8 +35,8 @@ There are a few guidelines that we need contributors to follow so that we are ab
 
 # Additional Resources
 
-*  [General GitHub documentation](https://help.github.com/)
-*  [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
+*  <a target="_blank" onclick="trackOutboundLink('https://help.github.com/')" href="https://help.github.com/">General GitHub documentation</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://help.github.com/send-pull-requests/')" href="https://help.github.com/send-pull-requests/">GitHub pull request documentation</a>
 *  [Nike's Code of Conduct](https://github.com/Nike-Inc/nike-inc.github.io/blob/master/CONDUCT.md)
 *  [Nike's Individual Contributor License Agreement](https://www.clahub.com/agreements/Nike-Inc/fastbreak)
-*  [Nike OSS](https://nike-inc.github.io/)
+*  <a target="_blank" onclick="trackOutboundLink('https://nike-inc.github.io/')" href="https://nike-inc.github.io/">Nike OSS</a>
