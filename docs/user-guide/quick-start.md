@@ -107,12 +107,12 @@ else
     echo "HOST is set to '$CERBERUS_HOST'";
 fi
 
-if [ -z ${CERBERUS_USER_OR_EMAIL+x} ];
+if [ -z ${USER_OR_EMAIL+x} ];
 then
     echo -n "Enter your username / email: "
-    read CERBERUS_USER_OR_EMAIL
+    read USER_OR_EMAIL
 else
-    echo "CERBERUS_USER_OR_EMAIL is set to '$CERBERUS_USER_OR_EMAIL'";
+    echo "USER_OR_EMAIL is set to '$USER_OR_EMAIL'";
 fi
 
 if [ -z ${CERBERUS_PASS+x} ];
@@ -125,14 +125,16 @@ fi
 
 echo ""
 
-DATA=$(curl -s -u ${CERBERUS_USER_OR_EMAIL}:${CERBERUS_PASS} ${CERBERUS_HOST}/v2/auth/user)
+DATA=$(curl -s -u ${USER_OR_EMAIL}:${CERBERUS_PASS} ${CERBERUS_HOST}/v2/auth/user)
 
 STATUS=$(echo $DATA | jq ".status" | cut -d '"' -f 2)
 
 if [ "$STATUS" == "success" ]
 then
     echo "Success, use the following token for talking to Cerberus"
+    echo ""
     echo $DATA | jq ".data.client_token.client_token" | cut -d '"' -f 2
+    echo ""
     echo "The token has the following policies"
     echo $DATA | jq ".data.client_token.policies"
     exit 0
@@ -160,10 +162,14 @@ then
         \"state_token\": \"${STATE_TOKEN}\"
     }")
 
+    STATUS=$(echo $DATA | jq ".status" | cut -d '"' -f 2)
+
     if [ "$STATUS" == "success" ]
     then
         echo "Success, use the following token for talking to Cerberus"
+        echo ""
         echo $DATA | jq ".data.client_token.client_token" | cut -d '"' -f 2
+        echo ""
         echo "The token has the following policies"
         echo $DATA | jq ".data.client_token.policies"
         exit 0
@@ -173,5 +179,4 @@ fi
 echo "Error something went wrong:"
 echo $DATA | jq
 exit 1
-
 {% endhighlight %}
