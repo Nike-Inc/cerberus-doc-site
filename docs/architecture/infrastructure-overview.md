@@ -22,7 +22,7 @@ S3 and every time a new log chunk is written to S3, the Lambda is triggered (eve
 
 For more background information, please see:
 
-*  AWS white paper on [AWS Best Practices for DDoS Resiliency](https://d0.awsstatic.com/whitepapers/DDoS_White_Paper_June2015.pdf)
+*  AWS white paper on <a target="_blank" onclick="trackOutboundLink('https://d0.awsstatic.com/whitepapers/DDoS_White_Paper_June2015.pdf')" href="https://d0.awsstatic.com/whitepapers/DDoS_White_Paper_June2015.pdf">AWS Best Practices for DDoS Resiliency</a>
 *  Blog post on <a target="_blank" onclick="trackOutboundLink('https://blogs.aws.amazon.com/security/post/Tx1ZTM4DT0HRH0K/How-to-Configure-Rate-Based-Blacklisting-with-AWS-WAF-and-AWS-Lambda')" href="https://blogs.aws.amazon.com/security/post/Tx1ZTM4DT0HRH0K/How-to-Configure-Rate-Based-Blacklisting-with-AWS-WAF-and-AWS-Lambda">How to Configure Rate-Based Blacklisting with AWS WAF and AWS Lambda</a>
 
 # Routing Requests
