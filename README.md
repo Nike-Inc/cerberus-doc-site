@@ -1,8 +1,8 @@
-# [engineering.nike.com/cerberus](engineering.nike.com/cerberus)
+# [engineering.nike.com/cerberus](http://engineering.nike.com/cerberus)
 
 ## Cerberus
 
-The source code for [engineering.nike.com/cerberus](engineering.nike.com/cerberus)
+The source code for [engineering.nike.com/cerberus](http://engineering.nike.com/cerberus)
 
 Used to document Cerberus and its related components.
 
