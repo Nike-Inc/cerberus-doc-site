@@ -14,7 +14,7 @@ Cerberus uses the CloudFront WAF to provide edge security.  This is automaticall
 
 The WAF automatically drops requests with incorrect request body size, SQL injection, and Cross Site Scripting (XSS).
 
-CloudFront access logs are parsed using a [rate limiting lambda](https://github.com/Nike-Inc/cerberus-cloudfront-lambda) 
+CloudFront access logs are parsed using a <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-cloudfront-lambda')" href="https://github.com/Nike-Inc/cerberus-cloudfront-lambda">rate limiting lambda</a> 
 that automatically blacklists IP addresses exceeding a configurable request rate limit.  The access logs are stored in 
 S3 and every time a new log chunk is written to S3, the Lambda is triggered (every 10 minutes or so).
 
@@ -22,13 +22,13 @@ S3 and every time a new log chunk is written to S3, the Lambda is triggered (eve
 
 For more background information, please see:
 
-*  AWS white paper on [AWS Best Practices for DDoS Resiliency](https://d0.awsstatic.com/whitepapers/DDoS_White_Paper_June2015.pdf)
-*  Blog post on [How to Configure Rate-Based Blacklisting with AWS WAF and AWS Lambda](https://blogs.aws.amazon.com/security/post/Tx1ZTM4DT0HRH0K/How-to-Configure-Rate-Based-Blacklisting-with-AWS-WAF-and-AWS-Lambda)
+*  AWS white paper on <a target="_blank" onclick="trackOutboundLink('https://d0.awsstatic.com/whitepapers/DDoS_White_Paper_June2015.pdf')" href="https://d0.awsstatic.com/whitepapers/DDoS_White_Paper_June2015.pdf">AWS Best Practices for DDoS Resiliency</a>
+*  Blog post on <a target="_blank" onclick="trackOutboundLink('https://blogs.aws.amazon.com/security/post/Tx1ZTM4DT0HRH0K/How-to-Configure-Rate-Based-Blacklisting-with-AWS-WAF-and-AWS-Lambda')" href="https://blogs.aws.amazon.com/security/post/Tx1ZTM4DT0HRH0K/How-to-Configure-Rate-Based-Blacklisting-with-AWS-WAF-and-AWS-Lambda">How to Configure Rate-Based Blacklisting with AWS WAF and AWS Lambda</a>
 
 # Routing Requests
 
 A Route 53 CNAME record points to the internet-facing Elastic Load Balancer (ELB) in the VPC. The ELB fronts an 
-Auto Scaling Group (ASG) of [NGINX](https://www.nginx.com/) instances and handles reverse proxying of the 
+Auto Scaling Group (ASG) of <a target="_blank" onclick="trackOutboundLink('https://www.nginx.com/')" href="https://www.nginx.com/">NGINX</a> instances and handles reverse proxying of the 
 [Cerberus Dashboard](../user-guide/dashboard), [Vault](vault), and the Cerberus Management Service. Only APIs from Vault that are 
 required for managing secrets are exposed.
 
@@ -57,11 +57,11 @@ Vault project including:
 
 # References
 
-*  [AWS CloudFront](https://aws.amazon.com/cloudfront/)
-*  [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/)
-*  [AWS Route 53](https://aws.amazon.com/route53/)
-*  [AWS Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/)
-*  [AWS Elastic Load Balancing (ELB)](https://aws.amazon.com/elasticloadbalancing/)
-*  [AWS Auto Scaling](https://aws.amazon.com/autoscaling/)
-*  [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
-*  [NGINX](https://www.nginx.com/)
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/cloudfront/')" href="https://aws.amazon.com/cloudfront/">AWS CloudFront</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/iam/')" href="https://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/route53/')" href="https://aws.amazon.com/route53/">AWS Route 53</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/vpc/')" href="https://aws.amazon.com/vpc/">AWS Virtual Private Cloud (VPC)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/elasticloadbalancing/')" href="https://aws.amazon.com/elasticloadbalancing/">AWS Elastic Load Balancing (ELB)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/autoscaling/')" href="https://aws.amazon.com/autoscaling/">AWS Auto Scaling</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/kms/')" href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://www.nginx.com/')" href="https://www.nginx.com/">NGINX</a>

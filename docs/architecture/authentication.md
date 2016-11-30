@@ -58,12 +58,12 @@ assigned IAM roles to that instance.
 # Lambda Authentication
 
 Lambda authentication is similar to that of EC2 instances.  See the 
-[health check lambda](https://github.com/Nike-Inc/cerberus-healthcheck-lambda) for a complete example.
+<a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-healthcheck-lambda')" href="https://github.com/Nike-Inc/cerberus-healthcheck-lambda">health check lambda</a> for a complete example.
 
 # User Authentication
 
 Cerberus supports plugging in different authentication backends.  The example below shows 
-[OneLogin](https://www.onelogin.com/) but support for [Okta](https://www.okta.com/) is also being added and
+<a target="_blank" onclick="trackOutboundLink('https://www.onelogin.com/')" href="https://www.onelogin.com/">OneLogin</a> but support for <a target="_blank" onclick="trackOutboundLink('https://www.okta.com/')" href="https://www.okta.com/">Okta</a> is also being added and
 others can be added easily.  LDAP groups are used to provide role-based access with either read or read/write
 permissions.
 
@@ -73,8 +73,8 @@ permissions.
 # References
 
 *  [Vault](vault)
-*  [Amazon EC2 - Virtual Server Hosting](https://aws.amazon.com/ec2/)
-*  [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/)
-*  [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
-*  [OneLogin](https://www.onelogin.com/)
-*  [Okta](https://www.okta.com/)
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/ec2/')" href="https://aws.amazon.com/ec2/">Amazon EC2 - Virtual Server Hosting</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/iam/')" href="https://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/kms/')" href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://www.onelogin.com/')" href="https://www.onelogin.com/">OneLogin</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://www.okta.com/')" href="https://www.okta.com/">Okta</a>

@@ -47,12 +47,12 @@ Only the owner is allowed to modify permissions or to delete the SDB.
 
 # Implementation
 
-The dashboard is implemented as a [React](https://facebook.github.io/react/) single-page application (SPA) that interacts with the
+The dashboard is implemented as a <a target="_blank" onclick="trackOutboundLink('https://facebook.github.io/react/')" href="https://facebook.github.io/react/">React</a> single-page application (SPA) that interacts with the
 [composed REST API](../architecture/rest-api).  It is stored in an [S3 bucket](../architecture/infrastructure-overview)
 that gets setup using the [lifecycle management CLI](../administration-guide/lifecycle-management-cli).
 
 # References
 
-*  [Cerberus Management Dashboard Github](https://github.com/Nike-Inc/cerberus-management-dashboard)
-*  [React JavaScript Library](https://facebook.github.io/react/)
-*  [Amazon S3](https://aws.amazon.com/s3/)
+*  <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-management-dashboard')" href="https://github.com/Nike-Inc/cerberus-management-dashboard">Cerberus Management Dashboard Github</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://facebook.github.io/react/')" href="https://facebook.github.io/react/">React JavaScript Library</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/s3/')" href="https://aws.amazon.com/s3/">Amazon S3</a>

@@ -3,7 +3,7 @@ layout: documentation
 title: Vault
 ---
 
-[Vault](https://www.vaultproject.io/) is a tool created by [Hashicorp](https://www.hashicorp.com/) for managing 
+<a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/')" href="https://www.vaultproject.io/">Vault</a> is a tool created by <a target="_blank" onclick="trackOutboundLink('https://www.hashicorp.com/')" href="https://www.hashicorp.com/">Hashicorp</a> for managing 
 secrets. Cerberus uses Vault for storage and securing access to data.
 
 Consul is a tool for service discovery, monitoring and configuration. In Cerberus, Consul is the storage backend for 
@@ -56,8 +56,8 @@ screenshot below corresponds with the Vault node above.
 
 # References
 
-* [Vault Documentation](https://www.vaultproject.io/docs/index.html)
-* [Vault Tokens](https://www.vaultproject.io/docs/concepts/tokens.html)
-* [Vault Github](https://github.com/hashicorp/vault)
-* [Consul Documentation](https://www.consul.io/docs/index.html)
-* [Consul Github](https://github.com/hashicorp/consul)
+* <a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/docs/index.html')" href="https://www.vaultproject.io/docs/index.html">Vault Documentation</a>
+* <a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/docs/concepts/tokens.html')" href="https://www.vaultproject.io/docs/concepts/tokens.html">Vault Tokens</a>
+* <a target="_blank" onclick="trackOutboundLink('https://github.com/hashicorp/vault')" href="https://github.com/hashicorp/vault">Vault Github</a>
+* <a target="_blank" onclick="trackOutboundLink('https://www.consul.io/docs/index.html')" href="https://www.consul.io/docs/index.html">Consul Documentation</a>
+* <a target="_blank" onclick="trackOutboundLink('https://github.com/hashicorp/consul')" href="https://github.com/hashicorp/consul">Consul Github</a>

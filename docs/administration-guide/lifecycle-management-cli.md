@@ -18,8 +18,8 @@ This command line tool includes features for:
 It greatly simplifies managing the entire [Cerberus infrastructure](../architecture/infrastructure-overview).
 
 Learn more about [creating a Cerberus environment](creating-an-environment) and see docs in 
-the [Github project](https://github.com/Nike-Inc/cerberus-lifecycle-cli).
+the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-lifecycle-cli')" href="https://github.com/Nike-Inc/cerberus-lifecycle-cli">Github project</a>.
 
 # References
 
-*  [AWS CloudFormation](https://aws.amazon.com/cloudformation/)
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/cloudformation/')" href="https://aws.amazon.com/cloudformation/">AWS CloudFormation</a>

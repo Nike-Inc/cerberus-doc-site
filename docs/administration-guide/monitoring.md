@@ -7,7 +7,7 @@ Monitoring should be setup for all of the Cerberus services with the tools used 
 
 # Health Check Lambda
 
-A [Health Check Lambda](https://github.com/Nike-Inc/cerberus-healthcheck-lambda) provides an end-to-end test of the 
+A <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-healthcheck-lambda')" href="https://github.com/Nike-Inc/cerberus-healthcheck-lambda">Health Check Lambda</a> provides an end-to-end test of the 
 general health of the production Cerberus environment. It checks that a lambda can authenticate with Cerberus which 
 will exercise the Cerberus Management Service (CMS) and its RDS DB. It then uses that auth token to read from the 
 healthcheck SDB which will exercise and test that [Vault](../architecture/vault) and Consul are up and 
@@ -16,7 +16,7 @@ running.  The lambda can be invoked via the AWS API Gateway.
 
 # References
 
-* [Health Check Lambda Github](https://github.com/Nike-Inc/cerberus-healthcheck-lambda)
-* [AWS Lambda](https://aws.amazon.com/lambda/)
-* [AWS API Gateway](https://aws.amazon.com/api-gateway/)
-* [Amazon Relational Database Service (RDS)](https://aws.amazon.com/rds/)
+* <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-healthcheck-lambda')" href="https://github.com/Nike-Inc/cerberus-healthcheck-lambda">Health Check Lambda Github</a>
+* <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/lambda/')" href="https://aws.amazon.com/lambda/">AWS Lambda</a>
+* <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/api-gateway/')" href="https://aws.amazon.com/api-gateway/">AWS API Gateway</a>
+* <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/rds/')" href="https://aws.amazon.com/rds/">Amazon Relational Database Service (RDS)</a>

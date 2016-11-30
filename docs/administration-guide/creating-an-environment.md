@@ -4,11 +4,11 @@ title: Creating a Cerberus Environment
 ---
 
 ## Create Cerberus AMIs
-Clone or download the [Cerberus Utility Script](https://github.com/Nike-Inc/cerberus-util-scripts) project and follow 
+Clone or download the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-util-scripts')" href="https://github.com/Nike-Inc/cerberus-util-scripts">Cerberus Utility Script</a> project and follow 
 the README to create AMIs for Consul, Vault, Gateway and Cerberus Management Service.
 
 ## Configure the Lifecycle Management CLI
-Ensure that you have the [Cerberus Lifecycle CLI](https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest)
+Ensure that you have the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest')" href="https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest">Cerberus Lifecycle CLI</a>
 available on your command line and that you have a Java 8 JRE, with Java Cryptography Extension (JCE) Unlimited
 Strength Jurisdiction Policy.
 
@@ -20,7 +20,7 @@ You may want to install the AWS CLI. It is not required for standing up an envir
 an environment. Then configure your AWS credentials via the CLI command: `aws configure`.
 
 If you do not wish to install the AWS CLI, see
-[Working with AWS Credentials](http://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) for
+<a target="_blank" onclick="trackOutboundLink('http://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html')" href="http://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html">Working with AWS Credentials</a> for
 alternative ways to supply credentials for the Cerberus Lifecycle CLI. We use the default credential provider chain with
 an added STSAssumeRoleSessionCredentialsProvider (so that build systems can assume a role). You can allow cerberus to
 assume a role by setting environment variables `CERBERUS_ASSUME_ROLE_ARN` and `CERBERUS_ASSUME_ROLE_EXTERNAL_ID`.
@@ -70,13 +70,13 @@ cms.us-west-2.demo.internal.cerberus-oss.io
 
 ### Creating a Certificate using LetsEncrypt
 
-[LetsEncrypt](https://letsencrypt.org/) is a free, automated, open Certificate Authority. This is a great option if your
+<a target="_blank" onclick="trackOutboundLink('https://letsencrypt.org/')" href="https://letsencrypt.org/">LetsEncrypt</a> is a free, automated, open Certificate Authority. This is a great option if your
 company does not have a defined process for creating certificates.
 
 To create a certificate for Cerberus, make sure to create your A records in the AWS Console (example CNAMEs above).
 These A records should point to a machine running a server (e.g. NGINX).
 
-Then, use [cert-bot](https://certbot.eff.org/) and run the cert-bot wizard.
+Then, use <a target="_blank" onclick="trackOutboundLink('https://certbot.eff.org/')" href="https://certbot.eff.org/">cert-bot</a> and run the cert-bot wizard.
 
 At the end, I had the following files in `/etc/letsencrypt/live/demo.cerberus-oss.io`:
 
@@ -125,7 +125,7 @@ Then, run the following commands to extract the private and public keys:
 More likely than not you will need to add your CA to the Java trust store, if it is not trusted by Java by default
 
 ** **Let's Encrypt is not trusted by Java in the default trust store, and needs to be added, I followed the directions
-outlined [here in this stack overflow answer](http://stackoverflow.com/a/37969672/770134)**
+outlined <a target="_blank" onclick="trackOutboundLink('http://stackoverflow.com/a/37969672/770134')" href="http://stackoverflow.com/a/37969672/770134">here in this stack overflow answer</a>**
 
 When you have the CA, you can run something like the following.
 
@@ -163,8 +163,8 @@ panel in the AWS Console.**
     
 This command creates a VPC for the Cerberus Environment including all needed networking resources: IAM Roles, S3 Buckets,
 Bucket policies, and the RDS Instance needed for the Cerberus Management Service. See the
-[VPC and Base CloudFormation Troposphere](https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/smaas-cf/smaas/vpc-and-base.py)
-and [Create Base Command Operation](https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/src/main/java/com/nike/cerberus/operation/core/CreateBaseOperation.java) for more information.
+<a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/smaas-cf/smaas/vpc-and-base.py')" href="https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/smaas-cf/smaas/vpc-and-base.py">VPC and Base CloudFormation Troposphere</a>
+and <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/src/main/java/com/nike/cerberus/operation/core/CreateBaseOperation.java')" href="https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/src/main/java/com/nike/cerberus/operation/core/CreateBaseOperation.java">Create Base Command Operation</a> for more information.
 
     
 ## Whitelist CIDRs and PORTS
@@ -240,8 +240,8 @@ This command creates a Consul cluster (using the AMI we baked earlier), starts C
 configuration file that we generated. AWS Tags are then used to find other Consul clients in the same environment and
 join their cluster, or to create a new Consul cluster if no other clients are found.
 
-The Consul instances are configured to automatically backup there data to S3. Feel free to look through the [Cerberus
-Consul Puppet Module](https://github.com/Nike-Inc/cerberus-consul-puppet-module) to learn more about how we configure
+The Consul instances are configured to automatically backup there data to S3. Feel free to look through the 
+<a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-consul-puppet-module')" href="https://github.com/Nike-Inc/cerberus-consul-puppet-module">Cerberus Consul Puppet Module</a> to learn more about how we configure
 Consul.
 
 ## Upload Vault Certificate
@@ -295,7 +295,7 @@ itself.
 
 Allowing Vault instances to unseal themselves makes the entire cluster resistant to failure because if one instance
 becomes unhealthy or shuts down, then the ASG will spawn a new instance that can bootstrap itself. Feel free to look
-through the [Cerberus Vault Puppet Module](https://github.com/Nike-Inc/cerberus-vault-puppet-module) to learn more
+through the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-vault-puppet-module')" href="https://github.com/Nike-Inc/cerberus-vault-puppet-module">Cerberus Vault Puppet Module</a> to learn more
 about how we configure Vault.
 
 ## Initialize Vault
