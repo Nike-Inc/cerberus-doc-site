@@ -1,12 +1,19 @@
-# [engineering.nike.com/cerberus](http://engineering.nike.com/cerberus)
 
-## Cerberus
+# For information about Cerberus, please see [http://engineering.nike.com/cerberus](http://engineering.nike.com/cerberus)
 
-The source code for [engineering.nike.com/cerberus](http://engineering.nike.com/cerberus)
+# Cerberus
 
-Used to document Cerberus and its related components.
+Cerberus is a system for safely storing and managing secrets, targeted to running cloud 
+applications in AWS.
 
-### Development
+This project is the source code for the [Cerberus website](http://engineering.nike.com/cerberus).
+
+Please see the [Cerberus website](http://engineering.nike.com/cerberus) for more information
+about Cerberus and to get an overview of the 
+various [components](http://engineering.nike.com/cerberus/components/).
+
+## Cerberus Website Development
+
 This GitHub page is a [Jekyll](https://jekyllrb.com/) site.
 
 To run the site locally you will need to get [Jekyll](https://jekyllrb.com/docs/installation/) up and running.
@@ -19,6 +26,6 @@ Once you have Jekyll installed you can host the site by running the following co
 
 Enable live reloading by using `bundle exec guard`
 
-### License
+## License
 
 See the [LICENSE](https://github.com/Nike-Inc/cerberus/blob/master/LICENSE.md) file.
