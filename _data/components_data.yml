@@ -90,7 +90,7 @@
     description: A Node client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
     language: js
     url: https://github.com/Nike-Inc/cerberus-node-client
-    public: false
+    public: true
 
 - name: Utilities
   components:
