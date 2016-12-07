@@ -92,91 +92,13 @@ can [contribute](../contributing/how-to-contribute) a new client or use the [RES
 
 To make use of Cerberus locally you'll need a token to access secrets from your application.
 Most of the clients allow setting of a environmental or system property to enable local development with a user token.
-Below is a shell script you can add to your dev machine to retrieve a user token for development work.
+Download <a target="_blank" onclick="trackOutboundLink('https://raw.githubusercontent.com/Nike-Inc/cerberus/master/docs/user-guide/cerberus-token.sh')" href="https://raw.githubusercontent.com/Nike-Inc/cerberus/master/docs/user-guide/cerberus-token.sh">cerberus-token.sh</a> to 
+your dev machine to retrieve a token for development work.
 
-The below shell script requires <a target="_blank" onclick="trackOutboundLink('https://stedolan.github.io/jq/')" href="https://stedolan.github.io/jq/">jq</a> availible in your path
+This shell script requires <a target="_blank" onclick="trackOutboundLink('https://stedolan.github.io/jq/')" href="https://stedolan.github.io/jq/">jq</a> available in your path
+
+Use the --help option for usage:
 
 {% highlight bash %}
-#!/usr/bin/env bash
-
-if [ -z ${CERBERUS_HOST+x} ];
-then
-    echo -n "Enter your Cerberus Api Domain ex: https://demo.cerberus-oss.io "
-    read CERBERUS_HOST
-else
-    echo "HOST is set to '$CERBERUS_HOST'";
-fi
-
-if [ -z ${USER_OR_EMAIL+x} ];
-then
-    echo -n "Enter your username / email: "
-    read USER_OR_EMAIL
-else
-    echo "USER_OR_EMAIL is set to '$USER_OR_EMAIL'";
-fi
-
-if [ -z ${CERBERUS_PASS+x} ];
-then
-    echo -n "Enter your password: "
-    read -s CERBERUS_PASS
-else
-    echo "CERBERUS_PASS is set, not prompting for password";
-fi
-
-echo ""
-
-DATA=$(curl -s -u ${USER_OR_EMAIL}:${CERBERUS_PASS} ${CERBERUS_HOST}/v2/auth/user)
-
-STATUS=$(echo $DATA | jq ".status" | cut -d '"' -f 2)
-
-if [ "$STATUS" == "success" ]
-then
-    echo "Success, use the following token for talking to Cerberus"
-    echo ""
-    echo $DATA | jq ".data.client_token.client_token" | cut -d '"' -f 2
-    echo ""
-    echo "The token has the following policies"
-    echo $DATA | jq ".data.client_token.policies"
-    exit 0
-fi
-
-if [ "$STATUS" == "mfa_req" ]
-then
-    STATE_TOKEN=$(echo $DATA | jq ".data.state_token" | cut -d '"' -f 2)
-
-    echo "You have the following devices"
-    echo $DATA | jq ".data.devices"
-
-    echo -n "Enter the device id you would like to use: "
-    read DEVICE_ID
-
-    echo -n "ENTER FACTOR: "
-    read FACTOR
-
-    DATA=$(curl -s ${CERBERUS_HOST}/v2/auth/mfa_check \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d "{
-        \"otp_token\": \"${FACTOR}\",
-        \"device_id\": \"${DEVICE_ID}\",
-        \"state_token\": \"${STATE_TOKEN}\"
-    }")
-
-    STATUS=$(echo $DATA | jq ".status" | cut -d '"' -f 2)
-
-    if [ "$STATUS" == "success" ]
-    then
-        echo "Success, use the following token for talking to Cerberus"
-        echo ""
-        echo $DATA | jq ".data.client_token.client_token" | cut -d '"' -f 2
-        echo ""
-        echo "The token has the following policies"
-        echo $DATA | jq ".data.client_token.policies"
-        exit 0
-    fi
-fi
-
-echo "Error something went wrong:"
-echo $DATA | jq
-exit 1
+./cerberus-token.sh --help
 {% endhighlight %}
