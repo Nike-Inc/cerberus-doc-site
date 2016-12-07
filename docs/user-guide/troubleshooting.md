@@ -79,3 +79,11 @@ configurations.all {
 
 Maven users can use the <a target="_blank" onclick="trackOutboundLink('http://maven.apache.org/plugins/maven-dependency-plugin/tree-mojo.html')" href="http://maven.apache.org/plugins/maven-dependency-plugin/tree-mojo.html">dependency tree</a>
 plugin to learn more about how dependencies are being resolved.
+
+
+# 301 Moved Permanently error during Auth call
+
+#### cerberus-token.sh
+
+This showed up when a new version of cerberus-token.sh that depended on /v2/auth/user was used with
+an old version of CMS that only implemented /v1/auth/user.
