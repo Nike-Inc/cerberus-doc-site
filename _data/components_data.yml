@@ -10,7 +10,7 @@
 
   - name: Cerberus Management Dashboard
     description: >
-      A self service web UI for administration of Safe Depoist Boxes, access control, and data.  This is implemented as
+      A self service web UI for administration of Safe Deposit Boxes, access control, and data.  This is implemented as
       a <a href="https://facebook.github.io/react/">React</a> single-page application (SPA).
     language: js
     url: https://github.com/Nike-Inc/cerberus-management-dashboard
