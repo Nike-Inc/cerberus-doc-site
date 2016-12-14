@@ -4,17 +4,22 @@ title: Creating a Cerberus Environment
 ---
 
 ## Create Cerberus AMIs
+
 Clone or download the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-util-scripts')" href="https://github.com/Nike-Inc/cerberus-util-scripts">Cerberus Utility Script</a> project and follow 
 the README to create AMIs for Consul, Vault, Gateway and Cerberus Management Service.
 
 ## Configure the Lifecycle Management CLI
-Ensure that you have the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest')" href="https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest">Cerberus Lifecycle CLI</a>
-available on your command line and that you have a Java 8 JRE, with Java Cryptography Extension (JCE) Unlimited
-Strength Jurisdiction Policy.
 
-For this guide I will assume you have the following in your bash profile 
-`alias cerberus='java -jar /path/to/cerberus.jar'`. Otherwise, you can replace `cerberus` with
-`java -jar /path/to/cerberus.jar` in the commands below.
+Ensure you have a Java 8 JRE with Java Cryptography Extension (JCE) Unlimited
+Strength Jurisdiction Policy installed and available on your path (Note: a second download is required).
+
+Download the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest')" href="https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest">Cerberus Lifecycle CLI</a>
+(both the cerberus shell script and jar) to some location like `~/Applications/cerberus` and setup environment variables:
+
+```bash
+export CERBERUS_HOME=~/Applications/cerberus
+export PATH=$PATH:$CERBERUS_HOME
+```
 
 You may want to install the AWS CLI. It is not required for standing up an environment, but it is required for deleting
 an environment. Then configure your AWS credentials via the CLI command: `aws configure`.
@@ -27,7 +32,7 @@ assume a role by setting environment variables `CERBERUS_ASSUME_ROLE_ARN` and `C
 
 ## Configure a Hosted Zone for your AWS account.
 
-Ensure that you have a Hosted Zone configured in AWS.
+Ensure that you have a Hosted Zone configured in AWS (under Route 53 console).
 
 ## Create a Certificate for the Cerberus Environment
 
@@ -144,8 +149,8 @@ Parameter                      | Notes
 -------------------------------|------
 admin-role-arn                 | an ARN for an IAM Role that will be given permission to administrate the KMS keys created by the CLI. If you have SSO integrated into AWS IAM and there is a role that admins get use that role, or else just create a new role for this.
 vpc-hosted-zone-name           | This is the private hosted zone that ELBs in the Cerberus env VPC will use. in our demo case we would use `demo.internal.cerberus-oss.io`
-owner-email                    | This is specific to the way we tag resources, we haven't made this optional yet, use an email that is for you team or your email. This value will be tagged on all resources possible.
-costcenter                     | This is specific to the way we tag resources, we haven't made this optional yet, you can put what ever you would like here, `no-op` would work
+owner-email                    | Provide a team or owner email. This value will be tagged on all resources possible to make it obvious the team or individual who owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+costcenter                     | Provide a cost center name or other value (`no-op` would work).  This value will be tagged on all resources possible and is helpful for internal billing or other purposes. (This is specific to how Nike tags resources and should be made optional in the future).
         
 Here is the command to run with our demo values, make sure to replace the values with your own.
 
@@ -220,10 +225,9 @@ Parameter                      | Notes
 instance-size | The instance size you would like to use for Consul, for the demo I am going to use micros, you can always use the update command to change the size later.
 key-pair-name | The name of the ssh key pair you created easier for us we created one called `cerberus-demo`
 ami-id        | The ami-id that for `consul` that you created earlier.
-owner-group   | This is specific to the way we tag resources, we haven't made this optional yet, what ever value you want. This value will be tagged on all resources possible.
-owner-email   | This is specific to the way we tag resources, we haven't made this optional yet, use an email that is for you team or your email. This value will be tagged on all resources possible.
-costcenter    | This is specific to the way we tag resources, we haven't made this optional yet, you can put what ever you would like here, `no-op` would work
-
+owner-group   | Provide an owning group name. This value will be tagged on all resources possible to make it obvious what group owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+owner-email   | Provide a team or owner email. This value will be tagged on all resources possible to make it obvious the team or individual who owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+costcenter    | Provide a cost center name or other value (`no-op` would work).  This value will be tagged on all resources possible and is helpful for internal billing or other purposes. (This is specific to how Nike tags resources and should be made optional in the future).
 
     cerberus --debug \
     -e demo \
@@ -273,9 +277,9 @@ Parameter                      | Notes
 instance-size | The instance size you would like to use for Consul, for the demo I am going to use micros, you can always use the update command to change the size later.
 key-pair-name | The name of the ssh key pair you created easier for us we created one called `cerberus-demo`
 ami-id        | The ami-id that for `vault` that you created earlier.
-owner-group   | This is specific to the way we tag resources, we haven't made this optional yet, what ever value you want. This value will be tagged on all resources possible.
-owner-email   | This is specific to the way we tag resources, we haven't made this optional yet, use an email that is for you team or your email. This value will be tagged on all resources possible.
-costcenter    | This is specific to the way we tag resources, we haven't made this optional yet, you can put what ever you would like here, `no-op` would work
+owner-group   | Provide an owning group name. This value will be tagged on all resources possible to make it obvious what group owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+owner-email   | Provide a team or owner email. This value will be tagged on all resources possible to make it obvious the team or individual who owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+costcenter    | Provide a cost center name or other value (`no-op` would work).  This value will be tagged on all resources possible and is helpful for internal billing or other purposes. (This is specific to how Nike tags resources and should be made optional in the future).
 
     cerberus --debug \
     -e demo \
@@ -444,9 +448,9 @@ Parameter                      | Notes
 instance-size | The instance size you would like to use for Consul, for the demo I am going to use micros, you can always use the update command to change the size later.
 key-pair-name | The name of the ssh key pair you created easier for us we created one called `cerberus-demo`
 ami-id        | The ami-id that for `cms` that you created earlier.
-owner-group   | This is specific to the way we tag resources, we haven't made this optional yet, what ever value you want. This value will be tagged on all resources possible.
-owner-email   | This is specific to the way we tag resources, we haven't made this optional yet, use an email that is for you team or your email. This value will be tagged on all resources possible.
-costcenter    | This is specific to the way we tag resources, we haven't made this optional yet, you can put what ever you would like here, `no-op` would work
+owner-group   | Provide an owning group name. This value will be tagged on all resources possible to make it obvious what group owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+owner-email   | Provide a team or owner email. This value will be tagged on all resources possible to make it obvious the team or individual who owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+costcenter    | Provide a cost center name or other value (`no-op` would work).  This value will be tagged on all resources possible and is helpful for internal billing or other purposes. (This is specific to how Nike tags resources and should be made optional in the future).
 
     cerberus --debug \
     -e demo \
@@ -512,9 +516,9 @@ hosted-zone-id | This will be the Hosted Zone id of the Route 53 Hosted Zone tha
 instance-size  | The instance size you would like to use for Consul, for the demo I am going to use micros, you can always use the update command to change the size later.
 key-pair-name  | The name of the ssh key pair you created easier for us we created one called `cerberus-demo`
 ami-id         | The ami-id that for `gateway` that you created earlier.
-owner-group    | This is specific to the way we tag resources, we haven't made this optional yet, what ever value you want. This value will be tagged on all resources possible. 
-owner-email    | This is specific to the way we tag resources, we haven't made this optional yet, use an email that is for you team or your email. This value will be tagged on all resources possible.
-costcenter     | This is specific to the way we tag resources, we haven't made this optional yet, you can put what ever you would like here, `no-op` would work
+owner-group    | Provide an owning group name. This value will be tagged on all resources possible to make it obvious what group owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+owner-email    | Provide a team or owner email. This value will be tagged on all resources possible to make it obvious the team or individual who owns the resources. (This is specific to how Nike tags resources and should be made optional in the future).
+costcenter     | Provide a cost center name or other value (`no-op` would work).  This value will be tagged on all resources possible and is helpful for internal billing or other purposes. (This is specific to how Nike tags resources and should be made optional in the future).
 
     cerberus --debug \
     -e demo \
