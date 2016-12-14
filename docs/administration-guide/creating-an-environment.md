@@ -11,8 +11,7 @@ the README to create AMIs for Consul, Vault, Gateway and Cerberus Management Ser
 ## Configure the Lifecycle Management CLI
 
 Ensure you have a Java 8 JRE with Java Cryptography Extension (JCE) Unlimited
-Strength Jurisdiction Policy installed and available on your path.  Double check with `java -version` and also look 
-under `JAVA_HOME/jre/lib/security` for `US_export_policy.jar` and `local_policy.jar`.
+Strength Jurisdiction Policy installed and available on your path (Note: a second download is required).
 
 Download the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest')" href="https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest">Cerberus Lifecycle CLI</a>
 (both the cerberus shell script and jar) to some location like `~/Applications/cerberus` and setup environment variables:
