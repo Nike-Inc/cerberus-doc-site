@@ -196,6 +196,17 @@ For the demo environment I am going to whitelist my current public IP4 Address.
 You can whitelist multiple CIDRs just like you can do with the ports `-cidr 192.168.0.2/32 -cidr 192.168.0.3/32`
 
 
+## Upload Consul Certificate
+
+Upload the Consul Certificate
+
+    cerberus --debug \
+    -e demo \
+    -r us-west-2 \
+    upload-cert \
+    --stack-name consul \
+    --cert-path $CERBERUS_CERT_DIR
+
 ## Create Consul Config
 
 Create the config needed for consul to run
