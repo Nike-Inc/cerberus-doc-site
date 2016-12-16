@@ -3,6 +3,11 @@ layout: documentation
 title: Creating a Cerberus Environment
 ---
 
+The most difficult part of setting up a Cerberus environment is getting the certificates and keys setup correctly. This
+is the most common cause of errors.  Otherwise the process is very automated and well tested.
+
+Note: many of the commands complete quickly while some of the CloudFormation steps may take an hour to complete.
+
 ## Create Cerberus AMIs
 
 Clone or download the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-util-scripts')" href="https://github.com/Nike-Inc/cerberus-util-scripts">Cerberus Utility Script</a> project and follow 
@@ -341,6 +346,8 @@ Make sure the CA is in "DER" format.
 
 <a href="#add-ca">See add the CA to your java trust store.</a>
 
+Alternatively, a simple `ERROR: I/O error while communicating with vault` may be due to a proxy or firewall issue.
+
 ## Unseal Vault
 
 Now we need to manually unseal vault for the first time. Instances will unseal themselves after future updates and
@@ -544,7 +551,8 @@ costcenter     | Provide a cost center name or other value (`no-op` would work).
     --owner-group no-op \
     --ami-id ami-8144e9e1
 
-**NOTE: This command takes a long time**
+**This command will take a long time to run, if your worried that the CLI froze, you can check the CloudFormation
+panel in the AWS Console.**
 
 ## Create the Cloud Front Log Processing Lambda Config
 
@@ -593,6 +601,7 @@ to origin directly. Let's use Amazons Lambda for whitelisting only CloudFront IP
     --artifact-url https://github.com/Nike-Inc/cerberus-lifecycle-cli/raw/master/update_security_groups.zip \
     --lambda-name CLOUD_FRONT_SG_GROUP_IP_SYNC
 
+In the above command, `CLOUD_FRONT_SG_GROUP_IP_SYNC` is an enum name.
 
 ## Create the Lambda function and subscribe it to the AWS IP change topic
 
