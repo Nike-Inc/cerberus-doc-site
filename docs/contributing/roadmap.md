@@ -3,9 +3,11 @@ layout: documentation
 title: Roadmap
 ---
 
--  Finish open sourcing all components listed on the [components page](../components) that are not yet public - Dec 2016
--  Make Cerberus easier to use and deploy for other companies - Winter 2016/2017
+-  Add Okta support
+-  Add additional commands to CLI for rotation of TLS Certificates and Vault tokens
+-  Make Cerberus easier to use and deploy for other companies
    -  Pre-built AMIs, automation, improved documentation, work with early adopters
+-  Finish open sourcing all components listed on the [components page](../components) that are not yet public
 -  Treat files in a first class manner (files are supported via [API](../user-guide/file-storage) but support needs to be added to UI)
 -  Improvements for SOX/PCI compliance such as auditing, change tracking
 -  Increase horizontal scalability (consider replacing vault)
