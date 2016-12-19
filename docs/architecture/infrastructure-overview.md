@@ -18,7 +18,7 @@ CloudFront access logs are parsed using a <a target="_blank" onclick="trackOutbo
 that automatically blacklists IP addresses exceeding a configurable request rate limit.  The access logs are stored in 
 S3 and every time a new log chunk is written to S3, the Lambda is triggered (every 10 minutes or so).
 
-<img src="../../images/infrastructure-overview/edge-security.svg" />
+<img src="../../images/infrastructure-overview/edge-security-overview.png" />
 
 For more background information, please see:
 

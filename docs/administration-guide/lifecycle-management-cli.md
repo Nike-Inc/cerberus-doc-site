@@ -13,7 +13,7 @@ This command line tool includes features for:
 *  Maintenance
 *  Recovery
 
-<img src="../../images/admin-guide/admin-cli.png" style="width: 245px; height: 278px; margin-left: 40px;" />
+<img src="../../images/admin-guide/lifecycle-management-cli.png" style="width: 600;" />
 
 It greatly simplifies managing the entire [Cerberus infrastructure](../architecture/infrastructure-overview).
 
