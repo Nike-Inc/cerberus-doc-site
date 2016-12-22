@@ -9,11 +9,11 @@
 # Customize these settings based on your environment
 CERBERUS_DEFAULT_HOST="https://demo.cerberus-oss.io"
 # Depending on how login is configured for Cerberus, prompt for username or email address
-USER_PROMPT="Enter login: "
+#USER_PROMPT="Enter login: "
 #USER_PROMPT="Enter AD username: "
-#USER_PROMPT="Enter email address: "
+USER_PROMPT="Enter email address: "
 # If you've customized this script for your company, please modify version
-SCRIPT_VERSION=1.0.0
+SCRIPT_VERSION=1.0.1
 
 
 # Global variables
