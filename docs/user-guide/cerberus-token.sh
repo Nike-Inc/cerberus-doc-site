@@ -13,7 +13,7 @@ CERBERUS_DEFAULT_HOST="https://demo.cerberus-oss.io"
 #USER_PROMPT="Enter AD username: "
 USER_PROMPT="Enter email address: "
 # If you've customized this script for your company, please modify version
-SCRIPT_VERSION=1.0.0
+SCRIPT_VERSION=1.0.1
 
 
 # Global variables
