@@ -92,10 +92,9 @@ can [contribute](../contributing/how-to-contribute) a new client or use the [RES
 
 To make use of Cerberus locally you'll need a token to access secrets from your application.
 Most of the clients allow setting of a environmental or system property to enable local development with a user token.
-Download <a target="_blank" onclick="trackOutboundLink('https://raw.githubusercontent.com/Nike-Inc/cerberus/master/docs/user-guide/cerberus-token.sh')" href="https://raw.githubusercontent.com/Nike-Inc/cerberus/master/docs/user-guide/cerberus-token.sh">cerberus-token.sh</a> to 
-your dev machine to retrieve a token for development work.
 
-This shell script requires <a target="_blank" onclick="trackOutboundLink('https://stedolan.github.io/jq/')" href="https://stedolan.github.io/jq/">jq</a> available in your path
+Download <a target="_blank" onclick="trackOutboundLink('https://raw.githubusercontent.com/Nike-Inc/cerberus/master/docs/user-guide/cerberus-token.sh')" href="https://raw.githubusercontent.com/Nike-Inc/cerberus/master/docs/user-guide/cerberus-token.sh">cerberus-token.sh</a> to 
+your dev machine to retrieve a token for development work.  This shell script requires <a target="_blank" onclick="trackOutboundLink('https://stedolan.github.io/jq/')" href="https://stedolan.github.io/jq/">jq</a> available in your path
 
 Use the --help option for usage:
 
