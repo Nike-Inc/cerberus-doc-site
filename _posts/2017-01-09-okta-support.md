@@ -1,6 +1,8 @@
 ---
-layout: documentation
+layout: post
 title: Okta Support Added
+date:   2017-01-09 12:00:00 -0700
+categories: news
 ---
 
 Cerberus now supports 
