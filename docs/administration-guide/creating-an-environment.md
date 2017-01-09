@@ -424,18 +424,10 @@ admin-group | The group that admin users belong to, admin users have elevated pr
 You can add arbitrary params that will get written to the properties file by adding -P key=value
 
 CMS requires the parameter `-P cms.auth.connector` with the fully qualified class name of the Auth connector 
-implementation, e.g. `com.nike.cerberus.auth.connector.onelogin.OneLoginAuthConnector`
+implementation, e.g. `com.nike.cerberus.auth.connector.onelogin.OneLoginAuthConnector`.  The example below
+shows other required parameters for OneLogin.
 
-The OneLogin Auth Connector requires the following -P parameters:
-
-Parameter                             | Notes
---------------------------------------|------
-auth.connector.onelogin.api_region    | The OneLogin API region ex: us
-auth.connector.onelogin.client_id     | The OneLogin API Client ID for this app, create one for Cerberus
-auth.connector.onelogin.client_secret | The OneLogin API Client Secret for this app, create one for Cerberus
-auth.connector.onelogin.subdomain     | The OneLogin API Subdomain ex: nike
-
-For more information about auth connectors, including using Okta or writing your own custom auth connector, please 
+For more information about auth connectors, including configuration options, using Okta, or writing your own custom auth connector, please 
 see the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-management-service/')" href="https://github.com/Nike-Inc/cerberus-management-service/">CMS</a> project.
 
 For the demo environment I will run the command with the following:
