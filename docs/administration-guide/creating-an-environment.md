@@ -413,10 +413,7 @@ when they authenticate through CMS. This command needs proxy information if avai
 ## Create CMS Config
 
 Now we need to generate an encrypted properties file for CMS that contains the token as well as the auth connector
-information. Currently the only supported auth connector is OneLogin.
-
-See the README for CMS to learn more about
-implementing your own auth connector. We plan to create a connector for OKTA very soon.
+information. Supported auth connectors include OneLogin and Okta but it is easy to add others. 
 
 The following parameters are required for all connectors
 
@@ -426,12 +423,10 @@ admin-group | The group that admin users belong to, admin users have elevated pr
 
 You can add arbitrary params that will get written to the properties file by adding -P key=value
 
-CMS requires the following -P parameters
+CMS requires the parameter `-P cms.auth.connector` with the fully qualified class name of the Auth connector 
+implementation, e.g. `com.nike.cerberus.auth.connector.onelogin.OneLoginAuthConnector`
 
-`cms.auth.connector`, The fully qualified classname of the Auth connector implementation, currently we only have
-OneLogin: com.nike.cerberus.auth.connector.onelogin.OneLoginAuthConnector
-
-OneLogin Auth Connector requires the following -P parameters
+The OneLogin Auth Connector requires the following -P parameters:
 
 Parameter                             | Notes
 --------------------------------------|------
@@ -440,10 +435,10 @@ auth.connector.onelogin.client_id     | The OneLogin API Client ID for this app,
 auth.connector.onelogin.client_secret | The OneLogin API Client Secret for this app, create one for Cerberus
 auth.connector.onelogin.subdomain     | The OneLogin API Subdomain ex: nike
 
-** **Note: Our OneLogin Connector Implementation: gets user groups from the member-of field, which is wired to our
-LDAP groups. If you do not  use a similar system, than our OneLogin connector in its current state will not work for you.
+For more information about auth connectors, including using Okta or writing your own custom auth connector, please 
+see the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-management-service/')" href="https://github.com/Nike-Inc/cerberus-management-service/">CMS</a> project.
 
-For the demo environment I will run the command with the following
+For the demo environment I will run the command with the following:
 
     cerberus --debug \
     -e demo \
