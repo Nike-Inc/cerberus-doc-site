@@ -3,8 +3,8 @@ layout: documentation
 title: File Storage
 ---
 
-The UI of the dashboard does not yet support uploading of file contents but storing files is supported via API using
-one of the Cerberus clients or even over HTTPS using curl or wget.
+The UI of the dashboard allows storing plain text values including newline characters.  Storing other types of values 
+is supported via API using one of the Cerberus clients or even over HTTPS using curl or wget.
 
 For example, to write a certificate and java keystore to a safe deposit box in Cerberus:
 
