@@ -81,9 +81,14 @@ Maven users can use the <a target="_blank" onclick="trackOutboundLink('http://ma
 plugin to learn more about how dependencies are being resolved.
 
 
-# 301 Moved Permanently error during Auth call
+# cerberus-token.sh
 
-#### cerberus-token.sh
+#### 301 Moved Permanently error during Auth call
 
 This showed up when a new version of cerberus-token.sh that depended on /v2/auth/user was used with
 an old version of CMS that only implemented /v1/auth/user.
+
+#### Null token during local development
+
+This issue has showed up when an old version of <a target="_blank" onclick="trackOutboundLink('https://raw.githubusercontent.com/Nike-Inc/cerberus/master/docs/user-guide/cerberus-token.sh')" href="https://raw.githubusercontent.com/Nike-Inc/cerberus/master/docs/user-guide/cerberus-token.sh">cerberus-token.sh</a> was
+used with a newer version of Cerberus that included Multi-Factor Authentication (MFA).
