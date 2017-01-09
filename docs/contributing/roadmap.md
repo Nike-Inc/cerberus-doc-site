@@ -3,7 +3,6 @@ layout: documentation
 title: Roadmap
 ---
 
--  Add Okta support
 -  Add additional commands to CLI for rotation of TLS Certificates and Vault tokens
 -  Make Cerberus easier to use and deploy for other companies
    -  Pre-built AMIs, automation, improved documentation, work with early adopters
