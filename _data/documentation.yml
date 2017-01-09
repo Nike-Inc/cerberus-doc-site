@@ -27,12 +27,10 @@ table_of_contents:
         displayname: Monitoring
   - directory: architecture
     pages:
-      - filename: overview
-        displayname: Overview
-      - filename: rest-api
-        displayname: REST API
       - filename: infrastructure-overview
         displayname: Infrastructure Overview
+      - filename: rest-api
+        displayname: REST API
       - filename: vault
         displayname: Vault
       - filename: authentication
