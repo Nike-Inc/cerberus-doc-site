@@ -34,6 +34,7 @@ required for managing secrets are exposed.
 
 <img src="../../images/infrastructure-overview/routing-requests.png" style="width: 75%; height: 75%" />
 
+See the [REST API](rest-api) for more detail on how requests are routed.
 
 # Vault and Consul
 
@@ -51,6 +52,8 @@ Vault project including:
 *  User Authentication
 *  AWS IAM Role Authentication
 *  Permissions Management
+
+RDS is used to storing meta data about the SDBs while Vault/Consul are used for storing the actual encrypted secrets.
 
 <img src="../../images/infrastructure-overview/cerberus-management-service.png" style="width: 75%; height: 75%;" />
 
