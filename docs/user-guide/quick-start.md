@@ -76,12 +76,12 @@ URL friendly.  So, if you had 'My Awesome App' in the Applications category your
 
 # 4. Access Your Secrets with Cerberus
 
-Use one of the clients
+Use one of the clients:
 
 * <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-java-client')" href="https://github.com/Nike-Inc/cerberus-java-client">Java Client</a>
 * <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-archaius-client')" href="https://github.com/Nike-Inc/cerberus-archaius-client">Java Archaius Polling Client</a> (generally preferred for 
   companies using [Archaius](archaius))
-* Others coming soon
+* <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-java-client')" href="https://github.com/Nike-Inc/cerberus-node-client">Node Client</a>
 
 Don't see your desired client? Cerberus has a REST API. You 
 can [contribute](../contributing/how-to-contribute) a new client or use the [REST API](../architecture/rest-api) directly.
