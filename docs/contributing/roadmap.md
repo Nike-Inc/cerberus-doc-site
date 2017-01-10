@@ -3,6 +3,7 @@ layout: documentation
 title: Roadmap
 ---
 
+-  Improve cross-region back-up and recovery process
 -  Make Cerberus easier to use and deploy for other companies
    -  Pre-built AMIs, automation, improved documentation, work with early adopters
    -  Simplify environment creation by defining Cerberus environment in YAML and adding composite commands
