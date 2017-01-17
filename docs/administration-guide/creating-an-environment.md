@@ -200,6 +200,8 @@ For the demo environment I am going to whitelist my current public IP4 Address.
 
 You can whitelist multiple CIDRs just like you can do with the ports `-cidr 192.168.0.2/32 -cidr 192.168.0.3/32`
 
+If you are using any NAT boxes, you will need to consider the aggregated traffic when you think about the limits or
+you will want to whitelist any NAT box IP addresses.
 
 ## Upload Consul Certificate
 
