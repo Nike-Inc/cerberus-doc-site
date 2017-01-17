@@ -13,4 +13,5 @@ seems well worth it considering how frequently people have hit issues.  In the f
 might look at more elegant solutions to this problem such as using REST for AWS calls or other 
 packaging changes.
 
-Please see the individual GitHub repos for the latest information on releases and current versions.
+Please see the individual GitHub repos for the latest information on releases and current versions
+(not all releases are mentioned on the news feed).

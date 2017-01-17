@@ -18,7 +18,8 @@ For example,
 -  5000 clients polling every 5 minutes results in a reasonable ~17 requests per second
 
 The <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-cloudfront-lambda')" href="https://github.com/Nike-Inc/cerberus-cloudfront-lambda">rate limiting lambda</a> is configured to auto-block
-IPs making more than a maximum requests per minute (configurable).
+IPs making more than a maximum requests per minute (configurable).  If you are using any NAT boxes, you will need to
+consider the aggregated traffic when you think about the limits or you will want to whitelist any NAT box IP addresses.
 
 Request limits will vary by organization and use case but a good rule of thumb would be to make less than 
 100 requests per hour per IP.
