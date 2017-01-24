@@ -4,7 +4,7 @@ title: Infrastructure Overview
 ---
 
 
-<img src="../../images/infrastructure-overview/infrastructure-overview.png" />
+<img src="../../images/infrastructure-overview/infrastructure-overview.png" alt="Cerberus infrastructure overview diagram" />
 
 
 # Edge Security
@@ -18,7 +18,7 @@ CloudFront access logs are parsed using a <a target="_blank" onclick="trackOutbo
 that automatically blacklists IP addresses exceeding a configurable request rate limit.  The access logs are stored in 
 S3 and every time a new log chunk is written to S3, the Lambda is triggered (every 10 minutes or so).
 
-<img src="../../images/infrastructure-overview/edge-security-overview.png" />
+<img src="../../images/infrastructure-overview/edge-security-overview.png" alt="Cerberus edge security diagram" />
 
 For more background information, please see:
 
@@ -32,7 +32,7 @@ Auto Scaling Group (ASG) of <a target="_blank" onclick="trackOutboundLink('https
 [Cerberus Dashboard](../user-guide/dashboard), [Vault](vault), and the Cerberus Management Service. Only APIs from Vault that are 
 required for managing secrets are exposed.
 
-<img src="../../images/infrastructure-overview/routing-requests.png" style="width: 75%; height: 75%" />
+<img src="../../images/infrastructure-overview/routing-requests.png" alt="Cerberus routing requests diagram" style="width: 75%; height: 75%" />
 
 See the [REST API](rest-api) for more detail on how requests are routed.
 
@@ -40,7 +40,7 @@ See the [REST API](rest-api) for more detail on how requests are routed.
 
 Consul is the underlying storage for [Vault](vault).
 
-<img src="../../images/infrastructure-overview/vault-and-consul.png" style="width: 75%; height: 75%"/>
+<img src="../../images/infrastructure-overview/vault-and-consul.png" alt="Cerberus Vault and Consul diagram" style="width: 75%; height: 75%"/>
 
 
 # Cerberus Management Service
@@ -55,7 +55,7 @@ Vault project including:
 
 RDS is used to storing meta data about the SDBs while Vault/Consul are used for storing the actual encrypted secrets.
 
-<img src="../../images/infrastructure-overview/cerberus-management-service.png" style="width: 75%; height: 75%;" />
+<img src="../../images/infrastructure-overview/cerberus-management-service.png" alt="Cerberus Management Service diagram" style="width: 75%; height: 75%;" />
 
 
 # References

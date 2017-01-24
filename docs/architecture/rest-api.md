@@ -18,7 +18,7 @@ Cerberus is a composed API behind a reverse proxy that delegates to 3 services.
 
 Please see the documentation for the underlying API you wish to work with.
     
-<img src="../../images/arch-diagrams/cerberus-core-components-hlo.png" />
+<img src="../../images/arch-diagrams/cerberus-core-components-hlo.png" alt="Cerberus REST API diagram" />
 
 # References
 
