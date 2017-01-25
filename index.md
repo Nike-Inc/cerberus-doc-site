@@ -1,6 +1,6 @@
 ---
 layout: default
-title: landing
+title: Home
 ---
 
 {% include landing.html %}
