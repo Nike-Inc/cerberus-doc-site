@@ -39,19 +39,19 @@ is used for properties that need to be shared between many applications.  The le
 are arbitrary names used to further organize application or shared secrets.  An individual application might have one
 leaf node under it or several.
 
-<img src="../../images/vault/vault-tree-diagram.svg" />
+<img src="../../images/vault/vault-tree-diagram.svg" alt="Vault tree diagram" />
 
 
 # Vault Node
 
 At any particular node a set of key/value properties can be stored.
 
-<img src="../../images/vault/vault-node-diagram.svg" />
+<img src="../../images/vault/vault-node-diagram.svg" alt="Vault node diagram" />
 
 The Cerberus [dashboard](../user-guide/dashboard) provides users a UI to modify these properties.  For example, the 
 screenshot below corresponds with the Vault node above.
 
-<img src="../../images/vault/dashboard-screenshot.png" />
+<img src="../../images/vault/dashboard-screenshot.png" alt="Cerberus Dashboard screenshot" />
 
 
 # References

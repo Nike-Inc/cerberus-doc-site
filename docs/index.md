@@ -19,7 +19,7 @@ and API keys, as well as non-sensitive dynamic run-time properties, such as feat
 -  Includes a [Dashboard](user-guide/dashboard), a self-service Web UI, where teams can manage properties and access control.
 -  Provides client libraries (e.g. Java, Node, Ruby) that can be used by Cloud applications (EC2 or Lambda) to retrieve properties at run-time.
 
-<img src="../images/arch-diagrams/cerberus-core-components-hlo.png" />
+<img src="../images/arch-diagrams/cerberus-core-components-hlo.png" alt="Cerberus core components diagram" />
 Cerberus is a [composed API](architecture/rest-api)
 
 Cerberus is a cloud native system that relies heavily on [AWS infrastructure](architecture/infrastructure-overview).  It would take significant work to 

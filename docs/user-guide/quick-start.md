@@ -54,7 +54,7 @@ what functions for a specific CMK (customer master key).
 1. Click the 'SUBMIT' button
 
 <a href="../../images/dashboard/create-new-safe-deposit-box-screen.png" target="_blank">
-<img src="../../images/dashboard/create-new-safe-deposit-box-screen.png" style="width: 25%; height: 25%;"/>
+<img src="../../images/dashboard/create-new-safe-deposit-box-screen.png" alt="Cerberus Dashboard new SDB screenshot" style="width: 25%; height: 25%;"/>
 </a>
 
 # 3. Manage Data in your Safe Deposit Box
@@ -71,7 +71,7 @@ URL friendly.  So, if you had 'My Awesome App' in the Applications category your
 1. The page will refresh and you'll be able to add more subpaths or edit the subpath you just added.
 
 <a href="../../images/dashboard/add-new-vault-path-screen.png" target="_blank">
-<img src="../../images/dashboard/add-new-vault-path-screen.png" style="width: 25%; height: 25%;"/>
+<img src="../../images/dashboard/add-new-vault-path-screen.png" alt="Cerberus Dashboard add new Vault path screenshot" style="width: 25%; height: 25%;"/>
 </a>
 
 # 4. Access Your Secrets with Cerberus

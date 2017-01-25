@@ -53,7 +53,7 @@ assigned IAM roles to that instance.
    1. Attempt to decrypt response with KMS
 1. Store the [Vault token](vault) and expire time
 
-<img src="../../images/arch-diagrams/cms-iam-auth-sequence-diagram.png" />
+<img src="../../images/arch-diagrams/cms-iam-auth-sequence-diagram.png" alt="IAM authentication sequence diagram" />
 
 # Lambda Authentication
 
@@ -67,7 +67,7 @@ Cerberus supports plugging in different authentication backends.  The example be
 others can be added easily.  LDAP groups are used to provide role-based access with either read or read/write
 permissions.
 
-<img src="../../images/arch-diagrams/user-authentication.png" style="width: 50%; height: 50%; margin: 50px;" />
+<img src="../../images/arch-diagrams/user-authentication.png" alt="User authentication diagram" style="width: 50%; height: 50%; margin: 50px;" />
 
 
 # References

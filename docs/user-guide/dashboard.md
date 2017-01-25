@@ -14,32 +14,32 @@ The Cerberus Dashboard is a Self-Service UI for managing secrets.
 
 Single sign-on eliminates the need to manually create user accounts.
 
-<img src="../../images/dashboard/login-screen.png" />
+<img src="../../images/dashboard/login-screen.png" alt="Cerberus Dashboard Login screenshot" />
 
 <br />
 
 The Welcome Screen lists the SDBs you have access to and lets you add new ones.
 
-<img src="../../images/dashboard/welcome-screen.png" />
+<img src="../../images/dashboard/welcome-screen.png" alt="Cerberus Dashboard Welcome screenshot" />
 
 <br />
 
 Users can create their own safe deposit boxes for their applications.  Self-service eliminates the need for 
 service tickets to administrators.
 
-<img src="../../images/dashboard/create-new-safe-deposit-box-screen.png" />
+<img src="../../images/dashboard/create-new-safe-deposit-box-screen.png" alt="Cerberus Dashboard new SDB screenshot" />
 
 <br />
 
 Users can add [Vault](../architecture/vault) paths for their applications as well as view and modify properties.
 
-<img src="../../images/dashboard/add-new-vault-path-screen.png" />
+<img src="../../images/dashboard/add-new-vault-path-screen.png" alt="Cerberus Dashboard Vault screenshot" />
 
 <br />
 
 Editing a Safe Deposit Box (SDB) allows users to add and remove permissions.
 
-<img src="../../images/dashboard/edit-safe-deposit-box-screen.png" />
+<img src="../../images/dashboard/edit-safe-deposit-box-screen.png" alt="Cerberus Dashboard edit SDB screenshot" />
 
 Only the owner is allowed to modify permissions or to delete the SDB.
 
