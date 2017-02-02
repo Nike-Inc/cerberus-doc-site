@@ -7,6 +7,8 @@
     language: java
     url: https://github.com/Nike-Inc/cerberus-management-service
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Management Dashboard
     description: >
@@ -15,28 +17,36 @@
     language: js
     url: https://github.com/Nike-Inc/cerberus-management-dashboard
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Lifecycle Management CLI
     description: A CLI for managing the lifecycle of a Cerberus environment.
     language: java
     url: https://github.com/Nike-Inc/cerberus-lifecycle-cli
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
-  - name: HashiCorp's Vault
+  - name: Vault
     description: >
       A tool for managing secrets. In Cerberus, <a href="../docs/architecture/vault">Vault</a> is used for the
       encryption of secrets as well as access control policies.
     language: go
     url: https://github.com/hashicorp/vault
     public: true
+    maintainer: HashiCorp
+    maintainer_url: https://www.hashicorp.com/
 
-  - name: HashiCorp's Consul
+  - name: Consul
     description: >
       Consul is a tool for service discovery, monitoring and configuration. In Cerberus, Consul is the storage
       backend for Vault and provides high availability.
     language: go
     url: https://github.com/hashicorp/consul
     public: true
+    maintainer: HashiCorp
+    maintainer_url: https://www.hashicorp.com/
 
   - name: Cerberus Healthcheck Lambda
     description: >
@@ -44,6 +54,8 @@
     language: java
     url: https://github.com/Nike-Inc/cerberus-healthcheck-lambda
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus CloudFront Lambda
     description: An AWS Lambda function for processing logs from CloudFront to enable things like rate limiting and
@@ -51,6 +63,8 @@
     language: java
     url: https://github.com/Nike-Inc/cerberus-cloudfront-lambda
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
 - name: Clients
   components:
@@ -61,6 +75,8 @@
     language: java
     url: https://github.com/Nike-Inc/java-vault-client
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Java Client
     description: >
@@ -72,6 +88,8 @@
     language: java
     url: https://github.com/Nike-Inc/cerberus-java-client
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Archaius Client
     description: A client for <a href="../docs/user-guide/archaius">Archaius</a>, a
@@ -80,18 +98,24 @@
     language: java
     url: https://github.com/Nike-Inc/cerberus-archaius-client
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Ruby Client
     description: A Ruby client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
     language: ruby
     url: https://github.com/Nike-Inc/cerberus-ruby-client
     public: false
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Node Client
     description: A Node client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
     language: js
     url: https://github.com/Nike-Inc/cerberus-node-client
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
 - name: Utilities
   components:
@@ -101,6 +125,8 @@
     language: multi
     url: https://github.com/Nike-Inc/cerberus-util-scripts
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Gateway Puppet Module
     description: >
@@ -108,6 +134,8 @@
     language: multi
     url: https://github.com/Nike-Inc/cerberus-gateway-puppet-module
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Consul Puppet Module
     description: >
@@ -115,6 +143,8 @@
     language: multi
     url: https://github.com/Nike-Inc/cerberus-consul-puppet-module
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Vault Puppet Module
     description: >
@@ -122,6 +152,8 @@
     language: multi
     url: https://github.com/Nike-Inc/cerberus-vault-puppet-module
     public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
   - name: Token Fetcher
     description: >
@@ -130,3 +162,5 @@
     language: java
     url:
     public: false
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/

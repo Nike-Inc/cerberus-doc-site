@@ -20,6 +20,9 @@ off_white: true
                     <div class="component-body">
                         <div class="description"><p>{{ component.description }}</p></div>
                     </div>
+                    <div class="component-maintainer">
+                        <div class="maintainer ncss-brand u-uppercase">Maintainer: <a href="{{ component.maintainer_url }}" target="_blank" onclick="trackOutboundLink('{{ component.maintainer_url }}')">{{ component.maintainer }}</a></div>
+                    </div>
                     <div class="component-footer">
                         <div class="social">
                             <a class="ico g72-facebook text-dark-grey" target="_blank" onclick="trackOutboundLink('https://www.facebook.com/sharer/sharer.php?u={{ component.url }}')" href="https://www.facebook.com/sharer/sharer.php?u={{ component.url }}"></a>
