@@ -82,6 +82,7 @@ Use one of the clients:
 * <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-archaius-client')" href="https://github.com/Nike-Inc/cerberus-archaius-client">Java Archaius Polling Client</a> (generally preferred for 
   companies using [Archaius](archaius))
 * <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-java-client')" href="https://github.com/Nike-Inc/cerberus-node-client">Node Client</a>
+* <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-ruby-client')" href="https://github.com/Nike-Inc/cerberus-ruby-client">Ruby Client</a>
 
 Don't see your desired client? Cerberus has a REST API. You 
 can [contribute](../contributing/how-to-contribute) a new client or use the [REST API](../architecture/rest-api) directly.

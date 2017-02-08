@@ -105,7 +105,7 @@
     description: A Ruby client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
     language: ruby
     url: https://github.com/Nike-Inc/cerberus-ruby-client
-    public: false
+    public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
@@ -152,15 +152,5 @@
     language: multi
     url: https://github.com/Nike-Inc/cerberus-vault-puppet-module
     public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Token Fetcher
-    description: >
-      A Java CLI to use on the command line of an EC2 instance to automatically fetch a
-      <a href="../docs/architecture/vault">Vault</a> token.  This is useful for Bash scripting.
-    language: java
-    url:
-    public: false
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/

@@ -18,7 +18,6 @@ title: Roadmap
    -  Update permissions management: move from account / name to ARN (easier to use, eliminates customer confusion that comes up occasionally)
    -  KPIs - can we capture more stats on usage
 -  Create automated integration test suite to fully validate Cerberus functionality
--  Finish open sourcing all components listed on the [components page](../components) that are not yet public
 -  SOX/PCI compliance - ensure the proper auditing capabilities are in place to support compliance, i.e. change tracking, etc.
 -  Ubuntu - remove tight coupling to particular release (14.04LTS) or at least upgrade to 16LTS.
 -  Stay up-to-date with latest versions of Vault and Consul
