@@ -39,6 +39,8 @@ table_of_contents:
         displayname: Authentication
       - filename: high-availability
         displayname: High Availability
+      - filename: files-in-s3
+        displayname: Files in S3
       - filename: alternative-solutions
         displayname: Alternative Solutions
   - directory: contributing
