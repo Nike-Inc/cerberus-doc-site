@@ -3,6 +3,8 @@ layout: documentation
 title: Roadmap
 ---
 
+-  Develop Cerberus client compatibility matrix - we'd like to develop a compatibility matrix describing what it means 
+   to be a 'Cerberus client' in a language neutral way and the features/gaps of each existing client.
 -  Improve cross-region back-up and recovery process
 -  Make Cerberus easier to use and deploy for other companies
    -  Pre-built AMIs, automation, improved documentation, work with early adopters
