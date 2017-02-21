@@ -39,6 +39,8 @@ assume a role by setting environment variables `CERBERUS_ASSUME_ROLE_ARN` and `C
 
 Ensure that you have a Hosted Zone configured in AWS (under Route 53 console).
 
+<a name="certs"></a>
+
 ## Create a Certificate for the Cerberus Environment
 
 Ensure that you have have created a certificate with the Subject Name and Subject Alternative Names in the following
@@ -470,6 +472,7 @@ costcenter    | Provide a cost center name or other value (`no-op` would work). 
     --owner-group no-op \
     --ami-id ami-d1963ab1
 
+<a name="dashboard">
 ## Publish Dashboard
 
 Now we need to upload the Single Page App to S3
