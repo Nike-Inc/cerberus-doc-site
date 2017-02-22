@@ -31,15 +31,14 @@ The IAM role to be assigned must contain, at a minimum, a IAM policy statement g
                 "kms:Decrypt"
             ],
             "Resource": [
-                "*"
+                "arn:aws:kms:*:[Cerberus AWS Account ID]:key/*"
             ]
         }
     ]
 }{% endhighlight %}
 
-Important: Although this allows your IAM role to call KMS decrypt function, that doesn't mean you can decrypt any KMS 
-encrypted data.  Each KMS provisioned key maintains its own policy document restricting exactly who is allowed to call 
-what functions for a specific CMK (customer master key).
+The account ID in the ARN should be the account ID where Cerberus is deployed.  See your company's internal
+documentation for the account ID that you should use.
 
 # 2. Create a Safe Deposit Box
 

@@ -8,6 +8,12 @@ is the most common cause of errors.  Otherwise the process is very automated and
 
 Note: many of the commands complete quickly while some of the CloudFormation steps may take an hour to complete.
 
+## Run Cerberus in its own AWS Account
+
+Due to how Cerberus uses KMS as part of its [authentication](/cerberus/docs/architecture/authentication) we strongly
+recommended running Cerberus in its own account for security reasons.  Running Cerberus in its own account prevents 
+services from being able to impersonate each other.  In the future, we hope to remove this limitation.
+
 ## Create Cerberus AMIs
 
 Clone or download the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-util-scripts')" href="https://github.com/Nike-Inc/cerberus-util-scripts">Cerberus Utility Script</a> project and follow 

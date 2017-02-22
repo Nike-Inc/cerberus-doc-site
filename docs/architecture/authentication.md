@@ -19,7 +19,8 @@ If more than one IAM role is associated with the EC2 instance, the first one to 
 ## Prerequisites
 
 The EC2 instance must be assigned an IAM role that has been given permissions to at least one SDB in Cerberus.
-The IAM role to be assigned must contain, at a minimum, a IAM policy statement giving access to call the KMS' decrypt action.
+The IAM role to be assigned must contain, at a minimum, a IAM policy statement giving access to call the KMS' decrypt
+action:
 
 {% highlight json %}
 {
@@ -32,14 +33,14 @@ The IAM role to be assigned must contain, at a minimum, a IAM policy statement g
                 "kms:Decrypt"
             ],
             "Resource": [
-                "*"
+                "arn:aws:kms:*:[Cerberus AWS Account ID]:key/*"
             ]
         }
     ]
 }
 {% endhighlight %}
 
-<br />
+The account ID in the ARN should be the account ID where Cerberus is deployed.
 
 ## Sequence
 
