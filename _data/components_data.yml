@@ -117,6 +117,14 @@
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
+  - name: Cerberus Python Client
+    description: A Python client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+    language: python
+    url: https://github.com/Nike-Inc/cerberus-python-client
+    public: false
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
 - name: Utilities
   components:
   - name: Cerberus Util Scripts
