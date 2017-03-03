@@ -13,4 +13,4 @@ Please see the <a target="_blank" onclick="trackOutboundLink('https://github.com
 more information about how to setup and configure.
 
 Please see the individual GitHub repos for the latest information on releases and current versions
-(not all releases are mentioned in the news feed).
+(we like to highlight releases occasionally in the news feed but not all releases are mentioned here).

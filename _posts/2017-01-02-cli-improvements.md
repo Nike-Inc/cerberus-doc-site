@@ -19,4 +19,4 @@ New CLI features include:
 - Added option for customization of help inside Cerberus dashboard
 
 Please see the individual GitHub repos for the latest information on releases and current versions
-(not all releases are mentioned in the news feed).
+(we like to highlight releases occasionally in the news feed but not all releases are mentioned here).
