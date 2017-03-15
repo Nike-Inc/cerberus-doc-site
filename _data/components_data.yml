@@ -51,7 +51,7 @@
   - name: Cerberus Healthcheck Lambda
     description: >
       An AWS Lambda function that can be ran periodically to perform a health check of a Cerberus system.
-    language: java
+    language: js
     url: https://github.com/Nike-Inc/cerberus-healthcheck-lambda
     public: true
     maintainer: Nike, Inc
