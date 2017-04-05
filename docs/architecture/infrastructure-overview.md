@@ -14,7 +14,7 @@ Cerberus uses the CloudFront WAF to provide edge security.  This is automaticall
 
 The WAF automatically drops requests with incorrect request body size, SQL injection, and Cross Site Scripting (XSS).
 
-CloudFront access logs are parsed using a <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-cloudfront-lambda')" href="https://github.com/Nike-Inc/cerberus-cloudfront-lambda">rate limiting lambda</a> 
+CloudFront access logs are parsed using a <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-cloudfront-lambda')" href="https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-cloudfront-lambda">rate limiting lambda</a> 
 that automatically blacklists IP addresses exceeding a configurable request rate limit.  The access logs are stored in 
 S3 and every time a new log chunk is written to S3, the Lambda is triggered (every 10 minutes or so).
 

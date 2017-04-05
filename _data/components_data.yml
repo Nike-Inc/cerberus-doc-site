@@ -57,11 +57,10 @@
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
-  - name: Cerberus CloudFront Lambda
-    description: An AWS Lambda function for processing logs from CloudFront to enable things like rate limiting and
-      dynamic blocking of IPs.
+  - name: Cerberus Serverless Components
+    description: A collection of AWS Serverless components for Cerberus.
     language: java
-    url: https://github.com/Nike-Inc/cerberus-cloudfront-lambda
+    url: https://github.com/Nike-Inc/cerberus-serverless-components
     public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/

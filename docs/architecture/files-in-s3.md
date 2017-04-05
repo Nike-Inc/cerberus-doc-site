@@ -242,7 +242,7 @@ The `/data/lambda` folder contains actual Lambda code.
 
 The cf-sg-ip-sync.zip file is a Lambda created by Amazon for adding CloudFront IP's to the correct SecurityGroup.
 
-The waf.jar is the actual [Cerberus CloudFront Lambda](https://github.com/Nike-Inc/cerberus-cloudfront-lambda) whose
+The waf.jar is the actual [Cerberus CloudFront Lambda](https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-cloudfront-lambda) whose
 configuration is stored under in the same S3 bucket under `/data/cloud-front-log-processor/lambda-config.json` and
 that also uses the Gateway CloudFront Bucket.
 
@@ -255,7 +255,7 @@ E.g. `{envName}-gateway-{hash}-cloudfrontbucket-{hash}`
 {ID}.{DATE}.{HASH}.gz - CloudFront logs (many files)
 rate_limiting_lambda_ip_blocking_data.json - current violators for the rate limiter
 ```
-This bucket is used by the [Cerberus CloudFront Lambda](https://github.com/Nike-Inc/cerberus-cloudfront-lambda).
+This bucket is used by the [Cerberus CloudFront Lambda](https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-cloudfront-lambda).
 
 
 # References
