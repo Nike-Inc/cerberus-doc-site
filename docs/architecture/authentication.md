@@ -59,7 +59,7 @@ assigned IAM roles to that instance.
 # Lambda Authentication
 
 Lambda authentication is similar to that of EC2 instances.  See the 
-<a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-healthcheck-lambda')" href="https://github.com/Nike-Inc/cerberus-healthcheck-lambda">health check lambda</a> for a complete example.
+<a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-health-check-lambda')" href="https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-health-check-lambda">health check lambda</a> for a complete example.
 
 # User Authentication
 

@@ -14,9 +14,11 @@ Cerberus is a composed API behind a reverse proxy that delegates to 3 services.
     encrypted KMS blob that requires 
     a <a target="_blank" onclick="trackOutboundLink('http://docs.aws.amazon.com/kms/latest/developerguide/programming-encryption.html')" href="http://docs.aws.amazon.com/kms/latest/developerguide/programming-encryption.html">decrypt call</a> to get the actual
     JSON payload defined in the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-management-service/blob/master/API.md')" href="https://github.com/Nike-Inc/cerberus-management-service/blob/master/API.md">API</a>.  See the 
-    <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-healthcheck-lambda')" href="https://github.com/Nike-Inc/cerberus-healthcheck-lambda">health check lambda</a> for simple example code.
+    <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-health-check-lambda')" href="https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-health-check-lambda">health check lambda</a> for simple example code.
 
 Please see the documentation for the underlying API you wish to work with.
+
+You can also check out the [API Test suite](https://github.com/Nike-Inc/cerberus-integration-tests) for example calls.
     
 <img src="../../images/arch-diagrams/cerberus-core-components-hlo.png" alt="Cerberus REST API diagram" />
 

@@ -48,11 +48,11 @@
     maintainer: HashiCorp
     maintainer_url: https://www.hashicorp.com/
 
-  - name: Cerberus Healthcheck Lambda
+  - name: Cerberus Integration Tests
     description: >
-      An AWS Lambda function that can be ran periodically to perform a health check of a Cerberus system.
-    language: js
-    url: https://github.com/Nike-Inc/cerberus-healthcheck-lambda
+      Gradle project that contains various modules that can be used to test a Cerberus environment.
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-integration-tests
     public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
