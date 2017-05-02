@@ -22,6 +22,8 @@ was necessary to restore from backup.
 
 We recommend upgrading Consul and then Vault.
 
+**IMPORTANT!!! Practice this upgrade in a test environment or risk wiping out your system**
+
 Upgrade directions:
 
 1. Bake new AMIs for both Vault and Consul.
@@ -29,6 +31,11 @@ Upgrade directions:
 3. Upgrade Consul using the  `update-stack` command with the `--overwrite-template` flag while supplying values for the new parameters, 
 e.g. `-PdesiredInstances=3 -PmaximumInstances=4 -PminimumInstances=3 -PpauseTime=PT15M -PwaitOnResourceSignals=True`.
 4. Upgrade Vault using the same parameters.
+
+**WARNING!!!**
+
+1. If you do not use `update-consul-config` you may wipe out your Consul cluster.
+2. If you do not supply values for the new CloudFormation parameters (above) you may go to zero instances.
 
 More here:
 
