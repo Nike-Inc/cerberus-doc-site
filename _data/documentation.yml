@@ -21,6 +21,8 @@ table_of_contents:
         displayname: Lifecycle Management CLI
       - filename: creating-an-environment
         displayname: Creating an Environment
+      - filename: upgrading-an-environment
+        displayname: Upgrading an Environment
       - filename: deleting-an-environment
         displayname: Deleting an Environment
       - filename: monitoring
