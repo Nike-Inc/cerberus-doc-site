@@ -55,6 +55,8 @@ static files to an S3 bucket.
 
 # Upgrading Specific Versions
 
+* [Upgrading Consul to version 0.8.3](../../news/2017/05/16/consul-0.8.3.html) May 16, 2017
+  * Another major version upgrade for Consul
 * [New Consul Permissions](../../news/2017/05/04/new-consul-permissions.html) May 4, 2017
   * The base stack needs to be updated before applying the latest Consul AMI
 * [Upgrading Vault and Consul](../../news/2017/04/19/upgrading-vault-and-consul.html) April 19, 2017

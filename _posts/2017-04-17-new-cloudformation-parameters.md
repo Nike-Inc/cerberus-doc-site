@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New CloudFormation Parameters
-date:   2017-04-17 12:00:00 -0700
+date:   2017-04-17 00:00:00 -0700
 categories: news
 ---
 

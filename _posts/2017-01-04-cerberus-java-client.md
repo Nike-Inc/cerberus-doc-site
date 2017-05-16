@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cerberus Java Client 1.2.0 Released"
-date:   2017-01-04 12:00:00 -0700
+date:   2017-01-04 00:00:00 -0700
 categories: news
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cerberus is getting open sourced"
-date:   2016-11-28 12:00:00 -0700
+date:   2016-11-28 00:00:00 -0700
 categories: news
 ---
 Welcome to the Cerberus OSS site! We are excited to share this practical and useful solution with you and to see how you make it your own.

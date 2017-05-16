@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "AWS re:Invent Presentation"
-date:   2016-11-29 12:00:00 -0700
+date:   2016-11-29 00:00:00 -0700
 categories: news
 ---
 

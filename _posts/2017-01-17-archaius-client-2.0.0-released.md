@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Archaius Client 2.0.0 Released
-date:   2017-01-17 12:00:00 -0700
+date:   2017-01-17 00:00:00 -0700
 categories: news
 ---
 

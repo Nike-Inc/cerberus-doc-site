@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Security - Updated Deployment Guidelines
-date: 2017-02-20 12:00:00 -0700
+date: 2017-02-20 00:00:00 -0700
 categories: news
 ---
 

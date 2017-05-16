@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Updated Java clients
-date:   2017-03-02 12:00:00 -0700
+date:   2017-03-02 00:00:00 -0700
 categories: news
 ---
 
