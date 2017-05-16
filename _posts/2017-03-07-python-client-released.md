@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python Client Released
-date:   2017-03-07 12:00:00 -0700
+date:   2017-03-07 00:00:00 -0700
 categories: news
 ---
 

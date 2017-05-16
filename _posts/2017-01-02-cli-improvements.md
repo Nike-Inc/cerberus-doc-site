@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lifecycle Management CLI Improvements"
-date:   2017-01-02 12:00:00 -0700
+date:   2017-01-02 00:00:00 -0700
 categories: news
 ---
 

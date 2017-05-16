@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby Client Released
-date:   2017-02-08 12:00:00 -0700
+date:   2017-02-08 00:00:00 -0700
 categories: news
 ---
 

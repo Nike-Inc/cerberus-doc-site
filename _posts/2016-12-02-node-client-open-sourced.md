@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cerberus Node Client Open Sourced"
-date:   2016-12-02 12:00:00 -0700
+date:   2016-12-02 00:00:00 -0700
 categories: news
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New Consul Permissions
-date:   2017-05-04 12:00:00 -0700
+date:   2017-05-04 00:00:00 -0700
 categories: news
 ---
 

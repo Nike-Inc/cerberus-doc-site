@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Okta Support Added
-date:   2017-01-09 12:00:00 -0700
+date:   2017-01-09 00:00:00 -0700
 categories: news
 ---
 

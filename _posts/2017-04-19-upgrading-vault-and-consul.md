@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrading Vault and Consul
-date:   2017-04-19 12:00:00 -0700
+date:   2017-04-19 00:00:00 -0700
 categories: news
 ---
 
