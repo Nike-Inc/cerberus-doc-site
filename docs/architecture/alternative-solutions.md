@@ -5,7 +5,13 @@ title: Alternative Solutions
 
 Cerberus was developed because we did not find another solution that met our needs at the time.
 
-Some of the options we looked at included:
+Some of the options we've looked at include:
+
+# AWS Parameter Store
+
+[Parameter Store](https://aws.amazon.com/ec2/systems-manager/parameter-store/) is a feature of [Amazon EC2 Systems Manager](https://aws.amazon.com/ec2/systems-manager/)
+that was released about the same time as Cerberus.
+
 
 # CyberArk Password Vault and AIM
 
