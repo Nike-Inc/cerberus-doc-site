@@ -55,6 +55,8 @@ static files to an S3 bucket.
 
 # Upgrading Specific Versions
 
+* [Upgrading to Raft Protocol Version 3](../../news/2017/07/11/upgrading-to-raft-3.html) July 11, 2017
+  * Raft 3 is needed to take advantage of the new [Autopilot](https://www.consul.io/docs/guides/autopilot.html) features in Consul
 * [Upgrading Consul to version 0.8.3](../../news/2017/05/16/consul-0.8.3.html) May 16, 2017
   * Another major version upgrade for Consul
 * [New Consul Permissions](../../news/2017/05/04/new-consul-permissions.html) May 4, 2017
