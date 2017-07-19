@@ -102,3 +102,15 @@ Use the --help option for usage:
 {% highlight bash %}
 ./cerberus-token.sh --help
 {% endhighlight %}
+
+## Verifying Your Identity
+
+A common problem encountered during setup is a different role is in effect than expected by the developer.
+
+Verify your identity locally or on an Ec2 instance with:
+
+{% highlight bash %}
+
+aws sts get-caller-identity
+
+{% endhighlight %}
