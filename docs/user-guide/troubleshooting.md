@@ -3,13 +3,6 @@ layout: documentation
 title: Troubleshooting
 ---
 
-# Excessive Polling
-
-IPs making an excessive number of requests are automatically blacklisted for a configurable interval.
-
-When using polling be sure to use a reasonable interval as determined by your organization.
-
-
 # Permission Denied
 
 #### E.g. com.nike.cpe.vault.client.VaultServerException: Response Code: 400, Messages: permission denied
@@ -17,9 +10,24 @@ When using polling be sure to use a reasonable interval as determined by your or
 The SDB you are trying to access may need permissions updated.  For example, you will get this error if the IAM
 role being used isn't listed for the SDB you are trying to access.
 
+Verify your identity with:
+
+{% highlight bash %}
+
+aws sts get-caller-identity
+
+{% endhighlight %}
+
 Unexpectedly, you might also see this error when the path you are trying to access doesn't exist.
 
 Please see <a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/docs/http/')" href="https://www.vaultproject.io/docs/http/">Vault Documentation</a> for more information on Vault errors.
+
+
+# Excessive Polling
+
+IPs making an excessive number of requests are automatically blacklisted for a configurable interval.
+
+When using polling be sure to use a reasonable interval as determined by your organization.
 
 
 # SSL Handshake Failure
