@@ -27,6 +27,8 @@ table_of_contents:
         displayname: Deleting an Environment
       - filename: monitoring
         displayname: Monitoring
+      - filename: backup-restore
+        displayname: Backup and Restore
       - filename: consul-recovery
         displayname: Consul Recovery
   - directory: architecture
