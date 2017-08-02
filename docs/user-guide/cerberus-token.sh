@@ -13,7 +13,7 @@ CERBERUS_DEFAULT_HOST="https://demo.cerberus-oss.io"
 #USER_PROMPT="Enter AD username: "
 USER_PROMPT="Enter email address: "
 # If you've customized this script for your company, please modify version
-SCRIPT_VERSION=1.0.1
+SCRIPT_VERSION=1.0.2
 
 
 # Global variables
@@ -290,11 +290,14 @@ fi
 
 echo ""
 echo "ERROR! sorry but something went wrong when calling ${CERBERUS_URL}"
-echo "Response from server was:"
+echo "Response from server was: "
 if [[ "$DATA" == *"<html"* || "$DATA" == *"<HTML"* ]]
 then
     echo "$DATA"
 else
+    # echo it here without formatting in case jq pukes
+    echo "$DATA"
+    echo "Response formatted with jq: "
     # only pipe to jq if content is not HTML
     echo $DATA | jq
 fi
