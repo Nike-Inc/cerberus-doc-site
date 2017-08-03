@@ -3,39 +3,75 @@ layout: documentation
 title: Backup and Restore
 ---
 
-If Consul enters a fugue state or is unhealthy and cannot accept requests, one
-option is to erase all consul data (e.g. terminate all consul instances) and
-perform a full Cerberus recovery.
+# Backup
 
-This process requires the data in Consul to have been previously backed up via
-the Cerberus Backup Lambda or the Cerberus CLI `create-backup` command.
+Different components of Cerberus can be backed up independently e.g. RDS backups are 
+scheduled in the AWS console, Consul data files are automatically backed up in S3
+under the `config` bucket under the path `/consul/backups`, but the main backup for a 
+Cerberus system is created with the `create-backup` command in the CLI.  This command
+can be used to create a full export of secrets and SDB meta data, which is then encrypted
+using KMS, and stored in S3 in a different region than the Cerberus environment.
 
-Whenever we perform any maintenance on a Cerberus environment we typically open all of our
-[monitoring](monitoring) tools, as well as several terminals to tail all of the logs, repeatedly run the
-healthcheck, etc.  You will want to develop your own shell scripts to make it easy to perform these
-activities so that you can quickly understand what is going on with the system whenever you want to dig in.
+# Restore
 
-Simple preparation will help you enormously if you ever experience an actual outage.
+A backup created via the `create-backup` command can be applied to a Cerberus system using
+the `restore-complete` command.  These two commands can also be used to copy all of the data
+from one Cerberus environment to another.
 
-# Reset Consul Cluster
+```bash
+cerberus \
+    -e dev \
+    -r us-west-2 \
+    --debug \
+    --proxy-type SOCKS \
+    --proxy-host localhost \
+    --proxy-port 9001 \
+    restore-complete \
+    -s3-bucket <backup-bucket-name> \
+    -s3-prefix <path-to-backup> \
+    -s3-region <region-where-backup-is-stored> \
+    -url https://cerberus-env-url.com
+```
 
-Scale the Consul ASG down to 0 EC2 instances for the environment in need of
-recovery. This can be done in two ways:
+If the overall system is not healthy enough to accept a restore, it is possible to
+reinitialize most of the system by following the procedure outlined below.
 
+# Reinitializing Cerberus
 
-* Log in to AWS console and scale the Consul ASG down to zero
-* Use the Cerberus CLI 'update-stack' command to change the min-, max-, and
-  desired- instance values to zero.
+This procedure is helpful if a Cerberus environment has stopped working.
+For example, sometimes during development and testing an environment is destroyed.
+Maybe Consul or Raft has entered a fugue state and the system is still not working after 
+attempting [Consul Recovery](consul-recovery).  Rather than rebuilding the environment
+from scratch, it can usually be reinitialized using the following steps.
 
-Once, the Consul instances have been terminated scale the Consul ASG back to
-the expected instance values (e.g. 3 min instances, 3 desired instances,
+## 1. Prerequisite Steps
+
+1. If you require a proxy to reach the Cerberus EC2 instances then start it now and
+use it in the commands below.
+
+2. Export admin AWS credentials for Cerberus in your terminal environment.
+
+3. Add the Vault certificate in DER (*.cer) format to your Java trust store.
+
+```bash
+$ keytool -import-keystore /path/to/JDK/jre/lib/security/cacerts -storepass changeit -noprompt -trustcacerts -alias [certificate name] -file /path/to/der/file/[download_name].cer
+```
+
+You may have already completed this step during installation of Cerberus.
+
+## 2. Reset Consul cluster
+
+1. Scale the Consul AutoScalingGroup (ASG) down to 0 EC2 instances and wait for them to be terminated.
+1. Scale the Consul ASG back up to the expected instance values (e.g. 3 min instances, 3 desired instances,
 and 4 max instances). Then wait for the instances to reach "InService" status.
 
-# Add Vault to New Consul Cluster
+This step should produce a newly initialized and functional Consul cluster with no data.
 
-Reboot each EC2 instance in the Vault cluster using the AWS console.
+## 3. Add Vault to new Consul cluster
 
-SSH into a Vault or Consul instance and make sure that all Vault and Consul
+1. Reboot each EC2 instance in the Vault cluster using the AWS console so that they can join
+   the newly created Consul cluster.
+1. SSH into a Vault or Consul instance and make sure that all Vault and Consul
 private IPs appear in the `consul members` list:
 
 ```bash
@@ -55,22 +91,9 @@ If the Vault instances are not listed, then the Consul cluster may not have been
 fully initialized before the Vault reboot. Try rebooting the Vault nodes again
 to ensure they are added to the Consul cluster.
 
-# Start a SOCKS Proxy
+## 4. Initialize Vault
 
-If you require a proxy to talk to Cerberus EC2 instances then you will want to
-start it now and use it in the commands below.
-
-# Add Certificates to Trust Store
-
-Add the Vault certificate in DER (*.cer) format to your Java trust store:
-
-```bash
-$ keytool -import-keystore /path/to/JDK/jre/lib/security/cacerts -storepass changeit -noprompt -trustcacerts -alias [certificate name] -file /path/to/der/file/[download_name].cer
-```
-
-# Initialize Vault
-
-In a new Terminal tab run the following CLI command:
+Run the following CLI command:
 
 ```bash
 cerberus \
@@ -79,18 +102,15 @@ cerberus \
     --debug \
     --proxy-type SOCKS \
     --proxy-host localhost \
-        --proxy-port 9001 \
+    --proxy-port 9001 \
     init-vault-cluster
 ```
 
-** Note: This command requires admin AWS credentials for Cerberus to be set up
-in the Terminal environment.
-
-## Troubleshooting:
+### Troubleshooting
 
 * If Vault returns a 400 status code like below, then make sure the 'token' value
-in the 'data/vault/vault-config.json' file matches the value in the
-'vault_acl_token' value in the 'config/consul/secrets.json' file in S3.
+in the `data/vault/vault-config.json` file matches the value in the
+'vault_acl_token' value in the `config/consul/secrets.json` file in S3.
 
     ```
     responseCode=400,
@@ -99,14 +119,14 @@ in the 'data/vault/vault-config.json' file matches the value in the
     ```
 
     If the values token values in the two files mentioned aboved do not match, run
-    the 'create-vault-config' CLI command and reboot the Vault instances in the AWS
+    the `create-vault-config` CLI command and reboot the Vault instances in the AWS
     console. If you still get a 403 error, then reboot the nodes in your Consul
     cluster as well.
 
 * If Vault returns a 500, then Vault may still be starting up. Give it a minute or
 two and try again.
 
-# Unseal Vault Cluster
+## 5. Unseal Vault cluster
 
 ```bash
 cerberus \
@@ -119,7 +139,7 @@ cerberus \
     unseal-vault-cluster
 ```
 
-# Load Default Vault Policies
+## 6. Load default Vault policies
 
 ```bash
 cerberus \
@@ -132,14 +152,7 @@ cerberus \
     load-default-policies
 ```
 
-# Create New CMS Vault Token
-
-You may need to revoke the old CMS Vault token after the new token is generated.
-You can take note of the token before running this command or check previous
-versions of the 'data/cms/environment.json' file in S3.
-
-You may want to avoid 'force-overwrite' in a production system, unless the
-system is already in a broken state.
+## 7. Create new CMS Vault token
 
 ```bash
 cerberus \
@@ -153,7 +166,10 @@ cerberus \
     --force-overwrite
 ```
 
-# Update CMS Config
+This command will warn that the old CMS Vault token may need to be revoked but since
+the cluster has been wiped out, it no longer exists.
+
+## 8. Update CMS Config
 
 ```bash
 cerberus \
@@ -163,7 +179,7 @@ cerberus \
     update-cms-config
 ```
 
-# Reboot CMS instances
+## 9. Reboot CMS instances
 
 ```bash
 cerberus \
@@ -177,10 +193,10 @@ cerberus \
     --stack-name CMS
 ```
 
-# Restore from Backup
+## 10. Restore from Backup
 
-This command requires AWS credentials with permissions to decrypt the KMS key
-used to encrypt the specified Cerberus backup file:
+This command requires AWS credentials with permissions to decrypt using the KMS key
+that was used to encrypt the specified Cerberus backup file:
 
 ```bash
 cerberus \
