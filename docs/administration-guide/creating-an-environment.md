@@ -327,18 +327,12 @@ after the region, but before the 'init-vault-cluster' command.
 
     cerberus --debug -f /path/to/test.yaml init-vault-cluster
 
-If you get an error message like the following:
+Errors at this step may be from:
 
-    Exception in thread "main" com.nike.vault.client.VaultClientException: I/O error while communicating with vault.
-    ...
-    Caused by: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-
-You probably need to add the CA for your cert provider to the Java trust store on the machine you are running the CLI.
-Make sure the CA is in "DER" format.
-
-<a href="#add-ca">See add the CA to your java trust store.</a>
-
-Alternatively, a simple `ERROR: I/O error while communicating with vault` may be due to a proxy or firewall issue.
+1. Not waiting a few minutes after `create-vault-cluster` before trying to initialize it
+1. SSL Handshake Errors from not importing the CA for your certificate provider to your Java trust store (<a href="#add-ca">see above</a>).
+1. A proxy or firewall issue.
+1. Other issue.  See Vault and Consul logs.
 
 ## Unseal Vault
 
