@@ -119,7 +119,9 @@ Recommended: Export the directory path to environment variable `CERBERUS_CERT_DI
 If you are using Venafi, after creating the certificate in the UI,
 
 1. Download the Certificate
-   1. Choose PEM/OpenSSL
+   1. Choose DER format (later this file will be used to import into your Java trust store)
+1. Download the Certificate again
+   1. Choose PEM/OpenSSL format
    1. Include the Root Chain and Private Key by checking all of the checkboxes
    1. Choose the default Chain Order "End Entity First"
    1. Enter a pass phrase
