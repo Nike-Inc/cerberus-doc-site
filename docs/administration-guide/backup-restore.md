@@ -12,6 +12,26 @@ Cerberus system is created with the `create-backup` command in the CLI.  This co
 can be used to create a full export of secrets and SDB meta data, which is then encrypted
 using KMS, and stored in S3 in a different region than the Cerberus environment.
 
+Before running the backup command you must set up the IAM principals that are allowed to use the kms keys to encrypt and decrypt backups
+By default the [root and admin user are added](https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/src/main/java/com/nike/cerberus/operation/core/SetBackupAdminPrincipalsOperation.java#L71)
+You can add additional principals such as your ci-cd server by adding `--principal` or `-p` params. EX:
+
+```
+cerberus \
+    -e dev \
+    -r us-west-2
+    set-backup-principals
+    --principal arn:aws:iam::111111111111:role/additional-admin-user \
+    --principal arn:aws:iam::111111111111:role/ci-cd-server
+```
+
+Once you have specified the principals allowed to use the kms keys needed to encrypt and decrypt backups you can create a back up and specify any number of regions to create backups in.
+The CLI will automatically and lazily create KMS keys and S3 buckets for those regions while creating the backups. EX:
+
+```
+cerberus -e dev -r us-west-2 create-backup -br us-west-2 -br us-east-1
+```
+
 # Restore
 
 A backup created via the `create-backup` command can be applied to a Cerberus system using
