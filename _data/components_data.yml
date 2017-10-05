@@ -124,6 +124,14 @@
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
+  - name: Cerberus Go Client
+    description: A Golang client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+    language: go
+    url: https://github.com/Nike-Inc/cerberus-go-client
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
   - name: Cerberus Summon Provider
     description: A <a href="https://conjurinc.github.io/summon/">Summon</a> provider for retrieving secrets from Cerberus.
     language: go
@@ -131,6 +139,7 @@
     public: true
     maintainer: Lookout, Inc
     maintainer_url: https://github.com/lookout
+
 
 - name: Utilities
   components:
