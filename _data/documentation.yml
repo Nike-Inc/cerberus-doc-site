@@ -7,6 +7,8 @@ table_of_contents:
         displayname: Quick Start
       - filename: dashboard
         displayname: Dashboard
+      - filename: lambdas
+        displayname: Lambdas
       - filename: archaius
         displayname: Archaius
       - filename: file-storage
