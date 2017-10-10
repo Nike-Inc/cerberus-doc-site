@@ -83,7 +83,7 @@
      includes an authentication provider chain that enables automatic
      <a href="../docs/architecture/authentication">authentication</a> for EC2 and Lambda
      instances, with fallback for local development. Builds on top of the Java Vault Client and exposes read, write,
-     list, and delete functionality for data in a Safe Depoist Box (SDB). <a href='https://bintray.com/nike/maven/cerberus-client/_latestVersion'><img src='https://api.bintray.com/packages/nike/maven/cerberus-client/images/download.svg'></a>
+     list, and delete functionality for data in a Safe Deposit Box (SDB). <a href='https://bintray.com/nike/maven/cerberus-client/_latestVersion'><img src='https://api.bintray.com/packages/nike/maven/cerberus-client/images/download.svg'></a>
     language: java
     url: https://github.com/Nike-Inc/cerberus-java-client
     public: true
