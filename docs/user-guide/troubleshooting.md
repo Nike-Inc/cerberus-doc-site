@@ -66,14 +66,6 @@ We've seen this during local development as result of a library conflict with th
 
 During local development this may be due to a web proxy.  This is common in corporate environments and when working over a VPN.
 
-If you are using the AnyConnect web proxy, it can be temporarily disabled with:
-
-{% highlight bash %}
-
-sudo /opt/cisco/anyconnect/bin/acwebsecagent -disablesvc -websecurity
-
-{% endhighlight %}
-
 
 # Outdated AWS SDK
 
