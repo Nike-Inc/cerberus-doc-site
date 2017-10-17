@@ -3,12 +3,9 @@ layout: documentation
 title: Troubleshooting
 ---
 
-# Permission Denied
+# Who am I?
 
-#### E.g. com.nike.cpe.vault.client.VaultServerException: Response Code: 400, Messages: permission denied
-
-The SDB you are trying to access may need permissions updated.  For example, you will get this error if the IAM
-role being used isn't listed for the SDB you are trying to access.
+A frequent first troubleshooting step is validating the role assigned to an SDB is the actual role being used by your application.
 
 Verify your identity with:
 
@@ -17,6 +14,30 @@ Verify your identity with:
 aws sts get-caller-identity
 
 {% endhighlight %}
+
+Look up your role name by curling the [meta-data endpoint](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html#instancedata-data-retrieval) for your ec2 instance:
+
+{% highlight bash %}
+
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+
+{% endhighlight %}
+
+With the role name you can get the full ARN of the role with
+
+{% highlight bash %}
+
+aws iam get-role --role-name <role-name>
+
+{% endhighlight %}
+
+
+# Permission Denied
+
+#### E.g. com.nike.cpe.vault.client.VaultServerException: Response Code: 400, Messages: permission denied
+
+The SDB you are trying to access may need permissions updated.  For example, you will get this error if the IAM
+role being used isn't listed for the SDB you are trying to access (see 'Who am I?' above).
 
 Unexpectedly, you might also see this error when the path you are trying to access doesn't exist.
 
