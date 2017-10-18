@@ -109,10 +109,4 @@ Use the --help option for usage:
 
 A common problem encountered during setup is a different role is in effect than expected by the developer.
 
-Verify your identity locally or on an Ec2 instance with:
-
-{% highlight bash %}
-
-aws sts get-caller-identity
-
-{% endhighlight %}
+See [Who am I?](troubleshooting) for more information.
