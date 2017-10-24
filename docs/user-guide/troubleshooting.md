@@ -19,7 +19,7 @@ Look up your role name by curling the [meta-data endpoint](http://docs.aws.amazo
 
 {% highlight bash %}
 
-curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/
 
 {% endhighlight %}
 
@@ -30,7 +30,6 @@ With the role name you can get the full ARN of the role with
 aws iam get-role --role-name <role-name>
 
 {% endhighlight %}
-
 
 # Dependency Conflicts
 
