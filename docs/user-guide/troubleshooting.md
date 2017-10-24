@@ -32,6 +32,29 @@ aws iam get-role --role-name <role-name>
 {% endhighlight %}
 
 
+# Dependency Conflicts
+
+Another common problem is dependency conflicts.
+
+## Java Gradle Projects
+
+Use these commands to see the Cerberus client version that is actually being resolved in a Java Gradle project:
+
+{% highlight bash %}
+
+./gradlew dependencyInsight --dependency cerberus
+./gradlew dependencyInsight --dependency vault
+./gradlew dependencyInsight --dependency okhttp
+./gradlew dependencies
+
+{% endhighlight %}
+
+Learn more in the [Gradle User Guide](https://docs.gradle.org/current/userguide/dependency_management.html).
+
+## Java Maven Projects
+
+Debug Maven dependency conflicts using the [dependency:tree](https://maven.apache.org/plugins/maven-dependency-plugin/examples/resolving-conflicts-using-the-dependency-tree.html) command.
+
 # Permission Denied
 
 #### E.g. com.nike.cpe.vault.client.VaultServerException: Response Code: 400, Messages: permission denied
