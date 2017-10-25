@@ -23,13 +23,22 @@ curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/
 
 {% endhighlight %}
 
-With the role name you can get the full ARN of the role with
+With the role name you can get the full ARN of the role with:
 
 {% highlight bash %}
 
 aws iam get-role --role-name <role-name>
 
 {% endhighlight %}
+
+The role ARN for an instance profile can also be looked up using this command:
+
+{% highlight bash %}
+
+aws iam get-instance-profile --instance-profile-name <instance-profile-name>
+
+{% endhighlight %}
+
 
 # Dependency Conflicts
 
