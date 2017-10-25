@@ -7,13 +7,7 @@ title: Troubleshooting
 
 A frequent first troubleshooting step is validating the role assigned to an SDB is the actual role being used by your application.
 
-Verify your identity with:
-
-{% highlight bash %}
-
-aws sts get-caller-identity
-
-{% endhighlight %}
+## Use the AWS Metadata endpoint
 
 Look up your role name by curling the [meta-data endpoint](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html#instancedata-data-retrieval) for your ec2 instance:
 
@@ -22,6 +16,16 @@ Look up your role name by curling the [meta-data endpoint](http://docs.aws.amazo
 curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/
 
 {% endhighlight %}
+
+Look up your instance-profile ARN by curling the metadata endpoint:
+
+{% highlight bash %}
+
+curl -s http://169.254.169.254/latest/meta-data/iam/info
+
+{% endhighlight %}
+
+## Use the AWS CLI
 
 With the role name you can get the full ARN of the role with:
 
@@ -36,6 +40,14 @@ The role ARN for an instance profile can also be looked up using this command:
 {% highlight bash %}
 
 aws iam get-instance-profile --instance-profile-name <instance-profile-name>
+
+{% endhighlight %}
+
+Get your assumed-role identity with this command:
+
+{% highlight bash %}
+
+aws sts get-caller-identity
 
 {% endhighlight %}
 
