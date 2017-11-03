@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="footer-container">
         <div class="column">
-            <p>© 2016 Nike, Inc. All Rights Reserved.</p>
+            <p id='copyright'/>
             <p>View source code for this site on <a target="_blank" onclick="trackOutboundLink('https://github.com/nike-inc/cerberus')" href="https://github.com/nike-inc/cerberus">Github</a>.</p>
         </div>
         <div class="column">
@@ -12,7 +12,7 @@
                 <li><a target="_blank" onclick="trackOutboundLink('http://jobs.converse.com/')" href="http://jobs.converse.com/">Converse Culture & Careers</a></li>
                 <li><a target="_blank" onclick="trackOutboundLink('http://www.nike.com/us/en_us/c/sustainability')" href="http://www.nike.com/us/en_us/c/sustainability">Sustainable Innovation</a></li>
             </ul>
-    
+
         </div>
         <div class="column">
             <h4>Help Resources</h4>
@@ -25,4 +25,7 @@
             <a target="_blank" onclick="trackOutboundLink('http://engineering.nike.com/')" href="http://engineering.nike.com/"><div class="nike-oss"></div></a>
         </div>
     </div>
+    <script type="text/javascript">
+      document.getElementById('copyright').innerHTML = `© ${(new Date()).getUTCFullYear()} Nike, Inc. All Rights Reserved.`
+    </script>
 </div>
