@@ -98,7 +98,21 @@ When using polling be sure to use a reasonable interval as determined by your or
 
 #### E.g. javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
 
-We've seen this during local development as result of a library conflict with the
+This error may mean your client is not compatible with TLS1.2, possibly due to being on an old version of Java
+or other older library.
+
+#### Minimum Java versions for TLS1.2
+
+* Java 9 any version
+* Java 8 any version
+* Java 7 update 131 - added TLS1.2 to the client list of default-enabled protocols (see the [Release Notes](http://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html))
+* Java 6 update 141 - added TLS1.2 to the client list of default-enabled protocols (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html)
+* Java 6 update 115 - added TLS1.2 support to clients that is enabled via a system property (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html))
+
+
+#### JettyEclipseRun Conflict
+
+We've also seen this during local development as result of a library conflict with the
 <a target="_blank" onclick="trackOutboundLink('https://github.com/Khoulaiz/gradle-jetty-eclipse-plugin')" href="https://github.com/Khoulaiz/gradle-jetty-eclipse-plugin">jettyEclipseRun</a> Gradle plugin.  Upgrading to the
 <a target="_blank" onclick="trackOutboundLink('https://github.com/akhikhl/gretty')" href="https://github.com/akhikhl/gretty">Gretty</a> plugin resolved.
 
