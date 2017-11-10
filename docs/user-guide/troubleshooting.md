@@ -109,6 +109,7 @@ or other older library.
 * Java 6 update 141 - added TLS1.2 to the client list of default-enabled protocols (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html)
 * Java 6 update 115 - added TLS1.2 support to clients that is enabled via a system property (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html))
 
+_Note: the Java 6 and 7 versions above are the Oracle paid versions._
 
 #### JettyEclipseRun Conflict
 
