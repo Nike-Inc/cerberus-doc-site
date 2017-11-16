@@ -62,6 +62,9 @@ Vault stores data using a [path structure](../architecture/vault).  Note that th
 URL friendly.  So, if you had 'My Awesome App' in the Applications category your root path will be 
 'applications/my-awesome-app'.  From there you can add sub-paths to store key value pairs.
 
+Cerberus will allow an SDB to contain a folder structure with many subpaths but for most applications a single path with
+a list of several key/value pairs is optimal (that way all values can be read later with a single API call).
+
 ### How to add a subpath:
 1. Click the 'Add new Vault path' button.
 1. Enter a subpath name
