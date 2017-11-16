@@ -1,70 +1,3 @@
-- name: Components
-  components:
-  - name: Cerberus Management Service
-    description: >
-     A micro-service to compose Hashicorp's <a href="../docs/architecture/vault">Vault</a> API to enable the Safe
-     Deposit Box paradigm, IAM Role auth for EC2 instances and Lambda functions, and user auth via SSO providers.
-    language: java
-    url: https://github.com/Nike-Inc/cerberus-management-service
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Cerberus Management Dashboard
-    description: >
-      A self service web UI for administration of Safe Deposit Boxes, access control, and data.  This is implemented as
-      a <a href="https://facebook.github.io/react/">React</a> single-page application (SPA).
-    language: js
-    url: https://github.com/Nike-Inc/cerberus-management-dashboard
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Cerberus Lifecycle Management CLI
-    description: A CLI for managing the lifecycle of a Cerberus environment.
-    language: java
-    url: https://github.com/Nike-Inc/cerberus-lifecycle-cli
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Vault
-    description: >
-      A tool for managing secrets. In Cerberus, <a href="../docs/architecture/vault">Vault</a> is used for the
-      encryption of secrets as well as access control policies.
-    language: go
-    url: https://github.com/hashicorp/vault
-    public: true
-    maintainer: HashiCorp
-    maintainer_url: https://www.hashicorp.com/
-
-  - name: Consul
-    description: >
-      Consul is a tool for service discovery, monitoring and configuration. In Cerberus, Consul is the storage
-      backend for Vault and provides high availability.
-    language: go
-    url: https://github.com/hashicorp/consul
-    public: true
-    maintainer: HashiCorp
-    maintainer_url: https://www.hashicorp.com/
-
-  - name: Cerberus Integration Tests
-    description: >
-      Gradle project that contains various modules that can be used to test a Cerberus environment.
-    language: java
-    url: https://github.com/Nike-Inc/cerberus-integration-tests
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Cerberus Serverless Components
-    description: A collection of AWS Serverless components for Cerberus.
-    language: java
-    url: https://github.com/Nike-Inc/cerberus-serverless-components
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
 - name: Clients
   components:
   - name: Vault Java Client
@@ -140,6 +73,72 @@
     maintainer: Lookout, Inc
     maintainer_url: https://github.com/lookout
 
+- name: Components
+  components:
+  - name: Cerberus Management Service
+    description: >
+     A micro-service to compose Hashicorp's <a href="../docs/architecture/vault">Vault</a> API to enable the Safe
+     Deposit Box paradigm, IAM Role auth for EC2 instances and Lambda functions, and user auth via SSO providers.
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-management-service
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
+  - name: Cerberus Management Dashboard
+    description: >
+      A self service web UI for administration of Safe Deposit Boxes, access control, and data.  This is implemented as
+      a <a href="https://facebook.github.io/react/">React</a> single-page application (SPA).
+    language: js
+    url: https://github.com/Nike-Inc/cerberus-management-dashboard
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
+  - name: Cerberus Lifecycle Management CLI
+    description: A CLI for managing the lifecycle of a Cerberus environment.
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-lifecycle-cli
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
+  - name: Vault
+    description: >
+      A tool for managing secrets. In Cerberus, <a href="../docs/architecture/vault">Vault</a> is used for the
+      encryption of secrets as well as access control policies.
+    language: go
+    url: https://github.com/hashicorp/vault
+    public: true
+    maintainer: HashiCorp
+    maintainer_url: https://www.hashicorp.com/
+
+  - name: Consul
+    description: >
+      Consul is a tool for service discovery, monitoring and configuration. In Cerberus, Consul is the storage
+      backend for Vault and provides high availability.
+    language: go
+    url: https://github.com/hashicorp/consul
+    public: true
+    maintainer: HashiCorp
+    maintainer_url: https://www.hashicorp.com/
+
+  - name: Cerberus Integration Tests
+    description: >
+      Gradle project that contains various modules that can be used to test a Cerberus environment.
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-integration-tests
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
+  - name: Cerberus Serverless Components
+    description: A collection of AWS Serverless components for Cerberus.
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-serverless-components
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
 - name: Utilities
   components:
