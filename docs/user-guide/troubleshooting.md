@@ -103,13 +103,31 @@ or other older library.
 
 #### Minimum Java versions for TLS1.2
 
-* Java 9 any version
-* Java 8 any version
-* Java 7 update 131 - added TLS1.2 to the client list of default-enabled protocols (see the [Release Notes](http://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html))
-* Java 6 update 141 - added TLS1.2 to the client list of default-enabled protocols (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html)
-* Java 6 update 115 - added TLS1.2 support to clients that is enabled via a system property (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html))
+* Java 9 any version - enabled by default
+* Java 8 any version - enabled by default
+* Java 7 update 131 (Oracle paid version) - added TLS1.2 to the client list of default-enabled protocols (see the [Release Notes](http://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html))
+* Java 7 update 80 (last public version) - added TLS1.2 support to clients that is enabled via a system property
+* Java 6 update 141 (Oracle paid version) - added TLS1.2 to the client list of default-enabled protocols (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html)
+* Java 6 update 115 (Oracle paid version) - added TLS1.2 support to clients that is enabled via a system property (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html))
 
-_Note: the Java 6 and 7 versions above are the Oracle paid versions._
+
+In older Java versions TLSv1.2 is enabled via the system property `-Dhttps.protocols=TLSv1.2` or in code:
+
+```java
+    private void enableJava7Tls12() {
+        // The last Java 7 public update, 80, does not support TLS 1.2 by default.
+        // This method enables it.
+        try {
+            SSLContext ctx = SSLContext.getInstance("TLSv1.2");
+            ctx.init(null, null, null);
+            SSLContext.setDefault(ctx);
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+```
+
 
 #### JettyEclipseRun Conflict
 
