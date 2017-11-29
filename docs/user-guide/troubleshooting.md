@@ -98,6 +98,8 @@ When using polling be sure to use a reasonable interval as determined by your or
 
 #### E.g. javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
 
+#### E.g. java.net.UnknownServiceException: Unable to find acceptable protocols.
+
 This error may mean your client is not compatible with TLS1.2, possibly due to being on an old version of Java
 or other older library.
 
