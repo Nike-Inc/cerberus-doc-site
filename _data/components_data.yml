@@ -33,6 +33,15 @@
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
+  - name: Cerberus Spring Boot Client
+    description: Provides automatic initialization of the Java client for Spring Boot applications.
+     <a href='https://bintray.com/nike/maven/cerberus-spring-boot-client/_latestVersion'><img src='https://api.bintray.com/packages/nike/maven/cerberus-spring-boot-client/images/download.svg'></a>
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-spring-boot-client
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
   - name: Cerberus Ruby Client
     description: A Ruby client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
     language: ruby
