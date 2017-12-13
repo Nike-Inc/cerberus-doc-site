@@ -112,24 +112,7 @@ or other older library.
 * Java 6 update 141 (Oracle paid version) - added TLS1.2 to the client list of default-enabled protocols (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html)
 * Java 6 update 115 (Oracle paid version) - added TLS1.2 support to clients that is enabled via a system property (see the [Release Notes](http://www.oracle.com/technetwork/java/javase/overview-156328.html))
 
-
-In older Java versions TLSv1.2 is enabled via the system property `-Dhttps.protocols=TLSv1.2` or in code:
-
-```java
-    private void enableJava7Tls12() {
-        // The last Java 7 public update, 80, does not support TLS 1.2 by default.
-        // This method enables it.
-        try {
-            SSLContext ctx = SSLContext.getInstance("TLSv1.2");
-            ctx.init(null, null, null);
-            SSLContext.setDefault(ctx);
-
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-```
-
+Java 7 example code available [here](https://github.com/Nike-Inc/cerberus-java-client/pull/33).
 
 #### JettyEclipseRun Conflict
 
