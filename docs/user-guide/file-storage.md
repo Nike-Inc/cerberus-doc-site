@@ -24,7 +24,7 @@ vaultClient.write(“app/my-app/secrets”, contents);
 POST /v1/secret/app/my-app/secrets
 
 {% highlight json %}
-Host: test.cerberus.nikecloud.com
+Host: test.cerberus.example.com
 X-Vault-Token: <YOUR CERBERUS TOKEN>
 Content-Type: application/json
 {
