@@ -21,7 +21,8 @@ The IAM role to be assigned must contain, at a minimum, a IAM policy statement g
 1. Navigate to the Identity and Access Management section
 1. Configure a role with the following policy:
 
-{% highlight json %}{
+{% highlight json %}
+{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -35,7 +36,8 @@ The IAM role to be assigned must contain, at a minimum, a IAM policy statement g
             ]
         }
     ]
-}{% endhighlight %}
+}
+{% endhighlight %}
 
 The account ID in the ARN should be the account ID where Cerberus is deployed.  See your company's internal
 documentation for the account ID that you should use.
