@@ -8,7 +8,7 @@ These S3 Buckets are created when bringing up a Cerberus Environment:
 * Cerberus Config bucket(s), e.g. `{envName}-cerberus-config-cerberusconfigbucket-{hash}`, multiple copies may be created in different regions for redundancy. 
 * Load Balancer log bucket, e.g. `{envName}-cerberus-load-balancer-alblogbucket-{hash}`
 
-# Cerberus Config Bucket
+## Cerberus Config Bucket
 
 E.g. `{envName}-cerberus-config-cerberusconfigbucket-{hash}`
 
