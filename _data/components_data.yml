@@ -1,22 +1,10 @@
 - name: Clients
   components:
-  - name: Vault Java Client
-    description: >
-      A Java client for Hashicorp's <a href="../docs/architecture/vault">Vault</a> that includes admin functionality.
-      The Java Cerberus Client builds on this. <a href='https://bintray.com/nike/maven/vault-client/_latestVersion'><img src='https://api.bintray.com/packages/nike/maven/vault-client/images/download.svg'></a>
-    language: java
-    url: https://github.com/Nike-Inc/java-vault-client
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Java Client
     description: >
-     A Java client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>. This client
-     includes an authentication provider chain that enables automatic
-     <a href="../docs/architecture/authentication">authentication</a> for EC2 and Lambda
-     instances, with fallback for local development. Builds on top of the Java Vault Client and exposes read, write,
-     list, and delete functionality for data in a Safe Deposit Box (SDB). <a href='https://bintray.com/nike/maven/cerberus-client/_latestVersion'><img src='https://api.bintray.com/packages/nike/maven/cerberus-client/images/download.svg'></a>
+     A Java client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+     <a href='https://bintray.com/nike/maven/cerberus-client/_latestVersion'><img src='https://api.bintray.com/packages/nike/maven/cerberus-client/images/download.svg'></a>
     language: java
     url: https://github.com/Nike-Inc/cerberus-java-client
     public: true
@@ -82,107 +70,53 @@
     maintainer: Lookout, Inc
     maintainer_url: https://github.com/lookout
 
-- name: Components
+- name: Cerberus System and Management
   components:
   - name: Cerberus Management Service
     description: >
-     A micro-service to compose Hashicorp's <a href="../docs/architecture/vault">Vault</a> API to enable the Safe
-     Deposit Box paradigm, IAM Role auth for EC2 instances and Lambda functions, and user auth via SSO providers.
+     The main micro-service that makes up a Cerberus environment.  It includes
+     a <a href="../docs/architecture/rest-api">REST API</a>, authentication and encryption features, as well as a
+     self-service <a href="../docs/user-guide/dashboard">web UI</a> for users.
     language: java
     url: https://github.com/Nike-Inc/cerberus-management-service
     public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
-  - name: Cerberus Management Dashboard
-    description: >
-      A self service web UI for administration of Safe Deposit Boxes, access control, and data.  This is implemented as
-      a <a href="https://facebook.github.io/react/">React</a> single-page application (SPA).
-    language: js
-    url: https://github.com/Nike-Inc/cerberus-management-dashboard
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Cerberus Lifecycle Management CLI
-    description: A CLI for managing the lifecycle of a Cerberus environment.
-    language: java
-    url: https://github.com/Nike-Inc/cerberus-lifecycle-cli
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Vault
-    description: >
-      A tool for managing secrets. In Cerberus, <a href="../docs/architecture/vault">Vault</a> is used for the
-      encryption of secrets as well as access control policies.
-    language: go
-    url: https://github.com/hashicorp/vault
-    public: true
-    maintainer: HashiCorp
-    maintainer_url: https://www.hashicorp.com/
-
-  - name: Consul
-    description: >
-      Consul is a tool for service discovery, monitoring and configuration. In Cerberus, Consul is the storage
-      backend for Vault and provides high availability.
-    language: go
-    url: https://github.com/hashicorp/consul
-    public: true
-    maintainer: HashiCorp
-    maintainer_url: https://www.hashicorp.com/
-
-  - name: Cerberus Integration Tests
-    description: >
-      Gradle project that contains various modules that can be used to test a Cerberus environment.
-    language: java
-    url: https://github.com/Nike-Inc/cerberus-integration-tests
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
   - name: Cerberus Serverless Components
-    description: A collection of AWS Serverless components for Cerberus.
+    description: "A collection of AWS Serverless components (e.g. Lambdas) for Cerberus including: a healthcheck that
+      can be used in monitoring, log processing for rate limiting, etc."
     language: java
     url: https://github.com/Nike-Inc/cerberus-serverless-components
     public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
-- name: Utilities
-  components:
+  - name: Cerberus Lifecycle Management CLI
+    description: "A command line interface (CLI) for managing the lifecycle of a Cerberus environment used by the
+      operators/admins of Cerberus environment including: TLS certificate generation, invoking CloudFormation,
+      and setting up configuration in S3."
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-lifecycle-cli
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
   - name: Cerberus Util Scripts
     description: >
-      A collection of Packer, Shell and Puppet scripts needed to create the various AMIs needed to create a Cerberus environment.
+      A collection of Packer, Shell, and Puppet scripts needed to create the AMIs needed in a Cerberus environment.
     language: multi
     url: https://github.com/Nike-Inc/cerberus-util-scripts
     public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
-  - name: Cerberus Gateway Puppet Module
+  - name: Cerberus Integration Tests
     description: >
-      A Puppet module for installing nginx and the conf needed for the router component to work in a Cerberus environment.
-    language: multi
-    url: https://github.com/Nike-Inc/cerberus-gateway-puppet-module
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Cerberus Consul Puppet Module
-    description: >
-      A Puppet module for installing Hashicorp's Consul as a service with customized start up scripts for Cerberus.
-    language: multi
-    url: https://github.com/Nike-Inc/cerberus-consul-puppet-module
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
-  - name: Cerberus Vault Puppet Module
-    description: >
-      A Puppet module for installing Hashicorp's Vault as a service with customized start up scripts for Cerberus.
-    language: multi
-    url: https://github.com/Nike-Inc/cerberus-vault-puppet-module
+      Gradle project that contains various modules that can be used to test a Cerberus environment including:
+      integration testing, API contract validation, and load testing.
+    language: java
+    url: https://github.com/Nike-Inc/cerberus-integration-tests
     public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/

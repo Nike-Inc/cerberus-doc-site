@@ -9,8 +9,7 @@ Cerberus environment has been setup as described in the [Administration guide](.
 Cerberus is a complete solution to manage anything that you want to tightly control access to, such as API keys, 
 passwords, certificates, etc. By the end of this document you will be able to provision a safe deposit box (SDB), set the 
 correct permissions, and integrate a cerberus client library to access data from your application.  A safe 
-deposit box (SDB) is a logical grouping of data to be securely stored within [Vault](../architecture/vault).  Cerberus 
-uses Vault for storage and securing access to data.
+deposit box (SDB) is a logical grouping of data with a single set of access controls.
 
 # 1. Configure your Service's IAM Role
 
@@ -60,7 +59,7 @@ documentation for the account ID that you should use.
 
 # 3. Manage Data in your Safe Deposit Box
 
-Vault stores data using a [path structure](../architecture/vault).  Note that the application name is normalized to be 
+Data is stored using a path structure.  Note that the application name is normalized to be 
 URL friendly.  So, if you had 'My Awesome App' in the Applications category your root path will be 
 'applications/my-awesome-app'.  From there you can add sub-paths to store key value pairs.
 
@@ -68,14 +67,14 @@ Cerberus will allow an SDB to contain a folder structure with many subpaths but 
 a list of several key/value pairs is optimal (that way all values can be read later with a single API call).
 
 ### How to add a subpath:
-1. Click the 'Add new Vault path' button.
+1. Click the 'Add new path' button.
 1. Enter a subpath name
 1. Add the key/value pairs that you'd like to store at that subpath.
 1. Click 'SAVE'
 1. The page will refresh and you'll be able to add more subpaths or edit the subpath you just added.
 
-<a href="../../images/dashboard/add-new-vault-path-screen.png" target="_blank">
-<img src="../../images/dashboard/add-new-vault-path-screen.png" alt="Cerberus Dashboard add new Vault path screenshot" style="width: 25%; height: 25%;"/>
+<a href="../../images/dashboard/add-new-path-screen.png" target="_blank">
+<img src="../../images/dashboard/add-new-path-screen.png" alt="Cerberus Dashboard add new path screenshot" style="width: 25%; height: 25%;"/>
 </a>
 
 # 4. Access Your Secrets with Cerberus

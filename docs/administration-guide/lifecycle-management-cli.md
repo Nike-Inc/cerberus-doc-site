@@ -3,8 +3,7 @@ layout: documentation
 title: Lifecycle Management CLI
 ---
 
-Cerberus includes a Command Line Interface (CLI) for managing Cerberus environments using CloudFormation,
-native Vault APIs, and AWS API calls.
+Cerberus includes a Command Line Interface (CLI) for managing Cerberus environments using CloudFormation and native AWS API calls.
  
 This command line tool includes features for: 
 
@@ -13,7 +12,6 @@ This command line tool includes features for:
 *  Maintenance
 *  Recovery
 
-<img src="../../images/admin-guide/lifecycle-management-cli.png" alt="Cerberus lifecycle management CLI" style="width: 600;" />
 
 It greatly simplifies managing the entire [Cerberus infrastructure](../architecture/infrastructure-overview).
 

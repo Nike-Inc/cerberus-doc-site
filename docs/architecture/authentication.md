@@ -52,7 +52,7 @@ assigned IAM roles to that instance.
 1. For each assigned IAM role:
    1. Request encrypted auth response from Cerberus
    1. Attempt to decrypt response with KMS
-1. Store the [Vault token](vault) and expire time
+1. Store the auth token and expire time
 
 <img src="../../images/arch-diagrams/cms-iam-auth-sequence-diagram.png" alt="IAM authentication sequence diagram" />
 
@@ -73,7 +73,6 @@ permissions.
 
 # References
 
-*  [Vault](vault)
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/ec2/')" href="https://aws.amazon.com/ec2/">Amazon EC2 - Virtual Server Hosting</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/iam/')" href="https://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/kms/')" href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>

@@ -84,9 +84,6 @@ role being used isn't listed for the SDB you are trying to access (see 'Who am I
 
 Unexpectedly, you might also see this error when the path you are trying to access doesn't exist.
 
-Please see <a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/docs/http/')" href="https://www.vaultproject.io/docs/http/">Vault Documentation</a> for more information on Vault errors.
-
-
 # Excessive Polling
 
 IPs making an excessive number of requests are automatically blacklisted for a configurable interval.

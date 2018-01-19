@@ -26,35 +26,18 @@ validation using the <a target="_blank" onclick="trackOutboundLink('https://gith
 ## Upgrading Cerberus AMIs
 
 Clone or download the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-util-scripts')" href="https://github.com/Nike-Inc/cerberus-util-scripts">Cerberus Utility Script</a> project and follow
-the README to create AMIs for Consul, Vault, Gateway, and Cerberus Management Service (CMS).
+the README to create the AMI for Cerberus Management Service (CMS).
 
-Generally new AMIs can be deployed using the CLI and the `update-stack` command but sometimes extra steps are needed.
-
-## Upgrading Gateway
-
-The Gateway is one of the easiest and safest components to upgrade because it is stateless and rarely changes.
+Generally new AMIs can be deployed using the CLI and the `update-stack` command.
 
 ## Upgrading CMS and the RDS Schema
 
 CMS applies RDS schema updates automatically using <a target="_blank" onclick="trackOutboundLink('https://flywaydb.org/')" href="https://flywaydb.org/">Flyway</a>.  This makes upgrading version quite 
 easy but downgrading may require a restore from backup or other manual intervention.
 
-## Upgrading Vault and Consul
-
-Vault is the only Cerberus component that technically requires downtime during a deploy, 10-30 seconds, as a new leader
-is elected (this is due to how Cerberus is currently using an ELB instead of service discovery for accessing Vault).
-
-Vault and Consul upgrades should be tested before applying to production.  Incompatible configuration may prevent these
-components from starting.  Be prepared to perform [Consul recovery](consul-recovery) if you make any mistake during an
-upgrade.
-
-## Upgrading the Dashboard
-
-Use the `publish-dashboard` command to deploy a new dashboard.  The command simply downloads a release and uploads the
-static files to an S3 bucket.
-
 # Upgrading Specific Versions
 
+* [Upgrading to CMS v3.x.x](../../news/2017/01/04/next-generation-architecture.html) Jan 4, 2018
 * [Upgrading to Raft Protocol Version 3](../../news/2017/07/11/upgrading-to-raft-3.html) July 11, 2017
   * Raft 3 is needed to take advantage of the new [Autopilot](https://www.consul.io/docs/guides/autopilot.html) features in Consul
 * [Upgrading Consul to version 0.8.3](../../news/2017/05/16/consul-0.8.3.html) May 16, 2017

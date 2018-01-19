@@ -3,30 +3,32 @@ layout: documentation
 title: High Availability
 ---
 
-Cerberus is a cloud native application, designed to be failure indifferent, self-healing, and highly available.  Most 
-components of Cerberus are update-able with zero downtime, but there are a few key maintenance tasks that may incur 
-downtime although these outages can be measured in just a few minutes.
+Cerberus is a cloud native application, designed to be failure indifferent, self-healing, and highly available.
 
 See the [infrastructure overview](infrastructure-overview) for more information.
 
+# Configuration
+
+Configuration is stored in S3 and is managed with the CLI.  In our preferred configuration, the CLI will store copies
+of the configuration in two regions for high availability.
+
+# KMS
+
+Secrets are encrypted using the Key Management Service (KMS) and the 'AWS Encryption SDK'.
+Multiple Customer Master Keys (CMKs) are used to ensure multi-region availability of encrypted data.
+
+# RDS
+
+Amazon Aurora is used in a multiple availability zone configuration.
 
 # Backups
 
-Backups are automatically setup when a Cerberus environment is provisioned. We take hourly, daily and weekly 
-backups of the data to S3.  These backups are for the unexpected and extreme cases where the entire data store cluster
-is lost.
-
-
-# Data Recovery
-
-A manual process is needed to restore the data store cluster in the event that the cluster is lost entirely.  The
-process of restoring from backup takes up to 30 minutes.  The likely hood of this happening is extremely low as the
-cluster is fault tolerant and self healing in the event that a node goes bad.
-
+Backups are automatically setup when a Cerberus environment is provisioned. RDS snapshots are used plus we've included
+a command in our CLI for copying them cross region.
 
 # References
 
-*  <a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/docs/internals/high-availability.html')" href="https://www.vaultproject.io/docs/internals/high-availability.html">Vault High Availability</a>
-*  <a target="_blank" onclick="trackOutboundLink('https://www.consul.io/docs/index.html')" href="https://www.consul.io/docs/index.html">Consul Documentation</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/elasticloadbalancing/')" href="https://aws.amazon.com/elasticloadbalancing/">AWS Elastic Load Balancing (ELB)</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/autoscaling/')" href="https://aws.amazon.com/autoscaling/">AWS Auto Scaling</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/kms/')" href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>
+*  <a target="_blank" onclick="trackOutboundLink('https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/introduction.html')" href="https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/introduction.html">AWS Encryption SDK</a>

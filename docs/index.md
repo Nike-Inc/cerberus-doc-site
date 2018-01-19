@@ -14,13 +14,15 @@ and API keys, as well as non-sensitive dynamic run-time properties, such as feat
 
 # Overview
 
--  Uses HashiCorp's [Vault](architecture/vault) to manage the actual encryption at rest and to provide access controls.
+-  Uses the [AWS Encryption SDK](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/introduction.html) 
+   and [KMS](https://aws.amazon.com/documentation/kms/) to manage the actual encryption at rest.
 -  Operationalized for AWS including a [CLI](administration-guide/lifecycle-management-cli), Cloud Formation templates, edge security, and IAM integration.
+-  Exposes all functionality via a [REST API](architecture/rest-api) for easy integration.
 -  Includes a [Dashboard](user-guide/dashboard), a self-service Web UI, where teams can manage properties and access control.
 -  Provides client libraries (e.g. Java, Node, Ruby) that can be used by Cloud applications (EC2 or Lambda) to retrieve properties at run-time.
 
-<img src="../images/arch-diagrams/cerberus-core-components-hlo.png" alt="Cerberus core components diagram" />
-Cerberus is a [composed API](architecture/rest-api)
+<img src="../images/infrastructure-overview/infrastructure-overview.jpeg" alt="Cerberus infrastructure overview diagram" />
+
 
 Cerberus is a cloud native system that relies heavily on [AWS infrastructure](architecture/infrastructure-overview).  It would take significant work to 
 enable it in other environments.

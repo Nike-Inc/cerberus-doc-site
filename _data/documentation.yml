@@ -29,22 +29,18 @@ table_of_contents:
         displayname: Deleting an Environment
       - filename: monitoring
         displayname: Monitoring
-      - filename: backup-restore
-        displayname: Backup and Restore
-      - filename: consul-recovery
-        displayname: Consul Recovery
   - directory: architecture
     pages:
       - filename: infrastructure-overview
         displayname: Infrastructure Overview
       - filename: rest-api
         displayname: REST API
-      - filename: vault
-        displayname: Vault
       - filename: authentication
         displayname: Authentication
       - filename: high-availability
         displayname: High Availability
+      - filename: security-features
+        displayname: Security Features
       - filename: files-in-s3
         displayname: Files in S3
       - filename: alternative-solutions

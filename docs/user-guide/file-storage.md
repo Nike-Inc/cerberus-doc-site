@@ -25,7 +25,7 @@ POST /v1/secret/app/my-app/secrets
 
 {% highlight json %}
 Host: test.cerberus.example.com
-X-Vault-Token: <YOUR CERBERUS TOKEN>
+X-Cerberus-Token: <YOUR CERBERUS TOKEN>
 Content-Type: application/json
 {
 	“certificate.cer”: “<file contents>”,
