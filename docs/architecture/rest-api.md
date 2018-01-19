@@ -13,7 +13,7 @@ Cerberus has a REST API that implements all functions available including:
 
 For more information, please see the full <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-management-service/blob/master/API.md')" href="https://github.com/Nike-Inc/cerberus-management-service/blob/master/API.md">API Documentation</a>.
 
-You can also check out the [API Test suite](https://github.com/Nike-Inc/cerberus-integration-tests) for example calls.
+Also review the [API Test suite](https://github.com/Nike-Inc/cerberus-integration-tests) for example calls.
     
 
 # References

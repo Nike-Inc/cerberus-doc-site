@@ -52,7 +52,7 @@ title: Security Features
 
 # Configuration Encryption
 
-* Cerberus secrets are encrypted with the 'AWS Encryption SDK' using AES-GCM with an HMAC-based extract-and-expand key derivation function (HKDF), signing, and a 256-bit encryption key.
+* Configuration is encrypted with the 'AWS Encryption SDK' using AES-GCM with an HMAC-based extract-and-expand key derivation function (HKDF), signing, and a 256-bit encryption key.
 * Configuration is replicated in more than one region
 * KMS keys for configuration are configured to auto-rotate annually.
 
