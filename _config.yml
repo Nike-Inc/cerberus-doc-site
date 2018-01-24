@@ -3,3 +3,8 @@ url: "http://engineering.nike.com/cerberus"
 sass:
   sass_dir: css
 tracking_id: UA-86449904-1
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge

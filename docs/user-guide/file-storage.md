@@ -10,20 +10,20 @@ For example, to write a certificate and java keystore to a safe deposit box in C
 
 ### Java Client
  
-{% highlight java %}
+```java
 
 final Map<String, String> contents = new HashMap<>();
 contents.add(“certificate.cer”, “<file contents>”);
 contents.add(“keystore.jks”, “<file contents>”);
 vaultClient.write(“app/my-app/secrets”, contents);
 
-{% endhighlight %}
+```
 
 ### Over HTTPS
 
 POST /v1/secret/app/my-app/secrets
 
-{% highlight json %}
+```json
 Host: test.cerberus.example.com
 X-Cerberus-Token: <YOUR CERBERUS TOKEN>
 Content-Type: application/json
@@ -32,7 +32,7 @@ Content-Type: application/json
 	“keystore.jks”: “<file contents>”
 }
 
-{% endhighlight %}
+```
 
 
 

@@ -21,14 +21,12 @@ example, you can do this using [Ruby](https://www.ruby-lang.org/en/documentation
 [Bundler](http://bundler.io/):
 
 ```
-sudo gem install bundler
-sudo bundle install
+gem install bundler
+bundle install
 bundle exec jekyll serve -w --config _config.yml,_dev_config.yml 
 ```
 
 If your using Mac OS X and have issues with nokogiri checkout this [Stack Overflow](https://stackoverflow.com/questions/37711814/error-installing-rails-on-os-x-el-capitan/39929160#39929160) answer that I found useful.
-
-Enable live reloading by using `bundle exec guard`
 
 ## License
 

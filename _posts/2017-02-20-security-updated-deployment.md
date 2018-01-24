@@ -9,7 +9,7 @@ Two required updates for Cerberus security: 1) new IAM role policy, and 2) run C
 
 1) New IAM role policy
 
-{% highlight json %}
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -25,7 +25,7 @@ Two required updates for Cerberus security: 1) new IAM role policy, and 2) run C
         }
     ]
 }
-{% endhighlight %}
+```
 
 The account ID in the ARN should be the account ID where Cerberus is deployed.
 

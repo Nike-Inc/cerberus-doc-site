@@ -1,3 +1,2 @@
-gem "jekyll", "3.2.1"
-gem 'guard'
-gem 'guard-livereload'
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins

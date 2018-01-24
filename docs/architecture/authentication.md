@@ -22,7 +22,7 @@ The EC2 instance must be assigned an IAM role that has been given permissions to
 The IAM role to be assigned must contain, at a minimum, a IAM policy statement giving access to call the KMS' decrypt
 action:
 
-{% highlight json %}
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -38,7 +38,7 @@ action:
         }
     ]
 }
-{% endhighlight %}
+```
 
 The account ID in the ARN should be the account ID where Cerberus is deployed.
 

@@ -20,7 +20,7 @@ The IAM role to be assigned must contain, at a minimum, a IAM policy statement g
 1. Navigate to the Identity and Access Management section
 1. Configure a role with the following policy:
 
-{% highlight json %}
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -36,7 +36,7 @@ The IAM role to be assigned must contain, at a minimum, a IAM policy statement g
         }
     ]
 }
-{% endhighlight %}
+```
 
 The account ID in the ARN should be the account ID where Cerberus is deployed.  See your company's internal
 documentation for the account ID that you should use.
@@ -105,9 +105,9 @@ your dev machine and use it to retrieve a token for development work.  This shel
 
 Use the --help option for usage:
 
-{% highlight bash %}
+```bash
 ./cerberus-token.sh --help
-{% endhighlight %}
+```
 
 ## Verifying Your Identity
 
