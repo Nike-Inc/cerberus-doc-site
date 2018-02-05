@@ -49,7 +49,9 @@ Go to the EC2 panel and navigate to Key Pairs and generate a new key pair(s) to 
 
 ## Create the Cerberus Environment
 
-Copy and modify the [example-standup.yaml](https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/src/main/resources/example-standup.yaml) and pass it as a parameter to the `create-environment` command.
+Copy and modify the [example-standup.yaml](https://github.com/Nike-Inc/cerberus-lifecycle-cli/blob/master/src/test/resources/environment.yaml) and pass it as a parameter to the create environment command.
+
+```cerberus -f /path/to/yaml create-environment``` 
 
 Recommended: Name the YAML properties file after the environment name (e.g. dev.yaml, test.yaml, prod.yaml, etc.)
 
