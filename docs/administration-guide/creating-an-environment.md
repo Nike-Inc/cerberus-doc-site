@@ -13,10 +13,10 @@ recommended running Cerberus in its own account for security reasons.  Running C
 services from being able to impersonate each other.  In the future, we hope to remove this limitation.
 
 
-## Create Cerberus AMIs
+## Create the Cerberus AMI
 
 Clone or download the <a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-util-scripts')" href="https://github.com/Nike-Inc/cerberus-util-scripts">Cerberus Utility Script</a> project and follow
-the README to create AMIs for Consul, Vault, Gateway and Cerberus Management Service.
+the README to create the AMI for the Cerberus Management Service.
 
 
 ## Configure the Lifecycle Management CLI
