@@ -25,6 +25,8 @@ table_of_contents:
         displayname: Creating an Environment
       - filename: upgrading-an-environment
         displayname: Upgrading an Environment
+      - filename: restoring-from-backup
+        displayname: Restoring from Backup
       - filename: deleting-an-environment
         displayname: Deleting an Environment
       - filename: monitoring
