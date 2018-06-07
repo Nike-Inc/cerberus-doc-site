@@ -44,9 +44,18 @@ service tickets to administrators.
 
 <br />
 
-Users can add paths for their applications as well as view and modify properties.
+Users can add paths for their applications as well as view and modify properties and files.
 
-<img src="../../images/dashboard/add-new-path-screen.png" alt="Cerberus Dashboard screenshot" />
+<img src="../../images/dashboard/add-new-path-screen.png" alt="Cerberus Dashboard add path screenshot" />
+<img src="../../images/dashboard/add-new-file-screen.png" alt="Cerberus Dashboard add file screenshot" />
+
+<br />
+
+<br />
+
+Users can view the versions of paths and their values.
+
+<img src="../../images/dashboard/version-screen.png" alt="Cerberus Dashboard version screenshot" />
 
 <br />
 
