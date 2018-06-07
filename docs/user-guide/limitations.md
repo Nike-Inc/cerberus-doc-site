@@ -26,7 +26,7 @@ Request limits will vary by organization and use case but a good rule of thumb w
 
 # Request Body Size
 
-When writing data to Cerberus the request body size should be less than 256 KiB.
+When writing data to Cerberus the request body size should be less than 256 KB.
 
 # KMS Keys
 
