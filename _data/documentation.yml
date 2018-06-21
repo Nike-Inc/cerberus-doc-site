@@ -31,6 +31,8 @@ table_of_contents:
         displayname: Deleting an Environment
       - filename: monitoring
         displayname: Monitoring
+      - filename: manage-blacklist-whitelist
+        displayname: Managing Blacklist/Whitelist
       - filename: audit-logging
         displayname: Audit Logging
   - directory: architecture
