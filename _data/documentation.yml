@@ -31,6 +31,8 @@ table_of_contents:
         displayname: Deleting an Environment
       - filename: monitoring
         displayname: Monitoring
+      - filename: audit-logging
+        displayname: Audit Logging
   - directory: architecture
     pages:
       - filename: infrastructure-overview
