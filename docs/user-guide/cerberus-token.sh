@@ -26,14 +26,14 @@ function print_version() {
 }
 
 function print_troubleshooting() {
-    echo ""
-    echo "Troubleshooting:"
-    echo "  Is the Cerberus hostname correct?"
-    echo "  Are you able to login to dashboard with these credentials?"
-    echo "  Login name depends on Cerberus configuration but is probably either Active Directory login OR email"
-    echo "  Did you recently change your password?"
-    echo "  Do you have the latest version of this script? Use --version option"
-    echo ""
+    echo "" >&2
+    echo "Troubleshooting:" >&2
+    echo "  Is the Cerberus hostname correct?" >&2
+    echo "  Are you able to login to dashboard with these credentials?" >&2
+    echo "  Login name depends on Cerberus configuration but is probably either Active Directory login OR email" >&2
+    echo "  Did you recently change your password?" >&2
+    echo "  Do you have the latest version of this script? Use --version option" >&2
+    echo "" >&2
 }
 
 function print_help() {
@@ -125,7 +125,7 @@ function prompt_remove_creds() {
   then
     case "$OS" in
       Darwin)
-        echo "Would you like to remove any saved credentails? [Y/n]"
+        echo "Would you like to remove any saved credentails? [Y/n]" >&2
         read REMOVE_SAVED
         if [[ $REMOVE_SAVED != 'n' ]]
         then
@@ -247,7 +247,7 @@ elif [ "$STATUS" == "mfa_req" ]
 then
     STATE_TOKEN=$(echo $DATA | jq --raw-output ".data.state_token")
 
-    echo "Multi-Factor Authentication is required (${CREDS[0]})"
+    echo "Multi-Factor Authentication is required (${CREDS[0]})" >&2
 
     # if there is only one device, no need to prompt to choose device
     if [ "1" == `echo $DATA | jq ".data.devices | length"` ]
@@ -255,17 +255,17 @@ then
         DEVICE_ID=`echo $DATA | jq --raw-output ".data.devices[0].id"`
         DEVICE_NAME=`echo $DATA | jq --raw-output ".data.devices[0].name"`
 
-        echo -n "Enter factor for $DEVICE_NAME: "
+        echo -n "Enter factor for $DEVICE_NAME: " >&2
         read FACTOR
     else
         # More than one MFA devices so prompt as to which to use
-        echo "You have the following devices:"
-        echo $DATA | jq ".data.devices"
+        echo "You have the following devices:" >&2
+        echo $DATA | jq ".data.devices" >&2
 
-        echo -n "Enter the device id you would like to use: "
+        echo -n "Enter the device id you would like to use: " >&2
         read DEVICE_ID
 
-        echo -n "Enter factor: "
+        echo -n "Enter factor: " >&2
         read FACTOR
     fi
 
@@ -288,18 +288,18 @@ then
     fi
 fi
 
-echo ""
-echo "ERROR! sorry but something went wrong when calling ${CERBERUS_URL}"
-echo "Response from server was: "
+echo "" >&2
+echo "ERROR! sorry but something went wrong when calling ${CERBERUS_URL}" >&2
+echo "Response from server was: " >&2
 if [[ "$DATA" == *"<html"* || "$DATA" == *"<HTML"* ]]
 then
-    echo "$DATA"
+    echo "$DATA" >&2
 else
     # echo it here without formatting in case jq pukes
-    echo "$DATA"
-    echo "Response formatted with jq: "
+    echo "$DATA" >&2
+    echo "Response formatted with jq: " >&2
     # only pipe to jq if content is not HTML
-    echo $DATA | jq
+    echo $DATA | jq >&2
 fi
 
 print_troubleshooting
@@ -309,4 +309,3 @@ print_troubleshooting
 prompt_remove_creds
 
 exit 1
-
