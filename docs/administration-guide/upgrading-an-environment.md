@@ -37,7 +37,7 @@ easy but downgrading may require a restore from backup or other manual intervent
 
 # Upgrading Specific Versions
 
-* [Upgrading to CMS v3.x.x](../../news/2017/01/04/next-generation-architecture.html) Jan 4, 2018
+* [Upgrading to CMS v3.x.x](../../news/2018/01/04/next-generation-architecture.html) Jan 4, 2018
 * [Upgrading to Raft Protocol Version 3](../../news/2017/07/11/upgrading-to-raft-3.html) July 11, 2017
   * Raft 3 is needed to take advantage of the new [Autopilot](https://www.consul.io/docs/guides/autopilot.html) features in Consul
 * [Upgrading Consul to version 0.8.3](../../news/2017/05/16/consul-0.8.3.html) May 16, 2017
