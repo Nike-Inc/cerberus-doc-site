@@ -39,7 +39,9 @@
     maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Node Client
-    description: A Node client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+    description: >
+     A Node client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+          <a href='https://www.npmjs.com/package/cerberus-node-client'><img src='https://img.shields.io/npm/v/cerberus-node-client.svg'></a>
     language: js
     url: https://github.com/Nike-Inc/cerberus-node-client
     public: true
