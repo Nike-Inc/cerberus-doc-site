@@ -7,6 +7,10 @@ Cerberus was developed because we did not find another solution that met all our
 
 Here are some other options you may want to consider:
 
+# AWS Secrets Manager
+
+<a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/secrets-manager/')" href="https://aws.amazon.com/secrets-manager/">AWS Secrets Manager</a> came out after Cerberus and is the official solution for secrets management with in AWS and should seriously be considered over Cerberus.
+
 # HashiCorp Vault with Consul backend
 
 <a target="_blank" onclick="trackOutboundLink('https://www.vaultproject.io/')" href="https://www.vaultproject.io/">Vault</a> is a popular open source secrets management tool created by <a target="_blank" onclick="trackOutboundLink('https://www.hashicorp.com/')" href="https://www.hashicorp.com/">HashiCorp</a>.
