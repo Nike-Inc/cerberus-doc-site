@@ -66,7 +66,7 @@
   
   - name: Cerberus CLI
     description: A Golang Command Line Interface for the Cerberus API.
-    language: go
+    language: Windows/Mac/Linux
     url: https://github.com/Nike-Inc/cerberus-cli
     public: true
     maintainer: Nike, Inc
