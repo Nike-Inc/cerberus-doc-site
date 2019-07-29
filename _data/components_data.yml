@@ -63,6 +63,14 @@
     public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
+  
+  - name: Cerberus CLI
+    description: A Golang Command Line Interface for the Cerberus API.
+    language: go
+    url: https://github.com/Nike-Inc/cerberus-cli
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
 
 - name: Cerberus System and Management
   components:
