@@ -57,28 +57,6 @@
           font-size: 20px;
         }
       }
-      .resources-container {
-        padding-right: 10px;
-        margin-left: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-self: center;
-
-        .resources {
-          margin-top: 5px;
-          justify-content: flex-end;
-
-          display: flex;
-
-          .resorouce {
-            justify-self: flex-end;
-            width: 25px;
-            height: 25px;
-            margin-left: 15px;
-          }
-        }
-      }
     }
 
     @media (max-width: 1920px) {

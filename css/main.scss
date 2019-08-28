@@ -23,7 +23,6 @@ $break-small: 660px;
 @import "content";
 @import "components";
 @import "documentation";
-@import "news";
 
 html body {
   background-color: $ncss_black;
@@ -32,30 +31,6 @@ html body {
 
 .github {
   background: url('../images/github-offwhite100px.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-.slack {
-  background: url('../images/slack-offwhite100px.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-.stack-overflow {
-  background: url('../images/stack-overflow-offwhite100px.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-.twitter {
-  background: url('../images/twitter-logo-offwhite100px.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

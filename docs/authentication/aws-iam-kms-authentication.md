@@ -1,14 +1,14 @@
 ---
 layout: documentation
-title: Authentication
+title: AWS IAM KMS Authentication
 ---
 
-Cerberus currently supports authenticating EC2 instances, AWS Lambdas, and Users.
+This is Cerberus's original AWS IAM authentication mechanism, we consider this to be deprecated and are actively perusing ways of removing / disabling the endpoint in the near future. 
 
-# EC2 Instance Authentication
+# IAM Authentication
 
 One of the key components of the Cerberus offering is a simple yet secure solution for accessing privileged data from 
-an EC2 instance.  Within Cerberus, the logical grouping of related data is referred to as a safe deposit box (SDB). This
+an EC2 instance. Within Cerberus, the logical grouping of related data is referred to as a safe deposit box (SDB). This
 SDB in a collection of metadata describing the data and a set of permissions for what LDAP groups and AWS IAM roles 
 have access.
 
@@ -56,25 +56,14 @@ assigned IAM roles to that instance.
 
 <img src="../../images/arch-diagrams/cms-iam-auth-sequence-diagram.png" alt="IAM authentication sequence diagram" />
 
-# Lambda Authentication
+<a name="regions"></a>
+# A note about regions
 
-Lambda authentication is similar to that of EC2 instances.  See the 
-<a target="_blank" onclick="trackOutboundLink('https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-health-check-lambda')" href="https://github.com/Nike-Inc/cerberus-serverless-components/tree/master/cerberus-health-check-lambda">health check lambda</a> for a complete example.
-
-# User Authentication
-
-Cerberus supports plugging in different authentication backends.  The example below shows 
-<a target="_blank" onclick="trackOutboundLink('https://www.onelogin.com/')" href="https://www.onelogin.com/">OneLogin</a> but <a target="_blank" onclick="trackOutboundLink('https://www.okta.com/')" href="https://www.okta.com/">Okta</a> is also supported and
-others can be added easily.  LDAP groups are used to provide role-based access with either read or read/write
-permissions.
-
-<img src="../../images/arch-diagrams/user-authentication.png" alt="User authentication diagram" style="width: 50%; height: 50%; margin: 50px;" />
-
+The various Cerberus clients take in as an argument a region, when using KMS auth, the supplied region is the AWS region that Cerberus will create a KMS key for you in, and the region that you will have to use KMS decrypt in to get your payload.
+You will want to make this the region you are running in and not hard code this region. So that if there is an KMS outage in 1 region your services in another region will continue to work.
 
 # References
 
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/ec2/')" href="https://aws.amazon.com/ec2/">Amazon EC2 - Virtual Server Hosting</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/iam/')" href="https://aws.amazon.com/iam/">AWS Identity and Access Management (IAM)</a>
 *  <a target="_blank" onclick="trackOutboundLink('https://aws.amazon.com/kms/')" href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>
-*  <a target="_blank" onclick="trackOutboundLink('https://www.onelogin.com/')" href="https://www.onelogin.com/">OneLogin</a>
-*  <a target="_blank" onclick="trackOutboundLink('https://www.okta.com/')" href="https://www.okta.com/">Okta</a>

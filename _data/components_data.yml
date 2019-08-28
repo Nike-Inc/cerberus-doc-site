@@ -1,6 +1,18 @@
 - name: Clients
   components:
 
+  - name: Cerberus CLI
+    description: >
+     A command line interface for the Cerberus API.
+     <br/>Brew installable for Mac OS X users
+     <br/>Simple install script for docker / linux
+     <a href='https://github.com/Nike-Inc/cerberus-cli#installing'><img src='https://img.shields.io/github/release/nike-inc/cerberus-cli.svg'></a>
+    language: Windows/Mac/Linux
+    url: https://github.com/Nike-Inc/cerberus-cli
+    public: true
+    maintainer: Nike, Inc
+    maintainer_url: http://engineering.nike.com/
+
   - name: Cerberus Java Client
     description: >
      A Java client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
@@ -30,14 +42,6 @@
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
 
-  - name: Cerberus Ruby Client
-    description: A Ruby client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
-    language: ruby
-    url: https://github.com/Nike-Inc/cerberus-ruby-client
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-
   - name: Cerberus Node Client
     description: >
      A Node client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
@@ -49,7 +53,9 @@
     maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Python Client
-    description: A Python client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+    description: >
+     A Python client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+     <a href='https://badge.fury.io/py/cerberus-python-client'><img src='https://badge.fury.io/py/cerberus-python-client.svg'></a>
     language: python
     url: https://github.com/Nike-Inc/cerberus-python-client
     public: true
@@ -57,17 +63,11 @@
     maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Go Client
-    description: A Golang client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+    description: >
+     A Golang client for interacting with the Cerberus <a href="../docs/architecture/rest-api">REST API</a>.
+     <a href='https://github.com/Nike-Inc/cerberus-go-client/releases/latest'><img src='https://img.shields.io/github/release/nike-inc/cerberus-go-client.svg'></a>
     language: go
     url: https://github.com/Nike-Inc/cerberus-go-client
-    public: true
-    maintainer: Nike, Inc
-    maintainer_url: http://engineering.nike.com/
-  
-  - name: Cerberus CLI
-    description: A command line interface for the Cerberus API.
-    language: Windows/Mac/Linux
-    url: https://github.com/Nike-Inc/cerberus-cli
     public: true
     maintainer: Nike, Inc
     maintainer_url: http://engineering.nike.com/
@@ -79,6 +79,7 @@
      The main micro-service that makes up a Cerberus environment.  It includes
      a <a href="../docs/architecture/rest-api">REST API</a>, authentication and encryption features, as well as a
      self-service <a href="../docs/user-guide/dashboard">web UI</a> for users.
+     <a href='https://github.com/Nike-Inc/cerberus-management-service/releases/latest'><img src='https://img.shields.io/github/release/nike-inc/cerberus-management-service.svg'></a>
     language: java
     url: https://github.com/Nike-Inc/cerberus-management-service
     public: true
@@ -95,9 +96,11 @@
     maintainer_url: http://engineering.nike.com/
 
   - name: Cerberus Lifecycle Management CLI
-    description: "A command line interface (CLI) for managing the lifecycle of a Cerberus environment used by the
-      operators/admins of Cerberus environment including: TLS certificate generation, invoking CloudFormation,
-      and setting up configuration in S3."
+    description: >
+     A command line interface (CLI) for managing the lifecycle of a Cerberus environment used by the
+     operators/admins of Cerberus environment including: TLS certificate generation, invoking CloudFormation,
+     and setting up configuration in S3.
+     <a href='https://github.com/Nike-Inc/cerberus-lifecycle-cli/releases/latest'><img src='https://img.shields.io/github/release/nike-inc/cerberus-lifecycle-cli.svg'></a>
     language: java
     url: https://github.com/Nike-Inc/cerberus-lifecycle-cli
     public: true

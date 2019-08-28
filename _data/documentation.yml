@@ -23,8 +23,6 @@ table_of_contents:
         displayname: Lifecycle Management CLI
       - filename: creating-an-environment
         displayname: Creating an Environment
-      - filename: upgrading-an-environment
-        displayname: Upgrading an Environment
       - filename: restoring-from-backup
         displayname: Restoring from Backup
       - filename: deleting-an-environment
@@ -35,14 +33,20 @@ table_of_contents:
         displayname: Managing Blacklist/Whitelist
       - filename: audit-logging
         displayname: Audit Logging
+  - directory: authentication
+    pages:
+      - filename: aws-iam-sts-authentication
+        displayname: AWS IAM STS Authentication
+      - filename: aws-iam-kms-authentication
+        displayname: AWS IAM KMS Authentication
+      - filename: user-authentication
+        displayname: User Authentication
   - directory: architecture
     pages:
       - filename: infrastructure-overview
         displayname: Infrastructure Overview
       - filename: rest-api
         displayname: REST API
-      - filename: authentication
-        displayname: Authentication
       - filename: high-availability
         displayname: High Availability
       - filename: security-features
